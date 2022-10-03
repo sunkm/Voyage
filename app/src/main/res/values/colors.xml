@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <color name="base_black">#333333</color>
+    <color name="base_black_44">#3c4044</color>
+    <color name="base_gray_33">#333333</color>
+    <color name="base_gray_73">#737373</color>
+    <color name="base_gray_8a">#7f858a</color>
+    <color name="base_gray_a6">#a6a6a6</color>
+    <color name="base_gray_c8">#c0c5c8</color>
+    <color name="base_gray_d9">#ffd9d9d9</color>
+    <color name="base_gray_f5">#f5f5f5</color>
+    <color name="base_gray_f6">#f6f6f6</color>
+    <color name="base_white">#ffffffff</color>
+    <color name="gray_26">#262626</color>
+    <color name="gray_33">#333333</color>
+    <color name="gray_a6">#a6a6a6</color>
+    <color name="gray_bg">#f8f8f8</color>
+    <color name="gray_button">#eff1f4</color>
+    <color name="gray_eb">#ebebeb</color>
+    <color name="gray_f0">#f0f0f0</color>
+    <color name="gray_f5">#f5f5f5</color>
+    <color name="gray_line">#f6f6f6</color>
+    <color name="text_blue">#42b4ff</color>
+    <color name="text_blue_link">#ff499cd4</color>
+    <color name="text_gray">#ffc0c5c8</color>
+    <color name="text_gray_0b0b0b">#0b0b0b</color>
+    <color name="text_gray_5d646a">#5d646a</color>
+    <color name="text_gray_first">#ff1e1f20</color>
+    <color name="text_gray_link">#19a3ff</color>
+    <color name="text_gray_sec">#ff7f858a</color>
+    <color name="text_gray_third">#ffc0c5c8</color>
+    <color name="text_normal">#ff1e1f20</color>
+    <color name="text_note">#ff5d646a</color>
+    <color name="text_tab">#ff7f858a</color>
+    <color name="color_widget_genshin_content_text">#4a5366</color>
+    <color name="color_widget_genshin_content_title_text">#994a5366</color>
+    <color name="t_light_blue_50">#FFE1F5FE</color>
+    <color name="t_light_blue_200">#FF81D4FA</color>
+    <color name="t_light_blue_600">#FF039BE5</color>
+    <color name="t_light_blue_900">#FF01579B</color>
+    <color name="about_page_background">#f1f1f1</color>
+    <color name="about_page_category_text_color">#757575</color>
+    <color name="about_page_card_text_color">#de000000</color>
+    <color name="about_page_link_text_color">@android:color/black</color>
+    <color name="about_page_card_selected">#44000000</color>
+    <color name="about_page_card_normal">?android:attr/windowBackground</color>
+    <color name="about_page_card_ripple">#33000000</color>
+    <color name="about_page_line">#eae9e9</color>
+    <color name="about_page_name_color">@color/about_page_card_text_color</color>
+    <color name="about_page_desc_color">@color/about_page_hint</color>
+    <color name="about_page_license_title">@color/about_page_card_text_color</color>
+    <color name="about_page_hint">#757575</color>
+    <color name="about_page_navigationBarColor">#5C000000</color>
+    <color name="black_alpha_100">#111111</color>
+    <color name="black_alpha_90">#E6111111</color>
+    <color name="black_alpha_80">#CC111111</color>
+    <color name="black_alpha_70">#B3111111</color>
+    <color name="black_alpha_60">#99111111</color>
+    <color name="black_alpha_50">#80111111</color>
+    <color name="black_alpha_40">#66111111</color>
+    <color name="black_alpha_30">#4D111111</color>
+    <color name="black_alpha_20">#33111111</color>
+    <color name="black_alpha_10">#1A111111</color>
+    <color name="ic_launcher_background">#FFFFFFFF</color>
+    <color name="white_alpha_95">#F2FFFFFF</color>
+    <color name="white_alpha_90">#E6FFFFFF</color>
+    <color name="white_alpha_80">#CCFFFFFF</color>
+    <color name="white_alpha_70">#B3FFFFFF</color>
+    <color name="white_alpha_60">#99FFFFFF</color>
+    <color name="white_alpha_50">#80FFFFFF</color>
+    <color name="white_alpha_40">#66FFFFFF</color>
+    <color name="white_alpha_30">#4DFFFFFF</color>
+    <color name="white_alpha_20">#33FFFFFF</color>
+    <color name="white_alpha_10">#1AFFFFFF</color>
+
+    <color name="colorPrimary">#448AFF</color>
+    <color name="colorAccent">@color/grey_active</color>
+    <color name="backgroundColor">#FFFAFAFA</color>
+    <color name="divider_color">#ffeeeeee</color>
+    <color name="textColor">#000000</color>
+    <color name="line">#ffe0e0e0</color>
+    <color name="imageColor">#000000</color>
+    <color name="SelectedBackColor">#ffeeeeee</color>
+    <color name="rippleColor">#ffbdbdbd</color>
+    <color name="editTextColor">#ff000000</color>
+    <color name="textColorSecondary">#99000000</color>
+    <color name="itemBackColor">#ffeeeeee</color>
+    <color name="fabColor">#ff5187f4</color>
+    <color name="red">#B3FF0000</color>
+    <color name="hui">#ff757575</color>
+    <!-- dark orange -->
+    <color name="black">#000000</color>
+    <!--前景色-->
+
+    <color name="resin_fill_color">#80D8FF</color>
+
+    <color name="home_fill_color">#CC80D8FF</color>
+
+    <color name="abyss_fill">#789D76</color>
+    <color name="daily_fill">#BE9D61</color>
+    <color name="event_fill">#5F84A4</color>
+    <color name="mail_fill">#7F73AA</color>
+    <color name="adventure_fill">#D56C6C</color>
+    <color name="task_fill">#75B5B7</color>
+    <color name="other_fill">#78ACC8</color>
+    <!--背景色-->
+
+    <!--操作栏颜色-->
+    <color name="background_light">@color/material_grey_50</color>
+    <color name="primary_light">@color/material_grey_100</color>
+    <color name="primary_dark_light">@color/material_grey_600</color>
+    <color name="navigation_bar_light">@color/background_light</color>
+    <color name="primary_dark_light_light_status_bar">@color/material_grey_300</color>
+
+    <color name="background_dark">#ff212121</color>
+    <color name="primary_dark">@color/material_grey_900</color>
+    <color name="primary_dark_dark">#101010</color>
+    <color name="navigation_bar_dark">@color/background_dark</color>
+
+    <color name="cardview_light_background">#ffffff</color>
+    <color name="cardview_dark_background">@color/material_grey_800</color>
+
+    <color name="navigation_bar_divider_light">#1f000000</color>
+    <color name="navigation_bar_divider_dark">#1fffffff</color>
+    <!--状态栏-->
+    //#ffffff
+
+    <color name="grey_active">#9e9e9e</color>
+
+    <color name="blue_grey_inactive">#90a4ae</color>
+    <color name="gery_inactive">#e0e0e0</color>
+
+    <color name="grey_silver">#bccbde</color>
+    <color name="orange">#e05915</color>
+    <color name="green">#8bf0ba</color>
+
+    <color name="transparent">#00000000</color>
+    <color name="chartreuse">#7FFF00</color>
+    <color name="white">#FFFFFFFF</color>
+    <color name="yellow">#FBC02D</color>
+    <color name="spring_green">#00FF7F</color>
+    <color name="cyan">#00FFFF</color>
+    <color name="azure">#007FFF</color>
+    <color name="blue">#0000FF</color>
+    <color name="violet">#7F00FF</color>
+    <color name="magenta">#FF00FF</color>
+    <array name="rainbow">
+        <item>@color/red</item>
+        <item>@color/orange</item>
+        <item>@color/yellow</item>
+        <item>@color/chartreuse</item>
+        <item>@color/green</item>
+        <item>@color/spring_green</item>
+        <item>@color/cyan</item>
+        <item>@color/azure</item>
+        <item>@color/blue</item>
+        <item>@color/violet</item>
+        <item>@color/magenta</item>
+    </array>
+    <color name="light_blue_50">#FFE1F5FE</color>
+    <color name="light_blue_200">#FF81D4FA</color>
+    <color name="light_blue_600">#FF039BE5</color>
+    <color name="light_blue_900">#FF01579B</color>
+</resources>

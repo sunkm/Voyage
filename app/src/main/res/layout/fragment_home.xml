@@ -1,0 +1,463 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:animateLayoutChanges="true"
+    android:overScrollMode="never"
+    android:scrollbars="vertical"
+    tools:context=".ui.home.HomeFragment">
+
+    <LinearLayout
+        android:id="@+id/containers"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="8dp"
+        android:animateLayoutChanges="true"
+        android:orientation="vertical"
+        android:paddingStart="?android:listPreferredItemPaddingStart"
+        android:paddingEnd="?android:listPreferredItemPaddingEnd"
+        android:paddingBottom="16dp"
+        tools:ignore="UselessParent">
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/refresh"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_8"
+            android:hapticFeedbackEnabled="true">
+
+            <com.drake.statelayout.StateLayout
+                android:id="@+id/state"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <FrameLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:animateLayoutChanges="true"
+                    android:animationCache="true">
+
+                    <androidx.appcompat.widget.AppCompatImageView
+                        android:id="@+id/dongman"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:scaleType="matrix" />
+
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="bottom"
+                        android:minHeight="@dimen/dp_46">
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical"
+                            android:padding="@dimen/dp_16">
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/title"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/dp_78"
+                                android:animateLayoutChanges="true"
+                                android:fontFamily="sans-serif-medium"
+                                android:freezesText="true"
+                                android:text="今日文案"
+                                android:textColor="?android:attr/textColorPrimary"
+                                tools:ignore="TextContrastCheck" />
+
+                            <androidx.appcompat.widget.AppCompatTextView
+                                android:id="@+id/content"
+                                style="@style/TextView.SansSerif"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:animateLayoutChanges="true"
+                                android:text="暂无文案"
+                                android:textColor="?android:attr/textColorPrimary"
+                                android:textSize="@dimen/sp_17"
+                                android:typeface="sans"
+                                tools:ignore="TextContrastCheck" />
+                        </LinearLayout>
+
+                    </FrameLayout>
+
+                </FrameLayout>
+
+            </com.drake.statelayout.StateLayout>
+
+
+        </com.google.android.material.card.MaterialCardView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="6dp"
+            android:orientation="vertical">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/daily"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_weight="1.0">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/dp_2">
+
+                    <com.manchuan.tools.view.MaterialCircleIconView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_8"
+                        android:src="@drawable/baseline_today_24"
+                        app:iconColorName="red" />
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:padding="@dimen/dp_16">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:maxLines="1"
+                            android:text="60秒看世界"
+                            android:textColor="@color/textColor"
+                            android:textSize="@dimen/sp_15" />
+
+                        <com.drake.engine.widget.MarqueeTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="marquee"
+                            android:singleLine="true"
+                            android:text="了解每日趣事"
+                            android:textColor="@color/textColorSecond"
+                            android:textSize="@dimen/sp_13"
+                            tools:ignore="TextContrastCheck" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/genshintool"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/dp_6"
+                android:layout_weight="1.0">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/dp_2">
+
+                    <com.manchuan.tools.view.MaterialCircleIconView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_8"
+                        android:src="@drawable/messages"
+                        app:iconColorName="green" />
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:padding="@dimen/dp_16">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:maxLines="1"
+                            android:text="远航反馈社区"
+                            android:textColor="@color/textColor"
+                            android:textSize="@dimen/sp_15" />
+
+                        <com.drake.engine.widget.MarqueeTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="marquee"
+                            android:singleLine="true"
+                            android:text="如遇BUG或有功能建议可以在此社区反馈"
+                            android:textColor="@color/textColorSecond"
+                            android:textSize="@dimen/sp_13"
+                            tools:ignore="TextContrastCheck" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/trans"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_6"
+                android:layout_weight="1.0">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/dp_2">
+
+                    <com.manchuan.tools.view.MaterialCircleIconView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_8"
+                        android:src="@drawable/baseline_wifi_tethering_24"
+                        app:iconColorName="blue" />
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:padding="@dimen/dp_16">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:maxLines="1"
+                            android:text="局域网快传"
+                            android:textColor="@color/textColor"
+                            android:textSize="@dimen/sp_15" />
+
+                        <com.drake.engine.widget.MarqueeTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="marquee"
+                            android:singleLine="true"
+                            android:text="快捷简单的跨设备传输文件"
+                            android:textColor="@color/textColorSecond"
+                            android:textSize="@dimen/sp_13"
+                            tools:ignore="TextContrastCheck" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/movies"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_6"
+                android:layout_weight="1.0">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/dp_2">
+
+                    <com.manchuan.tools.view.MaterialCircleIconView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_8"
+                        android:src="@drawable/ic_baseline_local_movies_24"
+                        app:iconColorName="pink" />
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:padding="@dimen/dp_16">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:maxLines="1"
+                            android:text="电影大全"
+                            android:textColor="@color/textColor"
+                            android:textSize="@dimen/sp_15" />
+
+                        <com.drake.engine.widget.MarqueeTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:ellipsize="marquee"
+                            android:singleLine="true"
+                            android:text="海量电影免费看"
+                            android:textColor="@color/textColorSecond"
+                            android:textSize="@dimen/sp_13"
+                            tools:ignore="TextContrastCheck" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/huaijiu"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_6"
+                android:layout_weight="1.0">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/dp_2">
+
+                    <com.manchuan.tools.view.MaterialCircleIconView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_8"
+                        android:src="@drawable/baseline_gamepad_24"
+                        app:iconColorName="teal" />
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:padding="@dimen/dp_16">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:maxLines="1"
+                            android:text="怀旧游戏"
+                            android:textColor="@color/textColor"
+                            android:textSize="@dimen/sp_15" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:maxLines="1"
+                            android:text="愿我们找回童年的快乐"
+                            android:textColor="@color/textColorSecond"
+                            android:textSize="@dimen/sp_13"
+                            tools:ignore="TextContrastCheck" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/speak_audio"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_6"
+                android:layout_weight="1.0">
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/dp_2">
+
+                    <com.manchuan.tools.view.MaterialCircleIconView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="@dimen/dp_8"
+                        android:src="@drawable/baseline_menu_book_24"
+                        app:iconColorName="cyan" />
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:padding="@dimen/dp_16">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:maxLines="1"
+                            android:text="免费有声小说"
+                            android:textColor="@color/textColor"
+                            android:textSize="@dimen/sp_15" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true"
+                            android:text="为您整理收集最新免费的有声小说"
+                            android:textColor="@color/textColorSecond"
+                            android:textSize="@dimen/sp_13"
+                            tools:ignore="TextContrastCheck" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/genshin"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_6"
+                android:layout_weight="1.0">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/dp_2">
+
+                    <com.manchuan.tools.view.MaterialCircleIconView
+                        android:layout_width="@dimen/sp_44"
+                        android:layout_height="@dimen/sp_44"
+                        android:layout_marginStart="@dimen/dp_8"
+                        android:src="@drawable/icon_magic_arts"
+                        app:iconColorName="purple" />
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:orientation="vertical"
+                        android:padding="@dimen/dp_16">
+
+                        <androidx.appcompat.widget.AppCompatTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:maxLines="1"
+                            android:text="原神工具箱"
+                            android:textColor="@color/textColor"
+                            android:textSize="@dimen/sp_15" />
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:singleLine="true"
+                            android:text="支持查询玩家信息、签到、抽卡分析等"
+                            android:textColor="@color/textColorSecond"
+                            android:textSize="@dimen/sp_13"
+                            tools:ignore="TextContrastCheck" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

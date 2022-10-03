@@ -1,0 +1,30 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.Material3.Dark.YuanHang">
+        <!-- Customize your theme here. -->
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:fontFamily">@font/sans</item>
+        <item name="android:windowContentTransitions">true</item>
+        <item name="buttonStyle">@style/Widget.MaterialComponents.Button.OutlinedButton</item>
+        <item name="android:forceDarkAllowed" tools:ignore="NewApi">false</item>
+        <item name="preferenceTheme">@style/PreferenceThemeOverlay.Rikka.Material3</item>
+        <item name="pickerColorEditTextColor">@color/textColor</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.DayNight" />
+
+    <style name="MyWidgetTheme" parent="@style/Theme.AppCompat.DayNight">
+        <item name="android:background">@drawable/bg_widget_genshin_content_dark</item>
+    </style>
+
+</resources>

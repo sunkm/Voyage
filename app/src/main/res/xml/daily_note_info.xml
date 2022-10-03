@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<appwidget-provider xmlns:android="http://schemas.android.com/apk/res/android"
+    android:initialLayout="@layout/daily_note"
+    android:minWidth="300dp"
+    android:minHeight="110dp"
+    android:previewImage="@drawable/img_widget_genshin_preview"
+    android:resizeMode="none"
+    android:updatePeriodMillis="600000" />

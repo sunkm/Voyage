@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rootLayout"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/bgIv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:src="@drawable/genshin" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignStart="@id/bgIv"
+        android:layout_alignTop="@id/bgIv"
+        android:layout_alignEnd="@id/bgIv"
+        android:layout_alignBottom="@id/bgIv">
+
+        <ImageView
+            android:id="@+id/iconIv"
+            android:layout_width="16dp"
+            android:layout_height="16dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="12dp"
+            android:src="@drawable/logo_widget_genshin" />
+
+        <TextView
+            style="@style/TextStyle.11.Medium"
+            android:layout_alignTop="@id/iconIv"
+            android:layout_alignBottom="@id/iconIv"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@id/iconIv"
+            android:gravity="center"
+            android:text="实时便笺"
+            android:textColor="@color/white" />
+
+        <TextView
+            style="@style/TextStyle"
+            android:layout_alignTop="@id/iconIv"
+            android:layout_alignBottom="@id/iconIv"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="12dp"
+            android:gravity="center"
+            android:text="数据来源于米游社"
+            android:textColor="@color/white80"
+            android:textSize="9sp" />
+
+        <FrameLayout
+            android:id="@+id/contentRootLayout"
+            style="@style/MyWidgetTheme"
+            android:layout_width="196dp"
+            android:layout_height="108dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginStart="8dp"
+            android:layout_marginBottom="8dp">
+
+            <RelativeLayout
+                android:id="@+id/contentLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingHorizontal="17dp"
+                android:paddingVertical="14dp"
+                android:paddingLeft="17dp"
+                android:paddingTop="14dp"
+                android:paddingRight="17dp"
+                android:paddingBottom="14dp"
+                android:visibility="visible">
+
+                <TextView
+                    android:id="@+id/contentTv1"
+                    style="@style/TextStyle.14"
+                    android:layout_height="20dp"
+                    android:gravity="center"
+                    android:textColor="@color/color_widget_genshin_content_text" />
+
+                <TextView
+                    android:id="@+id/contentTitleTv1"
+                    style="@style/TextStyle.10"
+                    android:layout_height="14dp"
+                    android:layout_below="@id/contentTv1"
+                    android:text="原粹树脂"
+                    android:textColor="@color/color_widget_genshin_content_title_text" />
+
+                <TextView
+                    android:id="@+id/contentTv3"
+                    style="@style/TextStyle.14"
+                    android:layout_height="20dp"
+                    android:layout_below="@id/contentTitleTv1"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:textColor="@color/color_widget_genshin_content_text" />
+
+                <TextView
+                    android:id="@+id/contentTitleTv3"
+                    style="@style/TextStyle.10"
+                    android:layout_height="14dp"
+                    android:layout_below="@id/contentTv3"
+                    android:text="每日委托奖励"
+                    android:textColor="@color/color_widget_genshin_content_title_text" />
+
+                <TextView
+                    android:id="@+id/contentTv2"
+                    style="@style/TextStyle.14"
+                    android:layout_height="20dp"
+                    android:layout_marginLeft="84dp"
+                    android:gravity="center"
+                    android:textColor="@color/color_widget_genshin_content_text" />
+
+                <TextView
+                    android:id="@+id/contentTitleTv2"
+                    style="@style/TextStyle.10"
+                    android:layout_height="14dp"
+                    android:layout_below="@id/contentTv2"
+                    android:layout_alignLeft="@id/contentTv2"
+                    android:text="探索派遣"
+                    android:textColor="@color/color_widget_genshin_content_title_text" />
+
+                <TextView
+                    android:id="@+id/contentTv4"
+                    style="@style/TextStyle.14"
+                    android:layout_height="20dp"
+                    android:layout_below="@id/contentTitleTv2"
+                    android:layout_marginLeft="84dp"
+                    android:layout_marginTop="10dp"
+                    android:gravity="center"
+                    android:textColor="@color/color_widget_genshin_content_text" />
+
+                <TextView
+                    android:id="@+id/contentTitleTv4"
+                    style="@style/TextStyle.10"
+                    android:layout_height="14dp"
+                    android:layout_below="@id/contentTv4"
+                    android:layout_alignLeft="@id/contentTv4"
+                    android:text="洞天财瓮"
+                    android:textColor="@color/color_widget_genshin_content_title_text" />
+            </RelativeLayout>
+
+            <LinearLayout
+                android:id="@+id/errorLayout"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:visibility="visible">
+
+                <ImageView
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:src="@drawable/icon_widget_paimon" />
+
+                <TextView
+                    android:id="@+id/errorTv"
+                    style="@style/TextStyle.10"
+                    android:layout_marginLeft="5dp"
+                    android:lineHeight="14dp"
+                    android:text="请先登录米游社账号~"
+                    android:textColor="@color/color_widget_genshin_content_text" />
+            </LinearLayout>
+        </FrameLayout>
+
+        <ImageView
+            android:id="@+id/moreView"
+            android:layout_width="75dp"
+            android:layout_height="20dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentBottom="true"
+            android:layout_marginEnd="12dp"
+            android:layout_marginBottom="12dp"
+            android:src="@drawable/bg_widget_genshin_btn_more"
+            android:visibility="gone" />
+    </RelativeLayout>
+</RelativeLayout>

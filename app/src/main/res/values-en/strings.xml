@@ -1,0 +1,7 @@
+<resources>
+    <string name="action_settings">Settings</string>
+    <string name="no_root">No Root Permission</string>
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Functions</string>
+    <string name="no_install_qq">QQ is not installed</string>
+</resources>

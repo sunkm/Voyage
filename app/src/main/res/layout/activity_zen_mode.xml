@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".activity.ZenModeActivity">
+
+    <ImageView
+        android:src="@drawable/zen"
+        android:layout_width="wrap_content"
+        android:padding="@dimen/dp_48"
+        android:layout_height="wrap_content"/>
+
+    <TextView
+        android:id="@+id/zen_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="禅定模式"
+        android:textColor="@color/textColor"
+        android:gravity="center"
+        android:textSize="@dimen/sp_28"
+        tools:ignore="HardcodedText" />
+
+    <TextView
+        android:layout_marginTop="@dimen/dp_10"
+        android:id="@+id/zen_sub_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/sp_16"
+        android:gravity="center"
+        android:textColor="@color/textColor"
+        android:text="开始设定禅定时间"/>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="@dimen/dp_12"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.robinhood.ticker.TickerView
+            android:id="@+id/zen_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"/>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+    <Button
+        android:id="@+id/zen_start"
+        android:text="开始禅定"
+        android:layout_marginTop="@dimen/dp_16"
+        android:layout_width="@dimen/dp_98"
+        android:layout_height="wrap_content"/>
+
+</androidx.appcompat.widget.LinearLayoutCompat>

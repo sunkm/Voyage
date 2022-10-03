@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/rootLay"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@id/appbar"
+        style="@style/Widget.Material3.AppBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:liftOnScroll="false">
+
+        <com.google.android.material.appbar.SubtitleCollapsingToolbarLayout
+            android:id="@id/ctl"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            app:collapsedSubtitleTextAppearance="@style/TextAppearance.SubTitle.YuanHang2"
+            app:collapsedTitleTextAppearance="@style/TextAppearance.Title.YuanHang"
+            app:expandedTitleMargin="@dimen/dp_20"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed|snap|snapMargins"
+            app:titleCollapseMode="scale"
+            app:toolbarId="@id/toolbar">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/toolbar"
+                style="@style/Widget.Material3.Toolbar.Surface"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_64"
+                android:background="@android:color/transparent"
+                android:clipToPadding="false"
+                android:elevation="0dp"
+                android:paddingStart="0dp"
+                android:paddingEnd="@dimen/dp_8"
+                app:buttonGravity="center_vertical"
+                app:layout_collapseMode="pin"
+                app:navigationIcon="@drawable/baseline_arrow_back_24"
+                app:navigationIconTint="?android:attr/textColorPrimary" />
+        </com.google.android.material.appbar.SubtitleCollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+        android:id="@+id/refresh_data"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+        <com.drake.statelayout.StateLayout
+            android:id="@+id/state"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/rvHoliday"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/dp_8"
+                android:layout_marginRight="@dimen/dp_8" />
+
+        </com.drake.statelayout.StateLayout>
+
+    </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom|center|end"
+        android:layout_margin="@dimen/dp_20"
+        android:minWidth="0dp"
+        android:paddingStart="@dimen/dp_20"
+        android:paddingEnd="@dimen/dp_20"
+        android:text="切换日期"
+        app:icon="@drawable/date_range_material"
+        app:iconSize="@dimen/dp_20"
+        app:layout_behavior="com.google.android.material.behavior.HideBottomViewOnScrollBehavior" />
+
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

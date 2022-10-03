@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory android:title="存储类型">
+        <Preference
+            android:key="clear_image_cache"
+            android:summary="已占大小:"
+            android:title="缓存"
+            app:icon="@drawable/ic_image_black_24dp" />
+        <Preference
+            android:key="clear_video_cache"
+            android:summary="已占大小:"
+            android:title="视频"
+            app:icon="@drawable/ic_video"
+            app:iconTint="@color/colorPrimary"
+            app:isPreferenceVisible="false" />
+        <Preference
+            android:key="clear_data"
+            android:summary="已占大小:"
+            android:title="数据"
+            app:icon="@drawable/ic_data_usage_black_24dp" />
+        <Preference
+            android:key="clear_log"
+            android:summary="已占大小:"
+            android:title="日志"
+            app:icon="@drawable/ic_baseline_bug_report_24" />
+    </PreferenceCategory>
+    <PreferenceCategory android:title="存储清理">
+
+        <Preference
+            android:key="all_clear"
+            android:summary="清除软件所占用的空间，且所有权限需重新授予"
+            android:title="清除所有数据"
+            app:icon="@drawable/ic_delete_black_24dp"
+            app:iconTint="@color/colorPrimary" />
+
+    </PreferenceCategory>
+</PreferenceScreen>

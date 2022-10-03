@@ -1,0 +1,239 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <com.drake.statelayout.StateLayout
+        android:id="@+id/state"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:id="@+id/content_span"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <androidx.core.widget.NestedScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:overScrollMode="never"
+                android:scrollbars="none">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <FrameLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="290dp">
+
+                        <androidx.appcompat.widget.AppCompatImageView
+                            android:id="@+id/home_background"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:adjustViewBounds="false"
+                            android:cropToPadding="true"
+                            android:scaleType="centerCrop" />
+
+                        <FrameLayout
+                            android:id="@+id/frame"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <LinearLayout
+                                android:id="@+id/solid"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/dp_48"
+                                android:layout_gravity="bottom"
+                                android:orientation="horizontal" />
+
+                            <com.youth.banner.Banner
+                                android:id="@+id/home_banner"
+                                android:layout_width="match_parent"
+                                android:layout_height="@dimen/dp_136"
+                                android:layout_marginStart="@dimen/dp_16"
+                                android:layout_marginTop="@dimen/dp_78"
+                                android:layout_marginEnd="@dimen/dp_16"
+                                android:layout_marginBottom="@dimen/dp_16"
+                                app:banner_auto_loop="true"
+                                app:banner_indicator_margin="@dimen/dp_6"
+                                app:banner_loop_time="3500" />
+
+                        </FrameLayout>
+
+                    </FrameLayout>
+
+
+                    <androidx.appcompat.widget.LinearLayoutCompat
+                        android:id="@+id/container"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="?android:attr/windowBackground"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.textview.MaterialTextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp_16"
+                            android:layout_marginTop="@dimen/dp_8"
+                            android:layout_marginEnd="@dimen/dp_16"
+                            android:text="即将上映"
+                            android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
+                            android:textStyle="bold"
+                            app:fontFamily="@font/chaopai_bold" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/coming"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="@dimen/dp_8"
+                            android:layout_marginTop="@dimen/dp_8"
+                            android:layout_marginEnd="@dimen/dp_8"
+                            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                            app:spanCount="3"
+                            tools:itemCount="3"
+                            tools:listitem="@layout/items_movies" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp_16"
+                            android:layout_marginTop="@dimen/dp_8"
+                            android:layout_marginEnd="@dimen/dp_16"
+                            android:text="热播电影"
+                            android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
+                            android:textStyle="bold"
+                            app:fontFamily="@font/chaopai_bold" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/hot_film"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="@dimen/dp_8"
+                            android:layout_marginTop="@dimen/dp_8"
+                            android:layout_marginEnd="@dimen/dp_8"
+                            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                            app:spanCount="3"
+                            tools:itemCount="3"
+                            tools:listitem="@layout/items_movies" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp_16"
+                            android:layout_marginTop="@dimen/dp_8"
+                            android:layout_marginEnd="@dimen/dp_16"
+                            android:text="热播电视"
+                            android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
+                            android:textStyle="bold"
+                            app:fontFamily="@font/chaopai_bold" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/hot_tv"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="@dimen/dp_8"
+                            android:layout_marginTop="@dimen/dp_8"
+                            android:layout_marginEnd="@dimen/dp_8"
+                            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                            app:spanCount="3"
+                            tools:itemCount="3"
+                            tools:listitem="@layout/items_movies" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginStart="@dimen/dp_16"
+                            android:layout_marginTop="@dimen/dp_8"
+                            android:layout_marginEnd="@dimen/dp_16"
+                            android:text="热播综艺"
+                            android:textAppearance="@style/TextAppearance.Material3.TitleMedium"
+                            android:textStyle="bold"
+                            app:fontFamily="@font/chaopai_bold" />
+
+                        <androidx.recyclerview.widget.RecyclerView
+                            android:id="@+id/hot_show"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginStart="@dimen/dp_8"
+                            android:layout_marginTop="@dimen/dp_8"
+                            android:layout_marginEnd="@dimen/dp_8"
+                            app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                            app:spanCount="3"
+                            tools:itemCount="3"
+                            tools:listitem="@layout/items_movies" />
+
+                    </androidx.appcompat.widget.LinearLayoutCompat>
+
+                </LinearLayout>
+
+            </androidx.core.widget.NestedScrollView>
+
+            <eightbitlab.com.blurview.BlurView
+                android:id="@+id/topbar"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_64"
+                android:clickable="true"
+                android:focusable="false"
+                app:blurOverlayColor="#B3000000">
+
+                <androidx.appcompat.widget.LinearLayoutCompat
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_64"
+                    android:layout_gravity="bottom|center"
+                    android:layout_marginStart="@dimen/dp_4"
+                    android:layout_marginEnd="@dimen/dp_4">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/search_bar"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/dp_46"
+                        android:layout_margin="@dimen/dp_10"
+                        android:layout_weight="1"
+                        app:cardBackgroundColor="#2FFFFFFF"
+                        app:cardCornerRadius="@dimen/dp_6"
+                        app:strokeWidth="0dp">
+
+                        <androidx.appcompat.widget.LinearLayoutCompat
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="horizontal">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:layout_width="@dimen/dp_32"
+                                android:layout_height="match_parent"
+                                android:layout_marginStart="@dimen/dp_8"
+                                android:padding="@dimen/dp_6"
+                                app:srcCompat="@drawable/search_material"
+                                app:tint="?android:attr/textColorPrimary" />
+
+                            <com.google.android.material.textview.MaterialTextView
+                                android:id="@+id/search_src_text"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="@dimen/dp_8"
+                                android:layout_marginEnd="@dimen/dp_8"
+                                android:hint="苍兰诀"
+                                android:textColor="?android:attr/textColorPrimary"
+                                android:textSize="@dimen/sp_15" />
+
+                        </androidx.appcompat.widget.LinearLayoutCompat>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                </androidx.appcompat.widget.LinearLayoutCompat>
+
+            </eightbitlab.com.blurview.BlurView>
+
+        </FrameLayout>
+
+    </com.drake.statelayout.StateLayout>
+
+</layout>

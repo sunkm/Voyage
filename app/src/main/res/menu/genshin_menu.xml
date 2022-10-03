@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/home"
+        android:enabled="true"
+        android:icon="@drawable/home_round"
+        android:title="@string/menu_home" />
+    <item
+        android:id="@+id/functions"
+        android:enabled="true"
+        android:icon="@drawable/map"
+        android:title="地图" />
+    <item
+        android:id="@+id/my"
+        android:enabled="true"
+        android:icon="@drawable/account_circle"
+        android:title="@string/my_account" />
+</menu>

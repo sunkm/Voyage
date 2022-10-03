@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="action_settings">設置</string>
+    <string name="no_root">无Root權限</string>
+    <string name="menu_home">首頁</string>
+    <string name="menu_gallery">功能</string>
+    <string name="no_install_qq">未安裝QQ</string>
+</resources>

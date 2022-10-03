@@ -1,0 +1,435 @@
+<resources xmlns:tools="http://schemas.android.com/tools" xmlns:xliff="urn:oasis:names:tc:xliff:document:1.2" tools:ignore="MissingTranslation">
+    <string name="app_name">Voyage</string>
+    <string name="notification_channel">音频服务</string>
+    <string name="notification_channel_description">音乐播放通知</string>
+
+    <string name="exo_download_notification_channel_name">Downloads</string>
+
+    <string name="label_pause">Pause</string>
+    <string name="label_play">Play</string>
+    <string name="label_previous">Previous</string>
+    <string name="label_next">Next</string>
+    <string name="appbar_scrolling_view_behavior">com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior</string>
+    <string name="about_page_open_with">打开方式：</string>
+    <string name="about_page_browser">浏览器</string>
+    <string name="menu_home">首页</string>
+    <string name="menu_gallery">功能</string>
+    <string name="hour">小时</string>
+    <string name="album_name_all">All Media</string>
+    <string name="button_preview">Preview</string>
+    <string name="button_apply_default">Apply</string>
+    <string name="button_apply">Apply(%1$d)</string>
+    <string name="button_back">Back</string>
+    <string name="button_ok">OK</string>
+    <string name="button_original">Original</string>
+    <string name="button_sure_default">Sure</string>
+    <string name="button_sure">Sure</string>
+    <string name="button_null">""</string>
+    <string name="button_complete">Complete</string>
+    <string name="folder_count">%1$s(%2$d)</string>
+    <string name="picture_size">%1$s M</string>
+
+    <string name="photo_grid_capture">Camera</string>
+    <string name="empty_text">No media yet</string>
+    <string name="error_over_count">You can only select up to %1$d media files</string>
+    <string name="error_over_count_of_image">You can only select up to %1$d media of image files</string>
+    <string name="error_over_count_of_video">You can only select up to %1$d media of video files</string>
+    <string name="error_file_type">Unsupported file type</string>
+    <string name="error_type_conflict">Can\'t select images and videos at the same time</string>
+    <string name="error_no_video_activity">No App found supporting video preview</string>
+    <string name="error_over_original_size">Can\'t select the images larger than %1$d MB</string>
+    <string name="error_over_original_count">%1$d images over %2$d MB. Original will be unchecked</string>
+    <string name="error_crop">Crop Failed</string>
+    <string name="please_select_media_resource">Please select media resource</string>
+    <string name="empty_album">album is empty</string>
+
+    <string name="ucrop_label_original">Original</string>
+    <string name="ucrop_label_edit_photo">Edit Photo</string>
+
+    <string name="ucrop_menu_crop">Crop</string>
+
+    <string name="ucrop_error_input_data_is_absent">Both input and output Uri must be specified</string>
+    <string name="ucrop_mutate_exception_hint">Therefore, override color resource (ucrop_color_toolbar_widget) in your app to make it work on pre-L devices</string>
+
+    <string name="ucrop_gif_tag">gif</string>
+    <plurals name="error_over_count">
+        <item quantity="one">You can only select one media file</item>
+        <item quantity="many">You can only select up to %1$d media files</item>
+    </plurals>
+    <string name="error_under_quality">Under quality</string>
+    <string name="error_over_quality">Over quality</string>
+    <string name="dkplayer_replay">重新播放</string>
+    <string name="dkplayer_lock_tip">请先解锁屏幕！</string>
+    <string name="dkplayer_unlocked">已解锁</string>
+    <string name="dkplayer_locked">已锁定</string>
+    <string name="dkplayer_error_message">出了点小问题，请稍后重试</string>
+    <string name="dkplayer_retry"> 重    试 </string>
+    <string name="dkplayer_continue_play">继续播放</string>
+    <string name="dkplayer_wifi_tip">您正在使用移动网络，继续播放将消耗流量</string>
+    <string name="minute">分钟</string>
+    <string name="open_drawer">Open Drawer</string>
+    <string name="close_drawer">Close Drawer</string>
+    <string name="zen_mode_desc">帮助您远离手机，享受生活。</string>
+    <string name="common_permission_hint">授权提示</string>
+    <string name="common_permission_message">使用此功能需要先授予%s</string>
+    <string name="common_permission_granted">授予</string>
+    <string name="common_permission_denied">取消</string>
+    <string name="not_downloaded">未下载</string>
+    <string name="click_to_play">点击播放</string>
+    <string name="merge">合并</string>
+    <string name="waiting">等待中</string>
+    <string name="downloading">下载中…</string>
+    <string name="enter_source_file_path">请输入源文件路径</string>
+    <string name="enter_origin_document">请输入原文件</string>
+    <string name="enter_target_file_path">请输入目标文件路径</string>
+    <string name="output_target_file">请输出目标文件</string>
+    <string name="change_format">转变封装格式</string>
+    <string name="download_m3u8_file">已下载M3U8文件</string>
+    <string name="download_setting">下载设置</string>
+    <string name="qr_code_scan">二维码扫描</string>
+    <string name="normal_download">普通下载</string>
+    <string name="m3u8_to_mp4">合并M3U8为MP4</string>
+    <string name="pause_all_download_task">暂停所有下载任务</string>
+    <string name="resume_all_download_task">恢复所有下载任务</string>
+    <string name="storage_location">存储位置</string>
+    <string name="cache_file_size">缓存文件大小</string>
+    <string name="clear_cache">清理缓存</string>
+    <string name="open_storage_directory">打开存储目录</string>
+    <string name="maximum_concurrent_number">最大并发数</string>
+    <string name="merge_ts_after_download">下载完成是否合并ts分片</string>
+    <string name="yes">是</string>
+    <string name="no">否</string>
+    <string name="ignore_certificate">是否忽略证书</string>
+    <string name="pause_download_on_mobile_network">移动网络下是否暂停下载</string>
+    <string name="convert_progress">已经转换的进度: %s\%</string>
+    <string name="download_paused_downloaded_size">下载暂停, 已下载=%s</string>
+    <string name="download_completed_total_size">下载完成, 总大小=%s</string>
+    <string name="download_error">下载错误</string>
+    <string name="progress_speed_downloaded">进度:%s, 速度:%s, 已下载:%s</string>
+    <string name="progress">进度:%s</string>
+    <string name="common_permission_alert">授权提醒</string>
+    <string name="common_permission_fail_hint">授权失败，请正确授予权限</string>
+    <string name="common_permission_fail_assign_hint">授权失败，请正确授予%s</string>
+    <string name="common_permission_manual_fail_hint">获取权限失败，请手动授予权限</string>
+    <string name="common_permission_manual_assign_fail_hint">获取权限失败，请手动授予%s</string>
+    <string name="common_permission_background_location_fail_hint">获取后台定位权限失败，\n请您选择《始终允许》</string>
+    <string name="common_permission_background_sensors_fail_hint">获取后台传感器权限失败，\n请您选择《始终允许》</string>
+    <string name="common_permission_media_location_hint_fail">获取媒体位置权限失败\n请清除应用数据后重试</string>
+    <string name="common_permission_goto_setting_page">前往授权</string>
+    <string name="splash_ad_unit_id">ca-app-pub-9790396069038412/2740392299</string>
+    <string name="common_permission_calendar">日历权限</string>
+    <string name="common_permission_camera">相机权限</string>
+    <string name="common_permission_contacts">通讯录权限</string>
+    <string name="common_permission_location">定位权限</string>
+    <string name="common_permission_location_background">后台定位权限</string>
+    <string name="common_permission_wireless_devices">附近的设备权限</string>
+    <string name="common_permission_microphone">麦克风权限</string>
+    <string name="common_permission_phone">电话权限</string>
+    <string name="common_permission_call_log">通话记录权限</string>
+    <string name="common_permission_sensors">身体传感器权限</string>
+    <string name="common_permission_sensors_background">后台身体传感器权限</string>
+    <string name="common_permission_activity_recognition">健身运动权限</string>
+    <string name="common_permission_media_location">读取媒体文件位置权限</string>
+    <string name="common_permission_sms">短信权限</string>
+    <string name="common_permission_storage">存储权限</string>
+    <string name="common_permission_post_notifications">发送通知权限</string>
+    <string name="common_permission_image_and_video">照片和视频权限</string>
+    <string name="common_permission_audio">音乐和音频权限</string>
+
+    <string name="common_permission_manage_storage">所有文件访问权限</string>
+    <string name="common_permission_install">安装应用权限</string>
+    <string name="common_permission_window">悬浮窗权限</string>
+    <string name="common_permission_setting">修改系统设置权限</string>
+    <string name="common_permission_notification">通知权限</string>
+    <string name="common_permission_notification_listener">通知栏监听权限</string>
+    <string name="common_permission_task">查看使用情况权限</string>
+    <string name="common_permission_alarm">查看闹钟提醒权限</string>
+    <string name="common_permission_not_disturb">勿扰权限</string>
+    <string name="common_permission_ignore_battery">忽略电池优化权限</string>
+    <string name="common_permission_vpn">\tVPN\t权限</string>
+    <string name="checker_ab_supported_supporting_text">"您的设备包含对无缝系统更新的支持，且存在 A/B 系统分区。"</string>
+    <string name="checker_ab_supported_virtual_supporting_text">"您的设备包含对新版无缝系统更新的支持，且存在虚拟 A /B 系统分区。虚拟 A/B 分区可以根据需要自由地调整大小。"</string>
+    <string name="checker_cpu_architecture_known_supporting_text">"您的设备使用基于 %1$s 架构的CPU。"</string>
+    <string name="checker_cpu_architecture_arm32_subtitle" translatable="false">32-bit ARM</string>
+    <string name="checker_cpu_architecture_arm32_binder64_subtitle" translatable="false">32-bit ARM &#8212; 64-bit Binder</string>
+    <string name="checker_cpu_architecture_arm64_subtitle" translatable="false">64-bit ARM</string>
+    <string name="checker_cpu_architecture_x86_subtitle" translatable="false">x86</string>
+    <string name="checker_cpu_architecture_x86_64_subtitle" translatable="false">64-bit x86</string>
+    <string name="private_text" tools:ignore="TypographyOther">本应用尊重并保护所有使用服务用户的个人隐私权。为了给您提供更准确、更有个性化的服务，本应用会按照本隐私权政策的规定使用和披露您的个人信息。但本应用将以高度的勤勉、审慎义务对待这些信息。除本隐私权政策另有规定外，在未征得您事先许可的情况下，本应用不会将这些信息对外披露或向第三方提供。本应用会不时更新本隐私权政策。 您在同意本应用服务使用协议之时，即视为您已经同意本隐私权政策全部内容。本隐私权政策属于本应用服务使用协议不可分割的一部分。
+
+1. 适用范围
+(a) 在您注册本应用帐号时，您根据本应用要求提供的个人注册信息；
+
+(b) 在您使用本应用网络服务，或访问本应用平台网页时，本应用自动接收并记录的您的浏览器和计算机上的信息，包括但不限于您的IP地址、浏览器的类型、使用的语言、访问日期和时间、软硬件特征信息及您需求的网页记录等数据；
+
+© 本应用通过合法途径从商业伙伴处取得的用户个人数据。
+
+您了解并同意，以下信息不适用本隐私权政策：
+
+(a) 您在使用本应用平台提供的搜索服务时输入的关键字信息；
+
+(b) 本应用收集到的您在本应用发布的有关信息数据，包括但不限于参与活动、成交信息及评价详情；
+
+© 违反法律规定或违反本应用规则行为及本应用已对您采取的措施。
+
+2. 信息使用
+(a)本应用不会向任何无关第三方提供、出售、出租、分享或交易您的个人信息，除非事先得到您的许可，或该第三方和本应用（含本应用关联公司）单独或共同为您提供服务，且在该服务结束后，其将被禁止访问包括其以前能够访问的所有这些资料。
+
+(b) 本应用亦不允许任何第三方以任何手段收集、编辑、出售或者无偿传播您的个人信息。任何本应用平台用户如从事上述活动，一经发现，本应用有权立即终止与该用户的服务协议。
+
+© 为服务用户的目的，本应用可能通过使用您的个人信息，向您提供您感兴趣的信息，包括但不限于向您发出产品和服务信息，或者与本应用合作伙伴共享信息以便他们向您发送有关其产品和服务的信息（后者需要您的事先同意）。
+
+3. 信息披露
+在如下情况下，本应用将依据您的个人意愿或法律的规定全部或部分的披露您的个人信息：
+
+(a) 经您事先同意，向第三方披露；
+
+(b)为提供您所要求的产品和服务，而必须和第三方分享您的个人信息；
+
+© 根据法律的有关规定，或者行政或司法机构的要求，向第三方或者行政、司法机构披露；
+
+(d) 如您出现违反中国有关法律、法规或者本应用服务协议或相关规则的情况，需要向第三方披露；
+
+(e) 如您是适格的知识产权投诉人并已提起投诉，应被投诉人要求，向被投诉人披露，以便双方处理可能的权利纠纷；
+
+(f) 在本应用平台上创建的某一交易中，如交易任何一方履行或部分履行了交易义务并提出信息披露请求的，本应用有权决定向该用户提供其交易对方的联络方式等必要信息，以促成交易的完成或纠纷的解决。
+
+(g) 其它本应用根据法律、法规或者网站政策认为合适的披露。
+
+4. 信息存储和交换
+本应用收集的有关您的信息和资料将保存在本应用及（或）其关联公司的服务器上，这些信息和资料可能传送至您所在国家、地区或本应用收集信息和资料所在地的境外并在境外被访问、存储和展示。
+
+5. Cookie的使用
+(a) 在您未拒绝接受cookies的情况下，本应用会在您的计算机上设定或取用cookies ，以便您能登录或使用依赖于cookies的本应用平台服务或功能。本应用使用cookies可为您提供更加周到的个性化服务，包括推广服务。
+
+(b) 您有权选择接受或拒绝接受cookies。您可以通过修改浏览器设置的方式拒绝接受cookies。但如果您选择拒绝接受cookies，则您可能无法登录或使用依赖于cookies的本应用网络服务或功能。
+
+(c) 通过本应用所设cookies所取得的有关信息，将适用本政策。
+
+6. 信息安全
+(a) 本应用帐号均有安全保护功能，请妥善保管您的用户名及密码信息。本应用将通过对用户密码进行加密等安全措施确保您的信息不丢失，不被滥用和变造。尽管有前述安全措施，但同时也请您注意在信息网络上不存在“完善的安全措施”。
+
+(b) 在使用本应用网络服务进行网上交易时，您不可避免的要向交易对方或潜在的交易对方 披露自己的个人信息，如联络方式或者邮政地址。
+
+7.本隐私政策的更改
+(a)如果决定更改隐私政策，我们会在本政策中、本公司网站中以及我们认为适当的位置发布这些更改，以便您了解我们如何收集、使用您的个人信息，哪些人可以访问这些信息，以及在什么情况下我们会透露这些信息。
+
+(b)本公司保留随时修改本政策的权利，因此请经常查看。如对本政策作出重大更改，本公司会通过网站通知的形式告知。
+
+为防止向第三方披露自己的个人信息，如联络方式或者邮政地址。请您妥善保护自己的个人信息，仅在必要的情形下向他人提供。如您发现自己的个人信息泄密，尤其是本应用用户名及密码发生泄露，请您立即联络本应用客服，以便本应用采取相应措施。</string>
+    <string name="second">秒</string>
+    <string name="no_install_qq">未安装QQ</string>
+
+    <string name="search">Search</string>
+    <string name="follow_system">Follow system</string>
+    <string name="copy">Copy</string>
+    <string name="no_root">No root</string>
+    <string name="action">Action</string>
+    <string name="share">Share</string>
+    <string name="other">其他功能</string>
+    <string name="qr_title">Qr Content</string>
+    <string name="qr_black">黑色色块</string>
+    <string name="qr_white">白色色块</string>
+
+
+    <!-- -
+        This is an ad unit ID for an interstitial test ad. Replace with your own interstitial ad unit id.
+        For more information, see https://support.google.com/admob/answer/3052638
+    <!- -->
+    <string name="title_activity_manage_space">管理空间</string>
+
+    <!-- Preference Titles -->
+    <string name="messages_header">Messages</string>
+    <string name="sync_header">Sync</string>
+
+    <!-- Messages Preferences -->
+    <string name="signature_title">Your signature</string>
+    <string name="reply_title">Default reply action</string>
+
+    <!-- Sync Preferences -->
+    <string name="sync_title">Sync email periodically</string>
+    <string name="attachment_title">Download incoming attachments</string>
+    <string name="attachment_summary_on">Automatically download attachments for incoming emails
+    </string>
+    <string name="attachment_summary_off">Only download attachments when manually requested</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+    <string name="large_text">
+        "Material is the metaphor.\n\n"
+
+        "A material metaphor is the unifying theory of a rationalized space and a system of motion."
+        "The material is grounded in tactile reality, inspired by the study of paper and ink, yet "
+        "technologically advanced and open to imagination and magic.\n"
+        "Surfaces and edges of the material provide visual cues that are grounded in reality. The "
+        "use of familiar tactile attributes helps users quickly understand affordances. Yet the "
+        "flexibility of the material creates new affordances that supercede those in the physical "
+        "world, without breaking the rules of physics.\n"
+        "The fundamentals of light, surface, and movement are key to conveying how objects move, "
+        "interact, and exist in space and in relation to each other. Realistic lighting shows "
+        "seams, divides space, and indicates moving parts.\n\n"
+
+        "Bold, graphic, intentional.\n\n"
+
+        "The foundational elements of print based design typography, grids, space, scale, color, "
+        "and use of imagery guide visual treatments. These elements do far more than please the "
+        "eye. They create hierarchy, meaning, and focus. Deliberate color choices, edge to edge "
+        "imagery, large scale typography, and intentional white space create a bold and graphic "
+        "interface that immerse the user in the experience.\n"
+        "An emphasis on user actions makes core functionality immediately apparent and provides "
+        "waypoints for the user.\n\n"
+
+        "Motion provides meaning.\n\n"
+
+        "Motion respects and reinforces the user as the prime mover. Primary user actions are "
+        "inflection points that initiate motion, transforming the whole design.\n"
+        "All action takes place in a single environment. Objects are presented to the user without "
+        "breaking the continuity of experience even as they transform and reorganize.\n"
+        "Motion is meaningful and appropriate, serving to focus attention and maintain continuity. "
+        "Feedback is subtle yet clear. Transitions are efﬁcient yet coherent.\n\n"
+
+        "3D world.\n\n"
+
+        "The material environment is a 3D space, which means all objects have x, y, and z "
+        "dimensions. The z-axis is perpendicularly aligned to the plane of the display, with the "
+        "positive z-axis extending towards the viewer. Every sheet of material occupies a single "
+        "position along the z-axis and has a standard 1dp thickness.\n"
+        "On the web, the z-axis is used for layering and not for perspective. The 3D world is "
+        "emulated by manipulating the y-axis.\n\n"
+
+        "Light and shadow.\n\n"
+
+        "Within the material environment, virtual lights illuminate the scene. Key lights create "
+        "directional shadows, while ambient light creates soft shadows from all angles.\n"
+        "Shadows in the material environment are cast by these two light sources. In Android "
+        "development, shadows occur when light sources are blocked by sheets of material at "
+        "various positions along the z-axis. On the web, shadows are depicted by manipulating the "
+        "y-axis only. The following example shows the card with a height of 6dp.\n\n"
+
+        "Resting elevation.\n\n"
+
+        "All material objects, regardless of size, have a resting elevation, or default elevation "
+        "that does not change. If an object changes elevation, it should return to its resting "
+        "elevation as soon as possible.\n\n"
+
+        "Component elevations.\n\n"
+
+        "The resting elevation for a component type is consistent across apps (e.g., FAB elevation "
+        "does not vary from 6dp in one app to 16dp in another app).\n"
+        "Components may have different resting elevations across platforms, depending on the depth "
+        "of the environment (e.g., TV has a greater depth than mobile or desktop).\n\n"
+
+        "Responsive elevation and dynamic elevation offsets.\n\n"
+
+        "Some component types have responsive elevation, meaning they change elevation in response "
+        "to user input (e.g., normal, focused, and pressed) or system events. These elevation "
+        "changes are consistently implemented using dynamic elevation offsets.\n"
+        "Dynamic elevation offsets are the goal elevation that a component moves towards, relative "
+        "to the component’s resting state. They ensure that elevation changes are consistent "
+        "across actions and component types. For example, all components that lift on press have "
+        "the same elevation change relative to their resting elevation.\n"
+        "Once the input event is completed or cancelled, the component will return to its resting "
+        "elevation.\n\n"
+
+        "Avoiding elevation interference.\n\n"
+
+        "Components with responsive elevations may encounter other components as they move between "
+        "their resting elevations and dynamic elevation offsets. Because material cannot pass "
+        "through other material, components avoid interfering with one another any number of ways, "
+        "whether on a per component basis or using the entire app layout.\n"
+        "On a component level, components can move or be removed before they cause interference. "
+        "For example, a floating action button (FAB) can disappear or move off screen before a "
+        "user picks up a card, or it can move if a snackbar appears.\n"
+        "On the layout level, design your app layout to minimize opportunities for interference. "
+        "For example, position the FAB to one side of stream of a cards so the FAB won’t interfere "
+        "when a user tries to pick up one of cards.\n\n"
+    </string>
+    <string name="textSizeString">文字大小</string>
+    <string name="marquee_speed">滚动速度</string>
+    <string name="todo">TODO</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="next">Next</string>
+
+    <string name="action_search">搜索</string>
+    <string name="system_apps">系统应用</string>
+    <string name="user_apps">用户应用</string>
+    <string name="action_settings">设置</string>
+    <string name="update_version">版本更新</string>
+    <string name="upgrade">更新</string>
+    <string name="cancel">取消</string>
+    <string name="battery_int">电量值</string>
+    <string name="title_activity_private">PrivateActivity</string>
+    <string name="title_activity_fullscreen_game">FullscreenGameActivity</string>
+    <string name="title_activity_fullscreen_video">FullscreenVideoActivity</string>
+    <string name="admin_receiver_status_disable_warning">取消激活后您可正常使用手机</string>
+    <string name="admin_receiver_status_disabled">禅定模式已关闭</string>
+    <string name="admin_receiver_status_pw_changed">锁屏密码已改变</string>
+    <string name="admin_receiver_status">禅定模式： %s</string>
+    <string name="menu_resources">资源库</string>
+    <string name="pages">页面</string>
+    <string name="check_update">检查更新</string>
+    <string name="alipay">支付宝捐赠</string>
+    <string name="joinGroup">加入QQ群</string>
+    <string name="wepay">微信捐赠</string>
+    <string name="title_activity_steps">StepsActivity</string>
+    <string name="title_activity_settings">SettingsActivity</string>
+    <string name="cloud_rules">EXIF信息</string>
+    <string name="send_files">Send Files</string>
+    <string name="receiver_files">Receiver Files</string>
+    <string name="network_settings">Network Settings</string>
+    <string name="location_settings">Location Setttings</string>
+    <string name="details">详情</string>
+    <string name="title_activity_genshin">GenshinActivity</string>
+    <string name="title_home">Home</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_notifications">Notifications</string>
+    <string name="my_account">我的</string>
+    <string name="pinyin">拼音查询</string>
+    <string name="color_value">Color Value</string>
+    <string name="appwidget_text">EXAMPLE</string>
+    <string name="add_widget">Add widget</string>
+    <string name="app_widget_description">This is an app widget description</string>
+    <string name="title_activity_subscribe_list">SubscribeListActivity</string>
+    <!-- Strings used for fragments for navigation -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+    <string name="previous">Previous</string>
+
+    <string name="lorem_ipsum">
+        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in scelerisque sem. Mauris
+        volutpat, dolor id interdum ullamcorper, risus dolor egestas lectus, sit amet mattis purus
+        dui nec risus. Maecenas non sodales nisi, vel dictum dolor. Class aptent taciti sociosqu ad
+        litora torquent per conubia nostra, per inceptos himenaeos. Suspendisse blandit eleifend
+        diam, vel rutrum tellus vulputate quis. Aliquam eget libero aliquet, imperdiet nisl a,
+        ornare ex. Sed rhoncus est ut libero porta lobortis. Fusce in dictum tellus.\n\n
+        Suspendisse interdum ornare ante. Aliquam nec cursus lorem. Morbi id magna felis. Vivamus
+        egestas, est a condimentum egestas, turpis nisl iaculis ipsum, in dictum tellus dolor sed
+        neque. Morbi tellus erat, dapibus ut sem a, iaculis tincidunt dui. Interdum et malesuada
+        fames ac ante ipsum primis in faucibus. Curabitur et eros porttitor, ultricies urna vitae,
+        molestie nibh. Phasellus at commodo eros, non aliquet metus. Sed maximus nisl nec dolor
+        bibendum, vel congue leo egestas.\n\n
+        Sed interdum tortor nibh, in sagittis risus mollis quis. Curabitur mi odio, condimentum sit
+        amet auctor at, mollis non turpis. Nullam pretium libero vestibulum, finibus orci vel,
+        molestie quam. Fusce blandit tincidunt nulla, quis sollicitudin libero facilisis et. Integer
+        interdum nunc ligula, et fermentum metus hendrerit id. Vestibulum lectus felis, dictum at
+        lacinia sit amet, tristique id quam. Cras eu consequat dui. Suspendisse sodales nunc ligula,
+        in lobortis sem porta sed. Integer id ultrices magna, in luctus elit. Sed a pellentesque
+        est.\n\n
+        Aenean nunc velit, lacinia sed dolor sed, ultrices viverra nulla. Etiam a venenatis nibh.
+        Morbi laoreet, tortor sed facilisis varius, nibh orci rhoncus nulla, id elementum leo dui
+        non lorem. Nam mollis ipsum quis auctor varius. Quisque elementum eu libero sed commodo. In
+        eros nisl, imperdiet vel imperdiet et, scelerisque a mauris. Pellentesque varius ex nunc,
+        quis imperdiet eros placerat ac. Duis finibus orci et est auctor tincidunt. Sed non viverra
+        ipsum. Nunc quis augue egestas, cursus lorem at, molestie sem. Morbi a consectetur ipsum, a
+        placerat diam. Etiam vulputate dignissim convallis. Integer faucibus mauris sit amet finibus
+        convallis.\n\n
+        Phasellus in aliquet mi. Pellentesque habitant morbi tristique senectus et netus et
+        malesuada fames ac turpis egestas. In volutpat arcu ut felis sagittis, in finibus massa
+        gravida. Pellentesque id tellus orci. Integer dictum, lorem sed efficitur ullamcorper,
+        libero justo consectetur ipsum, in mollis nisl ex sed nisl. Donec maximus ullamcorper
+        sodales. Praesent bibendum rhoncus tellus nec feugiat. In a ornare nulla. Donec rhoncus
+        libero vel nunc consequat, quis tincidunt nisl eleifend. Cras bibendum enim a justo luctus
+        vestibulum. Fusce dictum libero quis erat maximus, vitae volutpat diam dignissim.
+    </string>
+</resources>

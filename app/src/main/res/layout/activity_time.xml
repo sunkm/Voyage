@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.drawerlayout.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_gravity="start"
+    app:consumeSystemWindowsInsets="start|end"
+    android:id="@+id/drawerLayout"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/time_lay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:id="@+id/icons"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:animateLayoutChanges="true"
+            android:animationCache="true"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            android:paddingStart="26dp">
+
+            <ImageView
+                android:id="@+id/battery"
+                android:layout_width="32dp"
+                android:layout_height="56dp"
+                android:padding="5dp"
+                android:src="@drawable/twotone_battery_full_black_24dp" />
+
+            <ImageView
+                android:id="@+id/five_g"
+                android:layout_width="32dp"
+                android:layout_height="56dp"
+                android:padding="5dp"
+                android:src="@drawable/ic_baseline_5g_24"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="right"
+            android:orientation="horizontal"
+            android:padding="16dp"
+            tools:ignore="RtlHardcoded">
+
+            <ImageView
+                android:id="@+id/time_fullscreen_exit"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:padding="16dp"
+                android:tint="@color/textColor"
+                app:srcCompat="@drawable/ic_baseline_settings_24"
+                tools:ignore="ContentDescription,ImageContrastCheck,UseAppTint" />
+
+            <ImageView
+                android:id="@+id/switch_mode"
+                android:layout_width="56dp"
+                android:layout_height="56dp"
+                android:padding="16dp"
+                app:srcCompat="@drawable/outline_nights_stay_black_48"
+                app:tint="@color/textColor"
+                tools:ignore="ContentDescription,ImageContrastCheck" />
+
+        </LinearLayout>
+
+        <FrameLayout
+            android:id="@+id/time_lays"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:animateLayoutChanges="true">
+
+            <com.robinhood.ticker.TickerView
+                android:id="@+id/time_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center" />
+
+            <com.robinhood.ticker.TickerView
+                android:id="@+id/date_view"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom|right"
+                android:layout_margin="@dimen/dp_24" />
+
+        </FrameLayout>
+
+    </RelativeLayout>
+
+    <com.google.android.material.navigation.NavigationView
+        android:id="@+id/nav_drawer"
+        android:layout_width="wrap_content"
+        android:layout_gravity="start"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:id="@+id/settings"
+            android:layout_marginLeft="@dimen/dp_32"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+    </com.google.android.material.navigation.NavigationView>
+
+</androidx.drawerlayout.widget.DrawerLayout>
+

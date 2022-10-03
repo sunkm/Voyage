@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:padding="10dp">
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/icon"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center_vertical"
+        app:tint="?android:attr/textColorPrimary"
+        tools:ignore="UseAppTint" />
+
+    <LinearLayout
+        android:id="@+id/area_information_span"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_vertical"
+        android:layout_marginStart="15dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="地区"
+            android:textColor="?android:attr/textColorSecondary"
+            android:textSize="@dimen/sp_15"
+            android:textStyle="bold" />
+
+        <LinearLayout
+            android:id="@+id/reputation_span"
+            android:layout_width="match_parent"
+            android:layout_height="26dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:text="声望等级 - "
+                android:textColor="?attr/paletteTertiary40"
+                android:textSize="@dimen/sp_15" />
+
+            <TextView
+                android:id="@+id/reputation_level"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginEnd="20dp"
+                android:text="10级"
+                android:textColor="?attr/paletteTertiary40"
+                android:textSize="@dimen/sp_15" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:gravity="center">
+
+        <TextView
+            android:id="@+id/explorations_value"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="?attr/colorSafe"
+            android:textSize="@dimen/sp_13" />
+
+    </LinearLayout>
+
+</LinearLayout>

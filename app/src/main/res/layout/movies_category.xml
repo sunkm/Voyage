@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:id="@+id/rootLay"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@id/appbar"
+            style="@style/Widget.Material3.AppBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:liftOnScroll="false">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/toolbar"
+                style="@style/Widget.Material3.Toolbar.Surface"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_64"
+                android:background="@android:color/transparent"
+                android:clipToPadding="false"
+                android:elevation="0dp"
+                android:paddingStart="0dp"
+                android:paddingEnd="@dimen/dp_8"
+                app:buttonGravity="center_vertical"
+                app:layout_collapseMode="pin" />
+
+            <androidx.appcompat.widget.LinearLayoutCompat
+                android:id="@+id/container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:animateLayoutChanges="true"
+                android:orientation="vertical">
+
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/category"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_26"
+                    android:layout_marginTop="@dimen/dp_2"
+                    android:background="@color/transparent"
+                    app:tabContentStart="@dimen/dp_32"
+                    app:tabIndicator="@drawable/tab_indicator"
+                    app:tabIndicatorFullWidth="true"
+                    app:tabIndicatorGravity="stretch"
+                    app:tabMode="scrollable"
+                    app:tabRippleColor="@color/transparent"
+                    app:tabTextAppearance="@style/TextAppearance.AppCompat.Small"
+                    tools:ignore="SpeakableTextPresentCheck" />
+
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/types"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_26"
+                    android:layout_marginTop="@dimen/dp_4"
+                    android:background="@color/transparent"
+                    android:paddingEnd="@dimen/dp_8"
+                    app:tabContentStart="@dimen/dp_32"
+                    app:tabIndicator="@drawable/tab_indicator"
+                    app:tabIndicatorFullWidth="true"
+                    app:tabIndicatorGravity="stretch"
+                    app:tabMode="scrollable"
+                    app:tabRippleColor="@color/transparent"
+                    app:tabTextAppearance="@style/TextAppearance.AppCompat.Small"
+                    tools:ignore="SpeakableTextPresentCheck" />
+
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/areas"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_26"
+                    android:layout_marginTop="@dimen/dp_4"
+                    android:background="@color/transparent"
+                    android:paddingEnd="@dimen/dp_8"
+                    app:tabContentStart="@dimen/dp_32"
+                    app:tabIndicator="@drawable/tab_indicator"
+                    app:tabIndicatorFullWidth="true"
+                    app:tabIndicatorGravity="stretch"
+                    app:tabMode="scrollable"
+                    app:tabRippleColor="@color/transparent"
+                    app:tabTextAppearance="@style/TextAppearance.AppCompat.Small"
+                    tools:ignore="SpeakableTextPresentCheck" />
+
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/years"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_26"
+                    android:layout_marginTop="@dimen/dp_4"
+                    android:background="@color/transparent"
+                    android:paddingEnd="@dimen/dp_8"
+                    app:tabContentStart="@dimen/dp_32"
+                    app:tabIndicator="@drawable/tab_indicator"
+                    app:tabIndicatorFullWidth="true"
+                    app:tabIndicatorGravity="stretch"
+                    app:tabMode="scrollable"
+                    app:tabRippleColor="@color/transparent"
+                    app:tabTextAppearance="@style/TextAppearance.AppCompat.Small"
+                    tools:ignore="SpeakableTextPresentCheck" />
+
+                <com.google.android.material.tabs.TabLayout
+                    android:id="@+id/sort"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_26"
+                    android:layout_marginTop="@dimen/dp_4"
+                    android:layout_marginBottom="@dimen/dp_8"
+                    android:background="@color/transparent"
+                    android:paddingEnd="@dimen/dp_8"
+                    app:tabContentStart="@dimen/dp_32"
+                    app:tabIndicator="@drawable/tab_indicator"
+                    app:tabIndicatorFullWidth="true"
+                    app:tabIndicatorGravity="stretch"
+                    app:tabMode="scrollable"
+                    app:tabRippleColor="@color/transparent"
+                    app:tabTextAppearance="@style/TextAppearance.AppCompat.Small"
+                    tools:ignore="SpeakableTextPresentCheck" />
+
+            </androidx.appcompat.widget.LinearLayoutCompat>
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                style="?attr/materialIconButtonFilledTonalStyle"
+                android:text="收起"
+                android:id="@+id/expand"
+                app:iconPadding="@dimen/dp_8"
+                android:layout_marginStart="@dimen/dp_8"
+                android:layout_marginBottom="@dimen/dp_8"
+                android:layout_marginEnd="@dimen/dp_8"
+                app:icon="@drawable/expand_less_material"
+                app:iconGravity="textStart" />
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <com.drake.brv.PageRefreshLayout
+            android:id="@+id/state"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </com.drake.brv.PageRefreshLayout>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

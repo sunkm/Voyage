@@ -1,0 +1,34 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory app:title="常规">
+
+        <rikka.material.preference.MaterialSwitchPreference
+            app:icon="@drawable/ic_baseline_brightness_high_24"
+            app:title="屏幕常亮"
+            app:allowDividerBelow="true"
+            app:key="bright_key"
+            app:iconTint="?colorPrimaryDark"
+            app:defaultValue="true"/>
+
+        <EditTextPreference
+            app:isPreferenceVisible="false"
+            app:dialogTitle="设置亮屏时间 (单位:秒)"
+            app:icon="@drawable/ic_baseline_settings_brightness_24"
+            app:key="bright_time_key"
+            app:defaultValue="10"
+            app:title="亮屏时间" />
+
+        <rikka.preference.SimpleMenuPreference
+            app:defaultValue="linear"
+            app:tint="?colorPrimaryDark"
+            app:entries="@array/animation_types_entries"
+            app:entryValues="@array/animation_types_values"
+            app:icon="@drawable/ic_baseline_animation_24"
+            app:key="time_style"
+            app:title="动画样式"
+            app:useSimpleSummaryProvider="false" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

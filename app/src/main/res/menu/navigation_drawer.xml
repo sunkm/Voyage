@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:title="@string/pages">
+        <menu>
+            <item
+                android:id="@+id/nav_homes"
+                android:checkable="true"
+                android:icon="@drawable/ic_home"
+                android:title="@string/menu_home" />
+            <item
+                android:id="@+id/nav_functions"
+                android:checkable="true"
+                android:icon="@drawable/ic_alpha_f_box_outline"
+                android:title="@string/menu_gallery" />
+            <item
+                android:id="@+id/nav_resources"
+                android:checkable="true"
+                android:icon="@drawable/ic_resources"
+                android:title="@string/menu_resources" />
+        </menu>
+    </item>
+
+    <item android:title="@string/other">
+        <menu>
+            <item
+                android:id="@+id/joinGroup"
+                android:icon="@drawable/qq_icon"
+                android:title="@string/joinGroup" />
+            <item
+                android:id="@+id/check_update"
+                android:icon="@drawable/ic_update"
+                android:title="@string/check_update" />
+            <item
+                android:id="@+id/alipay"
+                android:icon="@drawable/zfb_icon"
+                android:title="@string/alipay"/>
+            <item
+                android:id="@+id/wepay"
+                android:icon="@drawable/wx_icon"
+                android:title="@string/wepay"
+                android:visible="false" />
+        </menu>
+    </item>
+
+</menu>

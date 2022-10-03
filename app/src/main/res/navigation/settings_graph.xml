@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/settings_graph"
+    app:startDestination="@id/main_settings">
+
+    <fragment
+        android:id="@+id/main_settings"
+        android:name="com.manchuan.tools.fragment.preferences.MainSettingsFragment"
+        android:label="设置" >
+        <action
+            android:id="@+id/action_main_settings_to_storage_fragment"
+            app:destination="@id/storage_fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/storage_fragment"
+        android:name="com.manchuan.tools.fragment.preferences.StorageFragment"
+        android:label="管理空间" >
+        <action
+            android:id="@+id/action_storage_fragment_to_main_settings"
+            app:destination="@id/main_settings" />
+    </fragment>
+</navigation>

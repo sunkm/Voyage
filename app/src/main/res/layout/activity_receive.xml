@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center|top"
+    android:orientation="vertical"
+    android:fitsSystemWindows="false"
+    android:id="@+id/container"
+    tools:context=".activity.transfer.SendFileActivity"
+    android:animateLayoutChanges="true">
+
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:id="@+id/progress"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        app:hideAnimationBehavior="outward"
+        app:indicatorColor="@array/rainbow"
+        app:indicatorDirectionLinear="leftToRight"
+        app:showAnimationBehavior="inward"
+        android:indeterminate="true"
+        app:indeterminateAnimationType="contiguous"
+        android:visibility="invisible"/>
+
+    <TextSwitcher
+        android:id="@+id/title"
+        style="@style/TextView.SansSerifCondensedMedium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_46"
+        android:text="@string/send_files"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        app:emojiCompatEnabled="true" />
+
+    <TextSwitcher
+        android:id="@+id/subtitle"
+        style="@style/TextView.SansSerifCondensedMedium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="准备开始"
+        android:textAppearance="@style/TextAppearance.AppCompat.Medium" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="16dp"
+        android:layout_weight="1"
+        android:animateLayoutChanges="true"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/steps"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:animateLayoutChanges="true"
+            android:orientation="vertical"
+            tools:ignore="NestedWeights">
+
+            <moe.feng.common.stepperview.VerticalStepperItemView
+                android:id="@+id/stepper_0"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                app:step_activated_color="?colorPrimary"
+                app:step_enable_animation="false"
+                app:step_index="1"
+                app:step_state="selected"
+                app:step_title="连接网络">
+
+                <!-- Your custom view (Step 1) -->
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="通过热点或无线网络，将两台设备连接到同一网络\n\n注意:如果您是Android 10及以上的设备，务必在设置中开启定位并且授予此应用其权限" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="16dp"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/button_next_0"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/network_settings"
+                            app:icon="@drawable/ic_open_in_new" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/location"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/location_settings"
+                            app:icon="@drawable/ic_open_in_new" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </moe.feng.common.stepperview.VerticalStepperItemView>
+
+            <moe.feng.common.stepperview.VerticalStepperItemView
+                android:id="@+id/stepper_1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:step_activated_color="?colorPrimary"
+                app:step_index="2"
+                app:step_state="selected"
+                app:step_title='另一台设备打开“接收文件”'>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text='在其他设备上的 远航 打开"发送文件"并创建连接'  />
+
+                </LinearLayout>
+
+            </moe.feng.common.stepperview.VerticalStepperItemView>
+
+            <moe.feng.common.stepperview.VerticalStepperItemView
+                android:id="@+id/stepper_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                app:step_activated_color="?colorPrimary"
+                app:step_index="3"
+                app:step_is_last="true"
+                app:step_state="selected"
+                app:step_summary="连接到同一网络后，将会引导您创建连接名称\n另一端连接后选择任何格式文件进行传输\n\n传输文件时，请不要离开页面以免传输失败"
+                app:step_title="连接要传输的设备">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="12dp"
+                        android:text="连接到同一网络后，点击下一步将会引导您创建连接名称。\n另一端连接后选择任何格式文件进行传输\n\n传输文件时，请不要离开页面以免传输失败" />
+
+                </LinearLayout>
+
+            </moe.feng.common.stepperview.VerticalStepperItemView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:orientation="vertical"
+            android:id="@+id/devices"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="@dimen/dp_16"
+            android:visibility="gone" >
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:layout_width="match_parent"
+                android:layout_margin="@dimen/dp_16"
+                app:startIconDrawable="@drawable/ic_baseline_phone_android_24"
+                android:hint="设备名称"
+                android:layout_height="wrap_content">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:layout_width="match_parent"
+                    android:id="@+id/deviceName"
+                    android:singleLine="true"
+                    android:imeOptions="actionDone"
+                    android:layout_height="wrap_content" />
+
+            </com.google.android.material.textfield.TextInputLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom"
+            android:gravity="right"
+            android:orientation="horizontal"
+            android:layout_marginBottom="8dp"
+            tools:ignore="RtlHardcoded">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/button4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/dp_16"
+                android:text="@string/next" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>

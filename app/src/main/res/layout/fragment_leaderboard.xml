@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.appbar.AppBarLayout
+            android:id="@id/appbar"
+            style="@style/Widget.Material3.AppBarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:liftOnScroll="false">
+
+            <com.google.android.material.appbar.SubtitleCollapsingToolbarLayout
+                android:id="@id/ctl"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                app:collapsedSubtitleTextAppearance="@style/TextAppearance.SubTitle.YuanHang2"
+                app:collapsedTitleTextAppearance="@style/TextAppearance.Title.YuanHang"
+                app:expandedTitleMargin="@dimen/dp_20"
+                app:layout_scrollFlags="scroll|exitUntilCollapsed|snap|snapMargins"
+                app:titleCollapseMode="scale"
+                app:toolbarId="@id/toolbar">
+
+                <com.google.android.material.appbar.MaterialToolbar
+                    android:id="@+id/toolbar"
+                    style="@style/Widget.Material3.Toolbar.Surface"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/dp_64"
+                    android:background="@android:color/transparent"
+                    android:clipToPadding="false"
+                    android:elevation="0dp"
+                    android:paddingStart="0dp"
+                    android:paddingEnd="@dimen/dp_8"
+                    app:buttonGravity="center_vertical"
+                    app:layout_collapseMode="pin" />
+            </com.google.android.material.appbar.SubtitleCollapsingToolbarLayout>
+
+            <com.google.android.material.tabs.TabLayout
+                android:id="@+id/tab_lay"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_32"
+                android:layout_marginTop="@dimen/dp_10"
+                android:layout_marginBottom="@dimen/dp_20"
+                android:background="@color/transparent"
+                app:tabContentStart="@dimen/dp_32"
+                app:tabIndicator="@drawable/tab_indicator"
+                app:tabIndicatorFullWidth="true"
+                app:tabIndicatorGravity="stretch"
+                app:tabMode="scrollable"
+                app:tabRippleColor="@color/transparent"
+                app:tabTextAppearance="@style/TextAppearance.AppCompat.Small"
+                tools:ignore="SpeakableTextPresentCheck">
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_8"
+                    android:layout_marginEnd="@dimen/dp_8"
+                    android:text="电影" />
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_8"
+                    android:layout_marginEnd="@dimen/dp_8"
+                    android:text="电视剧" />
+
+                <com.google.android.material.tabs.TabItem
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_8"
+                    android:layout_marginEnd="@dimen/dp_8"
+                    android:text="动漫" />
+
+            </com.google.android.material.tabs.TabLayout>
+
+        </com.google.android.material.appbar.AppBarLayout>
+
+        <com.drake.brv.PageRefreshLayout
+            android:id="@+id/state"
+            app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </com.drake.brv.PageRefreshLayout>
+
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+</layout>

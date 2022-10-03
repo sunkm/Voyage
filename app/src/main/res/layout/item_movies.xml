@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/movie"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="5dp"
+        app:cardCornerRadius="8dp"
+        app:cardElevation="0dp">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                app:shapeAppearance="@style/RoundedStyle.Two"
+                android:id="@+id/image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scaleType="centerCrop"
+                android:src="@drawable/loading"
+                tools:ignore="ContentDescription" />
+
+            <com.drake.engine.widget.MarqueeTextView
+                android:id="@+id/name"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_26"
+                android:layout_gravity="bottom|center"
+                android:background="@color/grey_silver"
+                android:ellipsize="marquee"
+                android:gravity="center"
+                android:paddingLeft="@dimen/dp_4"
+                android:paddingRight="@dimen/dp_4"
+                android:singleLine="true"
+                android:text="TextView"
+                android:textColor="@color/textColor"
+                tools:ignore="HardcodedText" />
+
+        </FrameLayout>
+    </androidx.cardview.widget.CardView>
+</LinearLayout>

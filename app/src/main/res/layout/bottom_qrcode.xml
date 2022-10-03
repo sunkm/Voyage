@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:elevation="@dimen/dp_8"
+    android:nestedScrollingEnabled="false"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/dp_24"
+    android:paddingRight="@dimen/dp_24"
+    android:paddingBottom="@dimen/dp_16">
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/title"
+        style="@style/TextView.SansSerifCondensedMedium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="@dimen/dp_8"
+        android:layout_marginBottom="@dimen/dp_2"
+        android:text="二维码参数"
+        android:textColor="?android:attr/textColorPrimary"
+        android:textSize="@dimen/sp_18" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/subtitle"
+        style="@style/TextView.SansSerifCondensedMedium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:text="向上拖动以显示更多参数"
+        android:textSize="@dimen/sp_13" />
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_8"
+        style="@style/RoundedTextInputLayout"
+        android:hint="二维码内容">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="3" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        style="@style/RoundedTextInputLayout"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/dp_8"
+        android:hint="宽度">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/width"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="4096" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/dp_8"
+        style="@style/RoundedTextInputLayout"
+        android:hint="高度">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/height"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="4096" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:layout_width="match_parent"
+        style="@style/RoundedTextInputLayout"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/dp_8"
+        android:hint="边距">
+
+        <com.google.android.material.textfield.TextInputEditText
+            android:id="@+id/margin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="4" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/RoundedTextInputLayout.DropDownMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_8"
+        android:focusable="false">
+
+        <AutoCompleteTextView
+            android:id="@+id/autoCompleteCharset"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="false"
+            android:hint="编码方式"
+            android:inputType="none"
+            android:text="UTF-8"
+            android:textColor="@color/textColor"
+            android:textColorHint="#607D8B"
+            android:textSize="16sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/RoundedTextInputLayout.DropDownMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_8"
+        android:focusable="false">
+
+        <AutoCompleteTextView
+            android:id="@+id/autoCompleteError"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:focusable="false"
+            android:hint="容错率 (L\M\Q\H)"
+            android:inputType="none"
+            android:text="L"
+            android:textColor="@color/textColor"
+            android:textColorHint="#607D8B"
+            android:textSize="16sp" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.button.MaterialButtonToggleGroup
+        android:id="@+id/choiceGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_8"
+        app:checkedButton="@id/whiteAra"
+        app:selectionRequired="true"
+        app:singleSelection="true">
+
+        <Button
+            android:id="@+id/whiteAra"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="二维码白色区块" />
+
+        <Button
+            android:id="@+id/blackAra"
+            style="@style/Widget.Material3.Button.OutlinedButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="二维码黑色区块" />
+
+    </com.google.android.material.button.MaterialButtonToggleGroup>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/colorPicker"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/dp_56"
+        android:layout_marginTop="@dimen/dp_8">
+
+        <TextView
+            android:id="@+id/colorString"
+            style="@style/TextView.SansSerifCondensedMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|left"
+            android:layout_marginLeft="@dimen/dp_16"
+            android:layout_marginRight="@dimen/dp_16"
+            android:text="TextView"
+            android:textColor="?android:attr/textColorPrimary"
+            android:textSize="@dimen/sp_15" />
+    </com.google.android.material.card.MaterialCardView>
+
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/imagePicker"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_8">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="left|center"
+            android:orientation="vertical"
+            android:padding="@dimen/dp_16"
+            tools:ignore="RtlHardcoded">
+
+            <TextView
+                android:id="@+id/colorTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|left"
+                android:gravity="bottom"
+                android:padding="0dp"
+                android:text="二维码Logo"
+                android:textColor="?android:attr/textColorPrimary"
+                android:textSize="@dimen/sp_15" />
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/imagePercent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_8">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="left|center"
+            android:orientation="vertical"
+            tools:ignore="RtlHardcoded">
+
+            <TextView
+                android:id="@+id/LogoTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|left"
+                android:layout_marginLeft="@dimen/dp_16"
+                android:layout_marginTop="@dimen/dp_8"
+                android:layout_marginRight="@dimen/dp_16"
+                android:gravity="bottom"
+                android:padding="0dp"
+                android:text="Logo百分比"
+                android:textColor="?android:attr/textColorPrimary" />
+
+
+            <com.google.android.material.slider.Slider
+                android:id="@+id/imageSlider"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_6"
+                android:layout_marginRight="@dimen/dp_6"
+                android:stepSize="1"
+                android:valueFrom="0"
+                android:valueTo="100" />
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/create"
+        style="@style/Widget.Material3.Button.IconButton.Outlined"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_8"
+        android:text="生成二维码"
+        app:icon="@drawable/ic_baseline_qr_code_24"
+        app:iconGravity="textStart" />
+
+</LinearLayout>

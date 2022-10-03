@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:animateLayoutChanges="true"
+	android:orientation="vertical">
+
+	<com.google.android.material.appbar.AppBarLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		app:elevation="0dp">
+
+		<com.google.android.material.appbar.MaterialToolbar
+			android:animateLayoutChanges="true"
+			android:id="@+id/toolbar"
+			android:layout_width="match_parent"
+			android:layout_height="?attr/actionBarSize"
+			app:elevation="0dp"
+			app:popupTheme="@style/AppTheme.PopupOverlay"/>
+
+	</com.google.android.material.appbar.AppBarLayout>
+
+	<com.google.android.material.progressindicator.LinearProgressIndicator
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:visibility="gone"
+		android:indeterminate="true"
+		android:id="@+id/progressBar"/>
+
+	<LinearLayout
+		android:orientation="vertical"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent">
+
+		<RelativeLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:gravity="center">
+
+			<ImageView
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:scaleType="fitCenter"
+				android:id="@+id/need_photo"/>
+
+			<LinearLayout
+				android:orientation="vertical"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:id="@+id/need_lay"
+				android:gravity="center">
+
+				<ImageView
+					android:id="@+id/add_photo"
+					android:layout_width="56dp"
+					android:layout_height="56dp"
+					android:padding="12dp"
+					android:src="@drawable/image"
+					app:tint="@color/textColor"
+					tools:ignore="ContentDescription" />
+
+				<TextView
+					android:layout_width="wrap_content"
+					android:gravity="center"
+					android:layout_height="wrap_content"
+					android:text="点击以选择图片转换成链接"
+					android:textAppearance="?android:attr/textAppearanceMedium"
+					android:layout_marginTop="6dp"/>
+
+			</LinearLayout>
+
+		</RelativeLayout>
+
+	</LinearLayout>
+
+</LinearLayout>
+

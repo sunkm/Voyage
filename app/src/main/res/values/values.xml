@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="t_app_name" translatable="false">Android T Easter Egg</string>
+    <string name="t_egg_name" translatable="false">Paint Chips</string>
+    <integer name="ucrop_progress_loading_anim_time">1500</integer>
+</resources>

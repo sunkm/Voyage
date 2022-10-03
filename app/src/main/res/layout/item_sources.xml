@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="m"
+            type="com.manchuan.tools.activity.movies.SourcesCount" />
+
+    </data>
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/chip"
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/_36mdp"
+        android:layout_marginEnd="@dimen/dp_6"
+        android:layout_marginBottom="@dimen/dp_4"
+        android:checkable="true"
+        android:checked="@{Boolean.valueOf(m.checked)}"
+        android:paddingStart="@dimen/dp_12"
+        android:paddingEnd="@dimen/dp_12"
+        app:checkedIcon="@drawable/transparent"
+        tools:ignore="NewApi">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingStart="@dimen/dp_8"
+            android:paddingEnd="@dimen/dp_8">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@{String.valueOf(m.name)}"
+                app:fontFamily="@font/sans" />
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    </com.google.android.material.card.MaterialCardView>
+</layout>

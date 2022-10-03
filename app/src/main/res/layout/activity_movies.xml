@@ -1,0 +1,191 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="false"
+    android:orientation="vertical"
+    android:animateLayoutChanges="true"
+    tools:context=".activity.ShortVideoActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/appBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:elevation="0dp">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:elevation="0dp"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <com.google.android.material.progressindicator.LinearProgressIndicator
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+        android:indeterminate="true"
+        android:id="@+id/progressBar"/>
+
+    <LinearLayout
+        android:id="@+id/_linear"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <com.scwang.smart.refresh.layout.SmartRefreshLayout
+            android:id="@+id/sl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:srlEnablePureScrollMode="true">
+
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/vscroll1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true"
+                android:overScrollMode="never">
+
+                <LinearLayout
+                    android:id="@+id/linear2"
+                    android:animateLayoutChanges="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/textinputlayout1"
+                        app:startIconDrawable="@drawable/twotone_web_black_24dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="20dp">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="请输入分享链接"
+                            android:textSize="16sp"
+                            android:id="@+id/url"
+                            tools:ignore="HardcodedText" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+
+                    <com.google.android.material.button.MaterialButtonToggleGroup
+                        android:layout_width="fill_parent"
+                        app:singleSelection="true"
+                        android:layout_gravity="center"
+                        app:selectionRequired="true"
+                        android:layout_height="wrap_content"
+                        android:id="@+id/toggleButton"
+                        android:layout_marginLeft="@dimen/sp_18"
+                        android:layout_marginTop="@dimen/dp_12"
+                        app:checkedButton="@id/interfaceOne"
+                        android:layout_marginRight="@dimen/sp_18">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/interfaceOne"
+                            style="@style/Widget.Material3.Button.OutlinedButton"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_weight="1"
+                            android:text="接口1" />
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/interfaceTwo"
+                            style="@style/Widget.Material3.Button.OutlinedButton"
+                            android:layout_width="wrap_content"
+                            android:layout_weight="1"
+                            android:layout_height="wrap_content"
+                            android:text="接口2" />
+
+                    </com.google.android.material.button.MaterialButtonToggleGroup>
+
+                    <LinearLayout
+                        android:id="@+id/linear4"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="@dimen/dp_8"
+                        android:orientation="horizontal"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:layout_width="0dp"
+                            android:layout_height="52dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_weight="1.0"
+                            android:gravity="center"
+                            android:text="解析"
+                            android:id="@+id/jiexi"
+                            tools:ignore="HardcodedText" />
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:visibility="gone">
+
+                        <com.google.android.material.button.MaterialButton
+                            style="@style/Widget.MaterialComponents.Button"
+                            android:layout_width="match_parent"
+                            android:layout_height="52dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="@dimen/dp_6"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginBottom="20dp"
+                            android:layout_weight="1.0"
+                            android:gravity="center"
+                            android:text="下载"
+                            android:clickable="true"
+                            android:textColor="#FFFFFFFF"
+                            android:textSize="14sp"
+                            app:backgroundTint="#FF5187F4"
+                            app:cornerRadius="8dp"
+                            app:strokeColor="#FF5187F4"
+                            app:strokeWidth="0dp"
+                            tools:ignore="TextContrastCheck"
+                            android:focusable="true" />
+
+                        <com.google.android.material.button.MaterialButton
+                            style="@style/Widget.MaterialComponents.Button"
+                            android:layout_width="match_parent"
+                            android:layout_height="52dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="@dimen/dp_6"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginBottom="20dp"
+                            android:layout_weight="1.0"
+                            android:gravity="center"
+                            android:text="播放"
+                            android:textColor="#FFFFFFFF"
+                            android:textSize="14sp"
+                            app:backgroundTint="#FF5187F4"
+                            app:cornerRadius="8dp"
+                            app:strokeColor="#FF5187F4"
+                            app:strokeWidth="0dp"
+                            tools:ignore="TextContrastCheck" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </androidx.core.widget.NestedScrollView>
+
+        </com.scwang.smart.refresh.layout.SmartRefreshLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

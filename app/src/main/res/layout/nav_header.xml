@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:padding="8dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:clipToPadding="false"
+    android:clipChildren="false">
+
+    <ImageButton
+        android:id="@+id/nav_button"
+        style="?attr/borderlessButtonStyle"
+        android:layout_width="@dimen/mtrl_min_touch_target_size"
+        android:layout_height="@dimen/mtrl_min_touch_target_size"
+        android:layout_gravity="start"
+        android:layout_marginStart="4dp"
+        android:layout_marginBottom="16dp"
+        android:background="?attr/actionBarItemBackground"
+        android:src="@drawable/ic_drawer_menu_24px"/>
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/nav_fab"
+        style="?attr/extendedFloatingActionButtonTertiaryStyle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        app:icon="@drawable/ic_create_24dp"/>
+</LinearLayout>

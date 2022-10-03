@@ -1,0 +1,7 @@
+id=PhoneInfo
+name=%s手机型号
+version=1.0
+versionCode=1099
+author=Magisk机型修改模块生成器 by Jesse205
+description=此模块让你的手机伪装成%s手机型号
+minMagisk=1500

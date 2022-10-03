@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#660205"
+    android:orientation="vertical"
+    tools:context=".activity.ErrorActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent"
+        app:elevation="0dp">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/transparent"
+            app:elevation="0dp"
+            app:subtitleCentered="true"
+            app:title="发生错误"
+            app:titleTextColor="@color/white"
+            app:titleCentered="true" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:id="@+id/linear1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_24"
+            android:gravity="center|top"
+            android:orientation="vertical"
+            android:padding="@dimen/dp_26">
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textView7"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/sans"
+                android:freezesText="false"
+                android:gravity="center_vertical"
+                android:text=":("
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_76"
+                tools:ignore="HardcodedText" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/textView8"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_16"
+                android:fontFamily="@font/sans"
+                android:text="远航  发生错误，需要重启。\n\n以下是有关此错误的信息，您可以将它发送给开发者，帮助我们更快的解决问题。不会收集您的隐私。"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_15"
+                tools:ignore="HardcodedText" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/error"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_16"
+                android:fontFamily="@font/sans"
+                android:maxLines="16"
+                android:minLines="1"
+                android:text="RuntimeException"
+                android:textColor="@color/white"
+                android:textSize="@dimen/sp_15"
+                tools:ignore="HardcodedText" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_16"
+                android:orientation="vertical">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/infos"
+                    style="@style/Widget.Material3.Button.OutlinedButton.Icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="错误详情"
+                    android:textColor="@color/white"
+                    app:icon="@drawable/outline_info_24"
+                    app:iconTint="@color/white"
+                    tools:ignore="HardcodedText" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/restart"
+                    style="@style/Widget.Material3.Button.OutlinedButton.Icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="重启 远航"
+                    android:textColor="@color/white"
+                    app:icon="@drawable/baseline_restart_alt_24"
+                    app:iconTint="@color/white"
+                    tools:ignore="HardcodedText" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/close"
+                    style="@style/Widget.Material3.Button.OutlinedButton.Icon"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="关闭"
+                    android:textColor="@color/white"
+                    app:icon="@drawable/baseline_close_24"
+                    app:iconTint="@color/white"
+                    tools:ignore="HardcodedText" />
+            </LinearLayout>
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <include
+        android:id="@+id/second"
+        layout="@layout/second_error_info"
+        android:visibility="gone" />
+
+
+</androidx.appcompat.widget.LinearLayoutCompat>
+

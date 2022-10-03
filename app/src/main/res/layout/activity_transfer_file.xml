@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:gravity="center"
+    tools:context=".activity.transfer.TransferFileActivity">
+
+    <com.airbnb.lottie.LottieAnimationView
+        android:layout_width="@dimen/dp_136"
+        android:layout_height="@dimen/dp_136"
+        app:lottie_autoPlay="true"
+        app:lottie_colorFilter="?attr/colorPrimary"
+        app:lottie_enableMergePathsForKitKatAndAbove="false"
+        app:lottie_ignoreDisabledSystemAnimations="true"
+        app:lottie_loop="true"
+        app:lottie_rawRes="@raw/wifi_tethering"
+        app:lottie_renderMode="hardware"
+        app:tint="?attr/colorPrimary"
+        app:tintMode="add"
+        tools:ignore="ImageContrastCheck" />
+
+    <TextView
+        style="@style/TextView.SansSerifCondensedMedium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_8"
+        android:text="局域网快传"
+        android:textAppearance="@style/TextAppearance.AppCompat.Display1"
+        app:emojiCompatEnabled="true" />
+
+    <TextView
+        style="@style/TextView.SansSerifCondensedMedium"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="快捷简单地跨设备传输文件"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal" >
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/TextView.SansSerifCondensedMedium"
+            android:text="@string/send_files"
+            android:id="@+id/button2"
+            app:icon="@drawable/ic_baseline_send_24" />
+
+        <Button
+            style="@style/TextView.SansSerifCondensedMedium"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:insetLeft="6dp"
+            android:id="@+id/button3"
+            android:text="@string/receiver_files"
+            app:icon="@drawable/ic_baseline_save_alt_24" />
+    </LinearLayout>
+
+</LinearLayout>

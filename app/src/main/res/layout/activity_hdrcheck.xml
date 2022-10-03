@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".activity.HDRCheckActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@id/appbar"
+        style="@style/Widget.Material3.AppBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="false"
+        app:liftOnScroll="false">
+
+        <com.google.android.material.appbar.SubtitleCollapsingToolbarLayout
+            android:id="@id/ctl"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            app:collapsedSubtitleTextAppearance="@style/TextAppearance.SubTitle.YuanHang2"
+            app:collapsedTitleTextAppearance="@style/TextAppearance.Title.YuanHang"
+            app:expandedTitleMargin="@dimen/dp_20"
+            app:layout_scrollFlags="scroll|exitUntilCollapsed|snap|snapMargins"
+            app:titleCollapseMode="scale"
+            app:toolbarId="@id/toolbar">
+
+            <com.google.android.material.appbar.MaterialToolbar
+                android:id="@+id/toolbar"
+                style="@style/Widget.Material3.Toolbar.Surface"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_64"
+                android:background="@android:color/transparent"
+                android:clipToPadding="false"
+                android:elevation="0dp"
+                android:paddingStart="0dp"
+                android:paddingEnd="@dimen/dp_8"
+                app:buttonGravity="center_vertical"
+                app:layout_collapseMode="pin"
+                app:navigationIcon="@drawable/baseline_arrow_back_24"
+                app:navigationIconTint="?android:attr/textColorPrimary" />
+        </com.google.android.material.appbar.SubtitleCollapsingToolbarLayout>
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+        tools:ignore="SpeakableTextPresentCheck">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/TextView.SansSerifMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="HDR10"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+
+            <TextView
+                android:id="@+id/hdr10"
+                style="@style/TextView.SansSerifMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="不支持"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="@color/red" />
+
+
+            <TextView
+                style="@style/TextView.SansSerifMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_32"
+                android:text="HDR10+"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+
+            <TextView
+                android:id="@+id/hdr10p"
+                style="@style/TextView.SansSerifMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="不支持"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="@color/red" />
+
+            <TextView
+                style="@style/TextView.SansSerifMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_32"
+                android:fontFamily="@font/sans"
+                android:text="HDR HLG"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+
+            <TextView
+                android:id="@+id/hlg"
+                style="@style/TextView.SansSerifMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="不支持"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="@color/red" />
+
+            <TextView
+                style="@style/TextView.SansSerifMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_32"
+                android:text="杜比视界"
+                android:textAppearance="@style/TextAppearance.AppCompat.Display1" />
+
+            <TextView
+                android:id="@+id/vision"
+                style="@style/TextView.SansSerifMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="不支持"
+                android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                android:textColor="@color/red" />
+
+        </LinearLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

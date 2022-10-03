@@ -1,0 +1,328 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <com.drake.statelayout.StateLayout
+        android:id="@+id/state"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <FrameLayout
+            android:id="@+id/content_span"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <ImageView
+                android:id="@+id/home_background"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:adjustViewBounds="false"
+                android:cropToPadding="true"
+                android:scaleType="matrix"
+                android:src="@drawable/img_home_background" />
+
+            <androidx.swiperefreshlayout.widget.SwipeRefreshLayout
+                android:id="@+id/swipe"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.core.widget.NestedScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:overScrollMode="never"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        android:orientation="vertical">
+
+                        <com.youth.banner.Banner
+                            android:id="@+id/home_banner"
+                            android:layout_width="match_parent"
+                            android:layout_height="175dp"
+                            app:banner_infinite_loop="true"
+                            app:banner_loop_time="5000"
+                            app:banner_radius="@dimen/dp_6" />
+
+                        <FrameLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="match_parent"
+                                android:layout_height="30dp"
+                                android:layout_gravity="bottom"
+                                android:background="?android:attr/windowBackground" />
+
+                            <androidx.cardview.widget.CardView
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="5dp"
+                                app:cardBackgroundColor="?android:attr/windowBackground"
+                                app:cardCornerRadius="10dp"
+                                app:cardElevation="0dp">
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="vertical">
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="?android:attr/windowBackground"
+                                        android:orientation="horizontal"
+                                        android:padding="@dimen/dp_10">
+
+                                        <LinearLayout
+                                            android:layout_width="match_parent"
+                                            android:layout_height="wrap_content"
+                                            android:orientation="horizontal">
+
+                                            <LinearLayout
+                                                android:id="@+id/daily_sign"
+                                                android:layout_width="0dp"
+                                                android:layout_height="match_parent"
+                                                android:layout_weight="1"
+                                                android:gravity="center_horizontal"
+                                                android:orientation="vertical">
+
+                                                <com.manchuan.tools.view.MaterialCircleIconView
+                                                    android:layout_width="@dimen/dp_48"
+                                                    android:layout_height="@dimen/dp_48"
+                                                    android:src="@drawable/icon_daily_sign"
+                                                    app:iconColorName="orange" />
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_marginTop="@dimen/dp_4"
+                                                    android:text="每日签到"
+                                                    android:textColor="?android:attr/textColorPrimary"
+                                                    android:textSize="16sp" />
+                                            </LinearLayout>
+
+                                            <LinearLayout
+                                                android:id="@+id/account_manager"
+                                                android:layout_width="0dp"
+                                                android:layout_height="match_parent"
+                                                android:layout_weight="1"
+                                                android:gravity="center_horizontal"
+                                                android:orientation="vertical">
+
+                                                <com.manchuan.tools.view.MaterialCircleIconView
+                                                    android:layout_width="@dimen/dp_48"
+                                                    android:layout_height="@dimen/dp_48"
+                                                    android:src="@drawable/icon_account"
+                                                    app:iconColorName="green" />
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_marginTop="@dimen/dp_4"
+                                                    android:text="账号管理"
+                                                    android:textColor="?android:attr/textColorPrimary"
+                                                    android:textSize="16sp" />
+                                            </LinearLayout>
+
+                                            <LinearLayout
+                                                android:id="@+id/me_information"
+                                                android:layout_width="0dp"
+                                                android:layout_height="match_parent"
+                                                android:layout_weight="1"
+                                                android:gravity="center_horizontal"
+                                                android:orientation="vertical">
+
+                                                <com.manchuan.tools.view.MaterialCircleIconView
+                                                    android:layout_width="@dimen/dp_48"
+                                                    android:layout_height="@dimen/dp_48"
+                                                    android:src="@drawable/icon_me_information"
+                                                    app:iconColorName="indigo" />
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_marginTop="@dimen/dp_4"
+                                                    android:text="我的信息"
+                                                    android:textColor="?android:attr/textColorPrimary"
+                                                    android:textSize="16sp" />
+                                            </LinearLayout>
+
+                                            <LinearLayout
+                                                android:id="@+id/month_ledge"
+                                                android:layout_width="0dp"
+                                                android:layout_height="match_parent"
+                                                android:layout_weight="1"
+                                                android:gravity="center_horizontal"
+                                                android:orientation="vertical">
+
+                                                <com.manchuan.tools.view.MaterialCircleIconView
+                                                    android:layout_width="@dimen/dp_48"
+                                                    android:layout_height="@dimen/dp_48"
+                                                    android:src="@drawable/icon_month_ledge"
+                                                    app:iconColorName="pink" />
+
+                                                <TextView
+                                                    android:layout_width="wrap_content"
+                                                    android:layout_height="wrap_content"
+                                                    android:layout_marginTop="@dimen/dp_4"
+                                                    android:text="旅行札记"
+                                                    android:textColor="?android:attr/textColorPrimary"
+                                                    android:textSize="16sp" />
+                                            </LinearLayout>
+
+                                        </LinearLayout>
+
+                                    </LinearLayout>
+
+                                    <LinearLayout
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:background="?android:attr/windowBackground"
+                                        android:orientation="horizontal"
+                                        android:paddingStart="@dimen/dp_16"
+                                        android:paddingTop="@dimen/dp_6"
+                                        android:paddingEnd="@dimen/dp_16">
+
+                                        <TextView
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="30dp"
+                                            android:gravity="center_vertical"
+                                            android:text="近期活动"
+                                            android:textColor="?attr/colorAccent"
+                                            android:textSize="18sp"
+                                            android:textStyle="bold" />
+
+                                        <TextView
+                                            android:layout_width="0dp"
+                                            android:layout_height="wrap_content"
+                                            android:layout_weight="1" />
+
+                                        <TextView
+                                            android:id="@+id/all_recommend_post"
+                                            android:layout_width="60dp"
+                                            android:layout_height="match_parent"
+                                            android:gravity="center"
+                                            android:text="全部 >"
+                                            android:textSize="14sp"
+                                            android:visibility="gone" />
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                            </androidx.cardview.widget.CardView>
+
+                        </FrameLayout>
+
+                        <RelativeLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="?android:attr/windowBackground">
+
+                            <androidx.recyclerview.widget.RecyclerView
+                                android:id="@+id/home_near_activity"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="?android:attr/windowBackground"
+                                android:nestedScrollingEnabled="false"
+                                android:orientation="vertical"
+                                android:overScrollMode="never"
+                                android:paddingStart="@dimen/dp_10"
+                                android:paddingEnd="@dimen/dp_10"
+                                android:paddingBottom="@dimen/dp_10"
+                                android:scrollbars="none"
+                                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+                        </RelativeLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:background="?android:attr/windowBackground"
+                            android:orientation="vertical">
+
+                            <LinearLayout
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:layout_marginTop="0dp"
+                                android:layout_marginBottom="30dp"
+                                android:background="?android:attr/windowBackground"
+                                android:orientation="vertical"
+                                android:paddingStart="@dimen/dp_16"
+                                android:paddingTop="@dimen/dp_4"
+                                android:paddingEnd="@dimen/dp_16">
+
+
+                                <LinearLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal">
+
+                                    <TextView
+                                        android:layout_width="0dp"
+                                        android:layout_height="wrap_content"
+                                        android:layout_weight="1"
+                                        android:gravity="center_vertical"
+                                        android:text="公告"
+                                        android:textColor="?attr/colorAccent"
+                                        android:textSize="18sp"
+                                        android:textStyle="bold" />
+
+                                    <LinearLayout
+                                        android:id="@+id/go_announcement"
+                                        android:layout_width="80dp"
+                                        android:layout_height="match_parent"
+                                        android:gravity="end">
+
+                                        <ImageView
+                                            android:layout_width="40dp"
+                                            android:layout_height="match_parent"
+                                            android:rotation="270"
+                                            tools:ignore="UseAppTint" />
+
+                                    </LinearLayout>
+
+                                </LinearLayout>
+
+                                <RelativeLayout
+                                    android:layout_width="match_parent"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="6dp">
+
+                                    <androidx.recyclerview.widget.RecyclerView
+                                        android:id="@+id/home_notice"
+                                        android:layout_width="match_parent"
+                                        android:layout_height="wrap_content"
+                                        android:nestedScrollingEnabled="false"
+                                        android:orientation="vertical"
+                                        android:overScrollMode="never"
+                                        android:scrollbars="none"
+                                        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager" />
+
+                                </RelativeLayout>
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </LinearLayout>
+
+                </androidx.core.widget.NestedScrollView>
+
+            </androidx.swiperefreshlayout.widget.SwipeRefreshLayout>
+
+        </FrameLayout>
+
+
+    </com.drake.statelayout.StateLayout>
+
+</layout>

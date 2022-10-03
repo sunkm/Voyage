@@ -1,0 +1,96 @@
+<resources>
+    <dimen name="t_neko_display_size">64dp</dimen>
+    <dimen name="about_page_header_height">212dp</dimen>
+    <dimen name="about_page_avatar_size">38dp</dimen>
+    <dimen name="about_page_license_text_size">13sp</dimen>
+    <dimen name="about_page_recommendation_icon_size">48dp</dimen>
+    <dimen name="about_page_bottom_sheet_item_height">48dp</dimen>
+    <dimen name="about_page_item_category_padding_horizontal">16dp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="default_slider_height">36dp</dimen>
+    <dimen name="default_slider_margin">24dp</dimen>
+    <dimen name="default_slider_bar_height">4dp</dimen>
+    <dimen name="default_slider_handler_radius">10dp</dimen>
+    <dimen name="default_padding_side">24dp</dimen>
+    <dimen name="default_preview_height">40dp</dimen>
+    <dimen name="default_preview_image_height">36dp</dimen>
+    <dimen name="default_margin_top">20dp</dimen>
+    <dimen name="app_bar_height">270dp</dimen>
+    <dimen name="text_margin">16dp</dimen>
+    <dimen name="dialog_handler_radius">2dp</dimen>
+    <dimen name="simple_menu_unit">56dp</dimen>
+    <dimen name="simple_menu_margin">15dp</dimen>
+    <dimen name="simple_menu_dialog_max_width">600dp</dimen>
+    <integer name="simple_menu_max_units">5</integer>
+    <integer name="config_activityShortDur">550</integer>
+    <integer name="config_activityDefaultDur">220</integer>
+    <dimen name="list_item_padding">16dp</dimen>
+    <dimen name="resolver_max_width">480dp</dimen>
+    <item name="ambient_shadow_alpha" format="float" type="dimen">0.02574</item>
+    <item name="spot_shadow_alpha" format="float" type="dimen">0.076</item>
+    <dimen name="rd_activity_horizontal_margin">0dp</dimen>
+    <dimen name="rd_toolbar_content_padding_start">16dp</dimen>
+    <dimen name="rd_toolbar_content_padding_start_with_navigation">72dp</dimen>
+    <dimen name="rd_toolbar_padding_end">0dp</dimen>
+    <dimen name="rd_default_dialog_corner_radius">4dp</dimen>
+    <dimen name="rd_default_button_corner_radius">4dp</dimen>
+    <dimen name="rd_material_button_horizontal_margin_amend">-8dp</dimen>
+    <dimen name="rd_material_dialog_default_elevation">24dp</dimen>
+    <item name="rd_material_dialog_default_dim_amount" format="float" type="dimen">0.32</item>
+    <integer name="rd_material_dialog_enter_alpha_anim_duration">150</integer>
+    <integer name="rd_material_dialog_enter_scale_anim_duration">225</integer>
+    <integer name="rd_material_dialog_exit_alpha_anim_duration">150</integer>
+    <integer name="rd_material_dialog_exit_scale_anim_duration">150</integer>
+    <dimen name="rd_material_dialog_title_divider_material">16sp</dimen>
+    <dimen name="rd_material_dialog_padding_top_material">24dp</dimen>
+    <dimen name="rd_material_dialog_line_spacing_extra">2sp</dimen>
+    <dimen name="sp_10">10sp</dimen>
+    <dimen name="sp_13">13sp</dimen>
+    <dimen name="sp_15">15sp</dimen>
+    <dimen name="sp_16">16sp</dimen>
+    <dimen name="sp_17">17sp</dimen>
+    <dimen name="sp_18">18sp</dimen>
+    <dimen name="sp_22">22sp</dimen>
+    <dimen name="sp_28">28sp</dimen>
+    <dimen name="sp_30">30sp</dimen>
+    <dimen name="sp_44">44sp</dimen>
+    <dimen name="sp_76">76sp</dimen>
+
+
+    <dimen name="dp_1">1dp</dimen>
+    <dimen name="dp_2">2dp</dimen>
+    <dimen name="dp_4">4dp</dimen>
+    <dimen name="dp_6">6dp</dimen>
+    <dimen name="dp_8">8dp</dimen>
+    <dimen name="dp_10">10dp</dimen>
+    <dimen name="dp_12">12dp</dimen>
+    <dimen name="dp_14">14dp</dimen>
+    <dimen name="dp_16">16dp</dimen>
+    <dimen name="dp_20">20dp</dimen>
+    <dimen name="dp_24">24dp</dimen>
+    <dimen name="dp_26">26dp</dimen>
+    <dimen name="dp_32">32dp</dimen>
+    <dimen name="dp_46">46dp</dimen>
+    <dimen name="dp_48">48dp</dimen>
+    <dimen name="dp_56">56dp</dimen>
+    <dimen name="dp_64">64dp</dimen>
+    <dimen name="dp_78">78dp</dimen>
+    <dimen name="dp_98">98dp</dimen>
+
+    <dimen name="dp_100">100dp</dimen>
+    <dimen name="dp_136">136dp</dimen>
+    <dimen name="dp_168">168dp</dimen>
+
+    <dimen name="dp_220">220dp</dimen>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+
+    <!--
+Refer to App Widget Documentation for margin information
+http://developer.android.com/guide/topics/appwidgets/index.html#CreatingLayout
+    -->
+    <dimen name="widget_margin">0dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+
+</resources>

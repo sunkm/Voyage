@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        app:elevation="0dp"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:elevation="0dp"/>
+
+    </com.google.android.material.appbar.AppBarLayout>
+    
+    <LinearLayout
+		android:id="@+id/_linear"
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:orientation="vertical"
+		app:layout_behavior="@string/appbar_scrolling_view_behavior">
+		
+		<com.scwang.smart.refresh.layout.SmartRefreshLayout
+			android:id="@+id/sl"
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			app:srlEnablePureScrollMode="true">
+			
+			<androidx.core.widget.NestedScrollView
+				android:id="@+id/vscroll1"
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:overScrollMode="never"
+				android:fillViewport="true">
+				
+				<LinearLayout
+					android:id="@+id/linear4"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:gravity="center_horizontal"
+					android:animateLayoutChanges="true"
+					android:orientation="vertical">
+					
+					<androidx.appcompat.widget.AppCompatTextView
+						android:id="@+id/textview2"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_marginLeft="20dp"
+						android:layout_marginTop="20dp"
+						android:layout_marginRight="20dp"
+						android:textSize="25sp"
+						android:textColor="@color/textColor"/>
+						
+					<androidx.appcompat.widget.AppCompatTextView
+						android:id="@+id/textview3"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:textSize="14sp"/>
+						
+					<androidx.appcompat.widget.AppCompatTextView
+						android:id="@+id/textview4"
+						android:layout_width="wrap_content"
+						android:layout_height="wrap_content"
+						android:layout_margin="20dp"
+						android:textSize="16sp"
+						android:textColor="@color/textColor"/>
+                    
+				</LinearLayout>
+				
+			</androidx.core.widget.NestedScrollView>
+			
+		</com.scwang.smart.refresh.layout.SmartRefreshLayout>
+		
+	</LinearLayout>
+
+</LinearLayout>
+

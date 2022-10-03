@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="?android:attr/windowBackground"
+    android:paddingStart="70dp"
+    android:paddingTop="16dp"
+    android:paddingEnd="12dp"
+    android:paddingBottom="16dp">
+
+    <TextView
+        android:id="@+id/content"
+        style="@style/AboutPage.CardContent"
+        tools:text="content" />
+
+</RelativeLayout>

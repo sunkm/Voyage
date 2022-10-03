@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.appcompat.widget.LinearLayoutCompat xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/movie"
+    android:layout_width="@dimen/dp_100"
+    android:layout_height="wrap_content"
+    android:layout_marginStart="@dimen/dp_8"
+    android:layout_marginEnd="@dimen/dp_8"
+    android:gravity="center|start"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_weight="1">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/image"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_168"
+            android:scaleType="centerCrop"
+            app:shapeAppearance="@style/RoundedStyle.Two" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/year"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@id/image"
+            android:layout_alignBottom="@id/image"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="@dimen/dp_4"
+            android:padding="@dimen/dp_2"
+            android:paddingStart="@dimen/dp_4"
+            android:paddingEnd="@dimen/dp_4"
+            android:text="年份"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_10"
+            android:textStyle="bold" />
+
+    </RelativeLayout>
+
+    <com.drake.engine.widget.MarqueeTextView
+        android:id="@+id/name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_6"
+        android:layout_marginEnd="@dimen/dp_6"
+        android:layout_marginBottom="@dimen/dp_4"
+        android:ellipsize="marquee"
+        android:maxLines="1"
+        android:text="影片名"
+        android:textColor="?android:attr/textColorPrimary"
+        android:textSize="@dimen/sp_13"
+        android:textStyle="bold"
+        app:fontFamily="@font/sans" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/summary"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_1"
+        android:layout_marginEnd="@dimen/dp_6"
+        android:layout_marginBottom="@dimen/dp_8"
+        android:ellipsize="end"
+        android:maxLines="1"
+        android:text="介绍"
+        android:textSize="@dimen/sp_10"
+        android:textStyle="bold" />
+
+</androidx.appcompat.widget.LinearLayoutCompat>

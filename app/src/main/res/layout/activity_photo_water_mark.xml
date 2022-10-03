@@ -1,0 +1,261 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".activity.PhotoWaterMarkActivity">
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:minHeight="?attr/actionBarSize" />
+
+    <androidx.appcompat.widget.AppCompatImageView
+        android:id="@+id/file_image"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.0"
+        tools:ignore="ContentDescription" />
+
+    <ScrollView
+        android:id="@+id/activity_exifScrollView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:id="@+id/save"
+                    android:layout_width="56dp"
+                    android:layout_height="56dp"
+                    android:padding="16dp"
+                    app:srcCompat="@drawable/ic_content_save_outline"
+                    tools:ignore="ContentDescription" />
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:gravity="right|center"
+                    android:orientation="horizontal"
+                    android:paddingEnd="16dp"
+                    tools:ignore="RtlHardcoded,RtlSymmetry">
+
+                    <Button
+                        android:id="@+id/add_mark"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:insetRight="6dp"
+                        android:text="水印图"
+                        android:visibility="gone"
+                        app:icon="@drawable/ic_baseline_add_photo_alternate_24"
+                        tools:ignore="TouchTargetSizeCheck,TextContrastCheck" />
+
+                    <Button
+                        android:id="@+id/add_back"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="背景图"
+                        app:icon="@drawable/ic_baseline_add_photo_alternate_24"
+                        tools:ignore="TextContrastCheck" />
+                </LinearLayout>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/activity_exifLinearLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_8"
+                android:background="@drawable/ripple"
+                android:gravity="left|center"
+                android:orientation="horizontal"
+                tools:ignore="RtlHardcoded">
+
+                <com.google.android.material.textfield.TextInputLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginEnd="16dp"
+                    android:hint="水印文字"
+                    app:hintAnimationEnabled="true"
+                    tools:ignore="HardcodedText">
+
+                    <com.google.android.material.textfield.TextInputEditText
+                        android:maxLines="1"
+                        android:id="@+id/mark_content"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        tools:ignore="TextContrastCheck" />
+                </com.google.android.material.textfield.TextInputLayout>
+            </LinearLayout>
+
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/colorPicker"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/dp_56"
+                android:layout_marginTop="@dimen/dp_8"
+                android:layout_marginLeft="16dp"
+                android:layout_marginRight="16dp">
+
+                <LinearLayout
+                    android:id="@+id/activity_exifLinearLayout2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="left|center"
+                    android:orientation="vertical"
+                    tools:ignore="RtlHardcoded">
+
+                    <TextView
+                        android:id="@+id/colorTitle"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|left"
+                        android:padding="0dp"
+                        android:layout_marginLeft="@dimen/dp_16"
+                        android:layout_marginRight="@dimen/dp_16"
+                        android:text="水印文字颜色"
+                        android:gravity="bottom"
+                        android:textColor="?android:attr/textColorPrimary" />
+
+
+                    <TextView
+                        android:id="@+id/colorString"
+                        style="@style/TextView.SansSerifCondensedMedium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center|left"
+                        android:layout_marginLeft="@dimen/dp_16"
+                        android:layout_marginRight="@dimen/dp_16"
+                        android:breakStrategy="high_quality"
+                        android:padding="0dp"
+                        android:gravity="top"
+                        android:outlineProvider="background"
+                        android:lineSpacingExtra="0dp"
+                        android:text="TextView"
+                        android:textColor="?android:attr/textColorPrimary"
+                        android:textSize="@dimen/sp_15" />
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+            <LinearLayout
+                android:id="@+id/activity_exifLinearLayout3"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="@drawable/ripple"
+                android:gravity="left|center"
+                android:orientation="horizontal"
+                android:paddingLeft="16dp"
+                android:paddingEnd="@dimen/dp_4"
+                tools:ignore="RtlHardcoded">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="不透明度"
+                    style="@style/TextView.SansSerifCondensedMedium"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/textColor"
+                    android:textSize="16sp"
+                    tools:ignore="HardcodedText" />
+
+                <com.google.android.material.slider.Slider
+                    android:id="@+id/trans"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_16"
+                    android:stepSize="10"
+                    android:valueFrom="30"
+                    android:value="70"
+                    android:valueTo="100"
+                    tools:ignore="SpeakableTextPresentCheck" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/activity_exifLinearLayout4"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:gravity="left|center"
+                android:orientation="horizontal"
+                android:paddingLeft="16dp"
+                android:paddingEnd="@dimen/dp_4"
+                tools:ignore="RtlHardcoded">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    style="@style/TextView.SansSerifCondensedMedium"
+                    android:text="角度"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/textColor"
+                    android:textSize="16sp"
+                    tools:ignore="HardcodedText" />
+
+                <com.google.android.material.slider.Slider
+                    android:id="@+id/angle"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_16"
+                    android:stepSize="10"
+                    android:valueFrom="0"
+                    android:valueTo="360"
+                    tools:ignore="SpeakableTextPresentCheck" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/activity_exifLinearLayout5"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:background="@drawable/ripple"
+                android:gravity="left|center"
+                android:orientation="horizontal"
+                android:paddingLeft="16dp"
+                android:paddingEnd="@dimen/dp_4"
+                tools:ignore="RtlHardcoded">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="水印大小"
+                    style="@style/TextView.SansSerifCondensedMedium"
+                    android:textAppearance="?android:attr/textAppearanceSmall"
+                    android:textColor="@color/textColor"
+                    android:textSize="16sp"
+                    tools:ignore="HardcodedText" />
+
+                <com.google.android.material.slider.Slider
+                    android:id="@+id/size"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_16"
+                    android:valueFrom="1"
+                    android:stepSize="1"
+                    android:value="12"
+                    android:valueTo="30"
+                    tools:ignore="SpeakableTextPresentCheck" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</LinearLayout>
+

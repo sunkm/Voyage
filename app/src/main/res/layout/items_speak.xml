@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginLeft="@dimen/dp_6"
+    android:layout_marginTop="@dimen/dp_6"
+    android:layout_marginRight="@dimen/dp_6"
+    android:layout_marginBottom="@dimen/dp_6">
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/card"
+        style="?attr/materialCardViewElevatedStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <com.google.android.material.imageview.ShapeableImageView
+                android:id="@+id/image"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:adjustViewBounds="true"
+                app:shapeAppearance="@style/GameRoundedStyle"
+                tools:ignore="ContentDescription,ImageContrastCheck,InefficientWeight" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/name"
+                style="@style/TextView.SansSerifCondensedMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center|left"
+                android:layout_margin="@dimen/dp_16"
+                android:text="@{m.title}"
+                android:textSize="@dimen/sp_15"
+                tools:ignore="HardcodedText" />
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+
+</LinearLayout>

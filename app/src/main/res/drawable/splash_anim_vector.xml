@@ -1,0 +1,62 @@
+<animated-vector xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:aapt="http://schemas.android.com/aapt">
+    <aapt:attr name="android:drawable">
+        <vector
+            android:name="vector"
+            android:width="376dp"
+            android:height="376dp"
+            android:viewportWidth="376"
+            android:viewportHeight="376">
+            <group android:name="container_group">
+                <path
+                    android:name="back"
+                    android:fillColor="@color/ic_launcher_background"
+                    android:pathData="M 187.5 100 C 164.302 100 142.031 109.225 125.628 125.628 C 109.225 142.031 100 164.302 100 187.5 C 100 210.698 109.225 232.969 125.628 249.372 C 142.031 265.775 164.302 275 187.5 275 C 210.698 275 232.969 265.775 249.372 249.372 C 265.775 232.969 275 210.698 275 187.5 C 275 164.302 265.775 142.031 249.372 125.628 C 232.969 109.225 210.698 100 187.5 100 Z"
+                    android:strokeWidth="1" />
+                <group
+                    android:name="inner_group"
+                    android:translateX="96.0"
+                    android:translateY="96.0">
+                    <path
+                        android:name="inner"
+                        android:fillColor="?attr/colorPrimary"
+                        android:pathData="M12,12c0,-3 2.5,-5.5 5.5,-5.5S23,9 23,12L12,12zM12,12c0,3 -2.5,5.5 -5.5,5.5S1,15 1,12h11zM12,12c-3,0 -5.5,-2.5 -5.5,-5.5S9,1 12,1v11zM12,12c3,0 5.5,2.5 5.5,5.5S15,23 12,23L12,12z"
+                        android:strokeWidth="1" />
+                </group>
+            </group>
+        </vector>
+    </aapt:attr>
+    <target android:name="container_group">
+        <aapt:attr name="android:animation">
+            <objectAnimator
+                android:duration="500"
+                android:interpolator="@android:anim/accelerate_decelerate_interpolator"
+                android:propertyName="translateY"
+                android:valueFrom="0"
+                android:valueTo="-36"
+                android:valueType="floatType" />
+        </aapt:attr>
+    </target>
+    <target android:name="back">
+        <aapt:attr name="android:animation">
+            <objectAnimator
+                android:duration="500"
+                android:interpolator="@android:anim/accelerate_decelerate_interpolator"
+                android:propertyName="fillAlpha"
+                android:valueFrom="1"
+                android:valueTo="0.75"
+                android:valueType="floatType" />
+        </aapt:attr>
+    </target>
+    <target android:name="inner_group">
+        <aapt:attr name="android:animation">
+            <objectAnimator
+                android:duration="500"
+                android:interpolator="@android:anim/accelerate_decelerate_interpolator"
+                android:propertyName="rotation"
+                android:valueFrom="0"
+                android:valueTo="45"
+                android:valueType="floatType" />
+        </aapt:attr>
+    </target>
+</animated-vector>

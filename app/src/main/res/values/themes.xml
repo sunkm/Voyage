@@ -1,0 +1,45 @@
+<resources>
+
+    <style name="ThemeOverlay.EasterEgg.AppWidgetContainer" parent="">
+        <item name="t_appWidgetBackgroundColor">@color/t_light_blue_600</item>
+        <item name="t_appWidgetTextColor">@color/t_light_blue_50</item>
+    </style>
+
+    <style name="AppTheme.AppWidgetContainerParent" parent="@android:style/Theme.DeviceDefault">
+        <!-- 小部件外部边界的半径以制作圆角 -->
+        <item name="appWidgetRadius">16dp</item>
+        <!--
+        内部视图的小部件边界的半径，以形成圆角。它需要小于或等于 appWidgetRadius 的值 8dp
+        -->
+        <item name="appWidgetInnerRadius">8dp</item>
+    </style>
+
+    <style name="AppTheme.AppWidgetContainer" parent="AppTheme.AppWidgetContainerParent">
+        <!-- Apply padding to avoid the content of the widget colliding with the rounded corners -->
+        <item name="appWidgetPadding">16dp</item>
+    </style>
+
+    <style name="RoundedTextInputLayout" parent="Widget.Material3.TextInputLayout.OutlinedBox">
+        <item name="boxCornerRadiusBottomEnd">@dimen/dp_14</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/dp_14</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/dp_14</item>
+        <item name="boxCornerRadiusTopStart">@dimen/dp_14</item>
+    </style>
+
+    <style name="RoundedTextInputLayout.DropDownMenu" parent="Widget.Material3.TextInputLayout.OutlinedBox.ExposedDropdownMenu">
+        <item name="boxCornerRadiusBottomEnd">@dimen/dp_14</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/dp_14</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/dp_14</item>
+        <item name="boxCornerRadiusTopStart">@dimen/dp_14</item>
+    </style>
+
+    <style name="MaterialSearchTextAppearance">
+        <item name="android:textSize">@dimen/sp_16</item>
+        <item name="android:textColor">?colorOnSurface</item>
+        <item name="android:textColorHint">?colorOnSurfaceVariant</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textAllCaps">false</item>
+        <item name="android:letterSpacing">0.0</item>
+    </style>
+
+</resources>

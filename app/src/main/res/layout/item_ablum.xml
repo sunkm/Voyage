@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card"
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/dp_168"
+    android:layout_marginStart="@dimen/dp_4"
+    android:layout_marginTop="@dimen/dp_6"
+    android:layout_marginEnd="@dimen/dp_4"
+    app:cardCornerRadius="@dimen/dp_6"
+    android:layout_marginBottom="@dimen/dp_6"
+    android:animateLayoutChanges="true"
+    app:strokeWidth="0dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/cover"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scaleType="centerCrop"
+            app:shapeAppearance="@style/RoundedStyle.Two" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/year"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignEnd="@id/cover"
+            android:layout_alignBottom="@id/cover"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="@dimen/dp_6"
+            android:padding="@dimen/dp_4"
+            android:paddingStart="@dimen/dp_6"
+            android:paddingEnd="@dimen/dp_6"
+            android:text="年份"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_13" />
+
+    </RelativeLayout>
+
+</com.google.android.material.card.MaterialCardView>

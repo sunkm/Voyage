@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal"
+    tools:context=".genshin.activity.WeaponActivity">
+
+
+    <LinearLayout
+        android:id="@+id/select_span"
+        android:layout_width="@dimen/dp_56"
+        android:layout_height="match_parent"
+        android:background="@color/black70"
+        android:gravity="center|top"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/rank"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="60dp"
+            android:src="@drawable/ic_action_left"
+            android:tint="@color/white"
+            tools:ignore="UseAppTint" />
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp">
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/select_one_hand_sword"
+                style="@style/CheckBoxStyle"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:layout_gravity="center"
+                android:background="@drawable/check_box_select"
+                android:checked="true" />
+
+            <ImageView
+                android:layout_width="39dp"
+                android:layout_height="39dp"
+                android:layout_gravity="center"
+                android:clickable="false"
+                android:padding="4dp"
+                android:src="@drawable/icon_one_hand_sword" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/select_both_hand_sword"
+                style="@style/CheckBoxStyle"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:layout_gravity="center"
+                android:background="@drawable/check_box_select"
+                android:checked="true" />
+
+            <ImageView
+                android:layout_width="39dp"
+                android:layout_height="39dp"
+                android:layout_gravity="center"
+                android:clickable="false"
+                android:padding="4dp"
+                android:src="@drawable/icon_both_hand_sword" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/select_bow_and_arrow"
+                style="@style/CheckBoxStyle"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:layout_gravity="center"
+                android:background="@drawable/check_box_select"
+                android:checked="true" />
+
+            <ImageView
+                android:layout_width="39dp"
+                android:layout_height="39dp"
+                android:layout_gravity="center"
+                android:clickable="false"
+                android:padding="4dp"
+                android:src="@drawable/icon_bow_and_arrow" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/select_magic_arts"
+                style="@style/CheckBoxStyle"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:layout_gravity="center"
+                android:background="@drawable/check_box_select"
+                android:checked="true" />
+
+            <ImageView
+                android:layout_width="39dp"
+                android:layout_height="39dp"
+                android:layout_gravity="center"
+                android:clickable="false"
+                android:padding="4dp"
+                android:src="@drawable/icon_magic_arts" />
+        </FrameLayout>
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <androidx.appcompat.widget.AppCompatCheckBox
+                android:id="@+id/select_spear"
+                style="@style/CheckBoxStyle"
+                android:layout_width="34dp"
+                android:layout_height="34dp"
+                android:layout_gravity="center"
+                android:background="@drawable/check_box_select"
+                android:checked="true" />
+
+            <ImageView
+                android:layout_width="39dp"
+                android:layout_height="39dp"
+                android:layout_gravity="center"
+                android:clickable="false"
+                android:padding="4dp"
+                android:src="@drawable/icon_spear" />
+        </FrameLayout>
+
+    </LinearLayout>
+
+
+    <androidx.core.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/list"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:nestedScrollingEnabled="false"
+                android:overScrollMode="never"
+                android:scrollbars="none"
+                app:layoutManager="androidx.recyclerview.widget.GridLayoutManager"
+                app:spanCount="4" />
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+
+</LinearLayout>

@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+        <import type="android.view.View" />
+
+        <variable
+            name="m"
+            type="com.manchuan.tools.activity.movies.MovieListCount" />
+
+    </data>
+
+    <com.manchuan.tools.view.CheckableChipView
+        android:id="@+id/chip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:checked="@{Boolean.valueOf(m.checked)}"
+        android:layout_marginEnd="@dimen/dp_6"
+        android:layout_marginBottom="@dimen/dp_4"
+        android:color="?colorPrimary"
+        app:ccv_checkedTextColor="@color/material_deep_purple_900"
+        android:text="@{String.valueOf(m.name)}"
+        tools:ignore="NewApi">
+
+    </com.manchuan.tools.view.CheckableChipView>
+</layout>

@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/_coordinatorLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:id="@+id/_appbarLayout"
+        android:layout_width="match_parent"
+        app:elevation="0dp"
+        android:layout_height="wrap_content">
+
+        <androidx.appcompat.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:elevation="0dp"
+            app:popupTheme="@style/AppTheme.PopupOverlay" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/_linear"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+        <com.scwang.smart.refresh.layout.SmartRefreshLayout
+            android:id="@+id/sl"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            app:srlEnablePureScrollMode="true">
+
+            <androidx.core.widget.NestedScrollView
+                android:id="@+id/vscroll1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:fillViewport="true"
+                android:overScrollMode="never">
+
+                <LinearLayout
+                    android:orientation="vertical"
+                    android:id="@+id/linear2"
+                    android:animateLayoutChanges="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                    <com.google.android.material.textfield.TextInputLayout
+                        android:id="@+id/textinputlayout1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginTop="20dp"
+                        android:layout_marginRight="20dp"
+                        android:animateLayoutChanges="true"
+                        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.Dense">
+
+                        <com.google.android.material.textfield.TextInputEditText
+                            android:id="@+id/edittext1"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:hint="请输入内容"
+                            android:maxLines="4"
+                            android:textSize="16sp"
+                            tools:ignore="HardcodedText,TextContrastCheck" />
+
+                    </com.google.android.material.textfield.TextInputLayout>
+
+                    <LinearLayout
+                        android:orientation="horizontal"
+                        android:id="@+id/linear4"
+                        android:paddingLeft="10dp"
+                        android:paddingRight="10dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.button.MaterialButton
+                            android:id="@+id/encrypt"
+                            style="@style/Widget.MaterialComponents.Button"
+                            android:layout_width="match_parent"
+                            android:layout_height="52dp"
+                            android:layout_marginLeft="10dp"
+                            android:layout_marginTop="20dp"
+                            android:layout_marginRight="10dp"
+                            android:layout_marginBottom="20dp"
+                            android:layout_weight="1.0"
+                            android:gravity="center"
+                            android:text="加密"
+                            android:textColor="#FFFFFFFF"
+                            android:textSize="14sp"
+                            app:backgroundTint="#FF5187F4"
+                            app:cornerRadius="8dp"
+                            app:strokeColor="#FF5187F4"
+                            app:strokeWidth="0dp"
+                            tools:ignore="TextContrastCheck" />
+
+                    </LinearLayout>
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cardview1"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="20dp"
+                        android:layout_marginRight="20dp"
+                        android:layout_marginBottom="20dp"
+                        android:animateLayoutChanges="true"
+                        app:cardCornerRadius="8dp"
+                        app:cardElevation="0dp"
+                        app:rippleColor="#FFBDBDBD"
+                        app:strokeColor="@color/divider_color"
+                        app:strokeWidth="1dp">
+
+                        <LinearLayout
+                            android:orientation="vertical"
+                            android:id="@+id/linear1"
+                            android:layout_width="match_parent"
+                            android:animateLayoutChanges="true"
+                            android:layout_height="match_parent">
+
+                            <AutoCompleteTextView
+                                android:id="@+id/autocomplete1"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content"
+                                android:background="@android:color/transparent"
+                                android:gravity="top"
+                                android:inputType="none"
+                                android:minLines="3"
+                                android:paddingLeft="16dp"
+                                android:paddingTop="12dp"
+                                android:paddingRight="16dp"
+                                android:paddingBottom="12dp"
+                                android:textColor="@color/textColor"
+                                android:textColorHint="#FF757575"
+                                android:textSize="16sp"
+                                tools:ignore="SpeakableTextPresentCheck" />
+
+                            <LinearLayout
+                                android:gravity="right"
+                                android:orientation="horizontal"
+                                android:id="@+id/linear3"
+                                android:layout_width="match_parent"
+                                android:layout_height="wrap_content">
+
+                                <ImageView
+                                    android:id="@+id/imageview1"
+                                    android:padding="13dp"
+                                    android:layout_width="48dp"
+                                    android:layout_height="48dp"
+                                    android:layout_marginLeft="8dp"
+                                    android:layout_marginRight="8dp"
+                                    android:layout_marginBottom="8dp"
+                                    android:src="@drawable/twotone_file_copy_black_48"
+                                    android:scaleType="fitCenter"
+                                    app:tint="@color/textColor" />
+
+                            </LinearLayout>
+
+                        </LinearLayout>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                </LinearLayout>
+
+            </androidx.core.widget.NestedScrollView>
+
+        </com.scwang.smart.refresh.layout.SmartRefreshLayout>
+
+    </LinearLayout>
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>

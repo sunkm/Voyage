@@ -1,0 +1,914 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+    <!-- Base application theme. -->
+    <style name="RequestMediaProjectionActivityStyle" parent="Theme.AppCompat.Light.DarkActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowFrame">@null</item>
+        <item name="android:windowBackground">@null</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowAnimationStyle">@null</item>
+        <item name="android:windowDisablePreview">true</item>
+        <item name="android:windowNoDisplay">false</item>
+        <item name="android:windowIsFloating">true</item>
+    </style>
+
+    <style name="AppTheme" parent="Theme.Material3.Light.YuanHang">
+        <!-- Customize your theme here. -->
+        <item name="android:forceDarkAllowed" tools:ignore="NewApi">false</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:windowContentTransitions">true</item>
+        <item name="android:fontFamily">@font/sans</item>
+        <item name="preferenceTheme">@style/PreferenceThemeOverlay.Rikka.Material3</item>
+        <item name="materialSwitchStyle">@style/Widget.Material3.CompoundButton.MaterialSwitch
+        </item>
+        <item name="bottomSheetDialogTheme">@style/CustomBottomSheetDialog</item>
+        <item name="pickerColorEditTextColor">@color/textColor</item>
+    </style>
+
+    <style name="TextAppearance.Design.SubtitleCollapsingToolbar.ExpandedSubtitle" parent="@style/TextAppearance.AppCompat.Title">
+        <item name="android:textSize">16.0sp</item>
+        <item name="android:fontFamily">@font/sans</item>
+        <item name="android:textColor">?android:attr/textColorSecondary</item>
+    </style>
+
+    <style name="TextAppearance.Design.SubtitleCollapsingToolbar.ExpandedTitle" parent="@style/TextAppearance.Design.CollapsingToolbar.Expanded">
+        <item name="android:textSize">36.0sp</item>
+        <item name="android:fontFamily">@font/sans</item>
+    </style>
+
+    <style name="Widget.Design.SubtitleCollapsingToolbar" parent="@style/Widget.Design.CollapsingToolbar" />
+
+    <style name="TextAppearance.SubTitle.YuanHang2" parent="@style/TextAppearance.AppCompat.Body1">
+        <item name="android:textSize">12.0sp</item>
+        <item name="android:fontFamily">@font/sans</item>
+    </style>
+
+    <style name="TextAppearance.Title.YuanHang" parent="@style/TextAppearance.AppCompat.Body1">
+        <item name="android:textSize">20.0sp</item>
+        <item name="android:fontFamily">@font/sans</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+
+    <style name="TextStyle">
+        <item name="android:textColor">@color/text_gray_first</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="TextStyle.10" parent="@style/TextStyle">
+        <item name="android:textSize">10.0sp</item>
+        <item name="android:lineSpacingExtra">2.0dp</item>
+    </style>
+
+    <style name="TextStyle.10.Bold" parent="@style/TextStyle.10">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextStyle.11" parent="@style/TextStyle">
+        <item name="android:textSize">11.0sp</item>
+        <item name="android:lineSpacingExtra">3.0dp</item>
+    </style>
+
+    <style name="TextStyle.11.Medium" parent="@style/TextStyle.11">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextStyle.12" parent="@style/TextStyle">
+        <item name="android:textSize">12.0sp</item>
+        <item name="android:lineSpacingExtra">4.0dp</item>
+    </style>
+
+    <style name="TextStyle.12.Medium" parent="@style/TextStyle.12">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextStyle.13" parent="@style/TextStyle">
+        <item name="android:textSize">13.0sp</item>
+        <item name="android:lineSpacingExtra">4.0dp</item>
+    </style>
+
+    <style name="TextStyle.14" parent="@style/TextStyle">
+        <item name="android:textSize">14.0sp</item>
+        <item name="android:lineSpacingExtra">6.0dp</item>
+    </style>
+
+    <style name="MyWidgetTheme" parent="@style/Theme.AppCompat.DayNight">
+        <item name="android:background">@drawable/bg_widget_genshin_content</item>
+    </style>
+
+    <style name="TextStyle.14.Medium" parent="@style/TextStyle.14">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextStyle.16" parent="@style/TextStyle">
+        <item name="android:textSize">16.0sp</item>
+        <item name="android:lineSpacingExtra">8.0dp</item>
+    </style>
+
+    <style name="TextStyle.16.Medium" parent="@style/TextStyle.16">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextStyle.18" parent="@style/TextStyle">
+        <item name="android:textSize">18.0sp</item>
+        <item name="android:lineSpacingExtra">8.0dp</item>
+    </style>
+
+    <style name="TextStyle.18.Medium" parent="@style/TextStyle.18">
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextStyle.22" parent="@style/TextStyle">
+        <item name="android:textSize">22.0sp</item>
+    </style>
+
+    <style name="TextStyle.22.Bold" parent="@style/TextStyle.22">
+        <item name="android:textStyle">bold</item>
+        <item name="android:lineSpacingExtra">6.0dp</item>
+    </style>
+
+    <style name="TextStyle.24" parent="@style/TextStyle">
+        <item name="android:textSize">24.0sp</item>
+    </style>
+
+    <style name="TextStyle.24.Bold" parent="@style/TextStyle.24">
+        <item name="android:textStyle">bold</item>
+        <item name="android:lineSpacingExtra">8.0dp</item>
+    </style>
+
+    <style name="TextStyle.Black" parent="@style/TextStyle">
+        <item name="android:textColor">@color/gray_33</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="TextStyle.Black.14" parent="@style/TextStyle.Black">
+        <item name="android:textSize">14.0sp</item>
+    </style>
+
+    <style name="TextStyle.Blue" parent="@style/TextStyle">
+        <item name="android:textColor">@color/text_blue</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="TextStyle.Blue.17" parent="@style/TextStyle.Blue">
+        <item name="android:textSize">17.0sp</item>
+    </style>
+
+    <style name="TextStyle.Caption.1" parent="@style/TextStyle.11" />
+
+    <style name="TextStyle.Gray33" parent="@style/TextStyle">
+        <item name="android:textColor">@color/gray_33</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="TextStyle.Gray33.14" parent="@style/TextStyle.Gray33">
+        <item name="android:textSize">14.0sp</item>
+    </style>
+
+    <style name="TextStyle.Gray33.17" parent="@style/TextStyle.Gray33">
+        <item name="android:textSize">17.0sp</item>
+    </style>
+
+    <style name="TextStyle.Gray73" parent="@style/TextStyle">
+        <item name="android:textColor">@color/base_gray_73</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="TextStyle.Gray73.12" parent="@style/TextStyle.Gray73">
+        <item name="android:textSize">12.0sp</item>
+    </style>
+
+    <style name="TextStyle.Gray73.14" parent="@style/TextStyle.Gray73">
+        <item name="android:textSize">14.0sp</item>
+    </style>
+
+    <style name="TextStyle.GrayA6" parent="@style/TextStyle">
+        <item name="android:textColor">@color/gray_a6</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="TextStyle.GrayA6.12" parent="@style/TextStyle.GrayA6">
+        <item name="android:textSize">12.0sp</item>
+    </style>
+
+    <style name="TextStyle.GrayA6.14" parent="@style/TextStyle.GrayA6">
+        <item name="android:textSize">14.0sp</item>
+    </style>
+
+    <style name="TextStyle.Rank" parent="@style/TextStyle">
+        <item name="android:fontFamily">@font/font_rank</item>
+        <item name="fontFamily">@font/font_rank</item>
+    </style>
+
+    <style name="TextStyle.Title" parent="@style/TextStyle">
+        <item name="android:textSize">17.0sp</item>
+    </style>
+
+    <style name="TextStyle.Title.1" parent="@style/TextStyle.16.Medium" />
+
+    <style name="TextStyle.Title.Large" parent="@style/TextStyle.24.Bold" />
+
+    <style name="TextStyle.UnRead" parent="@style/TextStyle">
+        <item name="android:textSize">10.0sp</item>
+        <item name="android:textColor">@color/base_white</item>
+        <item name="android:gravity">center</item>
+        <item name="android:background">@drawable/bg_tab_msg_unread_count</item>
+        <item name="android:paddingLeft">4.0dp</item>
+        <item name="android:paddingTop">1.0dp</item>
+        <item name="android:paddingRight">4.0dp</item>
+        <item name="android:paddingBottom">1.0dp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:minWidth">16.0dp</item>
+        <item name="android:includeFontPadding">false</item>
+    </style>
+
+    <style name="TextStyle.White" parent="@style/TextStyle">
+        <item name="android:textColor">@color/white</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="TextStyle.White.17" parent="@style/TextStyle.White">
+        <item name="android:textSize">17.0sp</item>
+    </style>
+
+    <style name="AppTheme_About" parent="Theme.Material3.Light.YuanHang">
+        <!-- Customize your theme here. -->
+        <item name="android:forceDarkAllowed" tools:ignore="NewApi">false</item>
+        <item name="android:windowLightStatusBar">true</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowBackground">@color/transparent</item>
+        <item name="android:colorBackgroundCacheHint">@null</item>
+        <item name="android:windowShowWallpaper">true</item>
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:windowContentTransitions">true</item>
+        <item name="buttonStyle">@style/Widget.MaterialComponents.Button.OutlinedButton</item>
+        <item name="preferenceTheme">@style/PreferenceThemeOverlay.Rikka.Material3</item>
+        <item name="materialSwitchStyle">@style/Widget.Material3.CompoundButton.MaterialSwitch
+        </item>
+        <item name="bottomSheetDialogTheme">@style/CustomBottomSheetDialog</item>
+        <item name="pickerColorEditTextColor">@color/textColor</item>
+    </style>
+
+    <style name="GameRoundedStyle">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">@dimen/dp_6</item>
+    </style>
+
+
+    <style name="CustomBottomStyle" parent="@android:style/TextAppearance.Small">
+        <item name="android:textColor">#fff</item>
+    </style>
+
+    <style name="RoundedStyle">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">@dimen/dp_10</item>
+    </style>
+
+    <style name="RoundedStyle.Two">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSize">@dimen/dp_6</item>
+    </style>
+
+    <style name="MaterialCircleIconViewLight">
+        <item name="iconForegroundChroma">600</item>
+        <item name="iconBackgroundChroma">50</item>
+        <item name="android:background">@drawable/shape_circle_icon_background</item>
+        <item name="android:tintMode">src_in</item>
+        <item name="android:backgroundTintMode">src_in</item>
+    </style>
+
+    <style name="ToolbarTitle" parent="@style/TextAppearance.Material3.ActionBar.Title">
+        <item name="fontFamily">@font/sans</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="ToolbarTitleLargeSize" parent="@style/TextAppearance.Material3.ActionBar.Title">
+        <item name="fontFamily">@font/sans</item>
+        <item name="android:textSize">@dimen/sp_30</item>
+    </style>
+
+    <style name="MaterialCircleIconViewDark">
+        <item name="iconForegroundChroma">100</item>
+        <item name="iconBackgroundChroma">600</item>
+        <item name="android:background">@drawable/shape_circle_icon_background</item>
+        <item name="android:tintMode">src_in</item>
+        <item name="android:backgroundTintMode">src_in</item>
+    </style>
+
+    <style name="_FullScreenTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="android:windowTranslucentStatus">true</item>
+    </style>
+
+
+    <!--    复选框样式-->
+    <style name="CheckBoxStyle" parent="Widget.AppCompat.CompoundButton.CheckBox">
+        <item name="android:button">@drawable/check_box_select</item>
+    </style>
+
+    <style name="_TranslucentTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="android:windowIsTranslucent">true</item>
+        <item name="android:windowTranslucentStatus">true</item>
+        <item name="android:windowBackground">@android:color/transparent</item>
+        <item name="android:windowAnimationStyle">@android:style/Animation.Translucent</item>
+    </style>
+
+    <style name="PickerEditText">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:imeOptions">actionNext</item>
+        <item name="android:singleLine">true</item>
+        <item name="android:textSize">@dimen/sp_18</item>
+    </style>
+
+    <style name="Theme.Material3.Light.YuanHang" parent="Theme.Material3.Light.Rikka">
+        <item name="materialCircleIconViewStyle">@style/MaterialCircleIconViewLight</item>
+        <item name="colorPrimary">@color/md_theme_libchecker_light_primary</item>
+        <item name="colorOnPrimary">@color/md_theme_libchecker_light_onPrimary</item>
+        <item name="extendedFloatingActionButtonStyle">
+            @style/Widget.Material3.ExtendedFloatingActionButton.Icon.Primary
+        </item>
+        <item name="colorPrimaryContainer">@color/md_theme_libchecker_light_primaryContainer</item>
+        <item name="colorOnPrimaryContainer">@color/md_theme_libchecker_light_onPrimaryContainer
+        </item>
+        <item name="colorSecondary">@color/md_theme_libchecker_light_secondary</item>
+        <item name="colorOnSecondary">@color/md_theme_libchecker_light_onSecondary</item>
+        <item name="colorSecondaryContainer">@color/md_theme_libchecker_light_secondaryContainer
+        </item>
+        <item name="colorOnSecondaryContainer">
+            @color/md_theme_libchecker_light_onSecondaryContainer
+        </item>
+        <item name="colorTertiary">@color/md_theme_libchecker_light_tertiary</item>
+        <item name="colorOnTertiary">@color/md_theme_libchecker_light_onTertiary</item>
+        <item name="colorTertiaryContainer">@color/md_theme_libchecker_light_tertiaryContainer
+        </item>
+        <item name="colorOnTertiaryContainer">@color/md_theme_libchecker_light_onTertiaryContainer
+        </item>
+        <item name="colorError">@color/md_theme_libchecker_light_error</item>
+        <item name="colorErrorContainer">@color/md_theme_libchecker_light_errorContainer</item>
+        <item name="colorOnError">@color/md_theme_libchecker_light_onError</item>
+        <item name="colorOnErrorContainer">@color/md_theme_libchecker_light_onErrorContainer</item>
+        <item name="android:colorBackground">@color/md_theme_libchecker_light_surface</item>
+        <item name="colorOnBackground">@color/md_theme_libchecker_light_onBackground</item>
+        <item name="colorSurface">@color/md_theme_libchecker_light_surface</item>
+        <item name="colorOnSurface">@color/md_theme_libchecker_light_onSurface</item>
+        <item name="colorSurfaceVariant">@color/md_theme_libchecker_light_surfaceVariant</item>
+        <item name="colorOnSurfaceVariant">@color/md_theme_libchecker_light_onSurfaceVariant</item>
+        <item name="colorOutline">@color/md_theme_libchecker_light_outline</item>
+        <item name="colorOnSurfaceInverse">@color/md_theme_libchecker_light_inverseOnSurface</item>
+        <item name="colorSurfaceInverse">@color/md_theme_libchecker_light_inverseSurface</item>
+        <item name="colorPrimaryInverse">@color/md_theme_libchecker_light_primaryInverse</item>
+        <item name="palettePrimary0">@color/md_theme_libchecker_palette_primary_0</item>
+        <item name="palettePrimary10">@color/md_theme_libchecker_palette_primary_10</item>
+        <item name="palettePrimary20">@color/md_theme_libchecker_palette_primary_20</item>
+        <item name="palettePrimary30">@color/md_theme_libchecker_palette_primary_30</item>
+        <item name="palettePrimary40">@color/md_theme_libchecker_palette_primary_40</item>
+        <item name="palettePrimary50">@color/md_theme_libchecker_palette_primary_50</item>
+        <item name="palettePrimary60">@color/md_theme_libchecker_palette_primary_60</item>
+        <item name="palettePrimary70">@color/md_theme_libchecker_palette_primary_70</item>
+        <item name="palettePrimary80">@color/md_theme_libchecker_palette_primary_80</item>
+        <item name="palettePrimary90">@color/md_theme_libchecker_palette_primary_90</item>
+        <item name="palettePrimary95">@color/md_theme_libchecker_palette_primary_95</item>
+        <item name="palettePrimary99">@color/md_theme_libchecker_palette_primary_99</item>
+        <item name="palettePrimary100">@color/md_theme_libchecker_palette_primary_100</item>
+        <item name="paletteSecondary0">@color/md_theme_libchecker_palette_secondary_0</item>
+        <item name="paletteSecondary10">@color/md_theme_libchecker_palette_secondary_10</item>
+        <item name="paletteSecondary20">@color/md_theme_libchecker_palette_secondary_20</item>
+        <item name="paletteSecondary30">@color/md_theme_libchecker_palette_secondary_30</item>
+        <item name="paletteSecondary40">@color/md_theme_libchecker_palette_secondary_40</item>
+        <item name="paletteSecondary50">@color/md_theme_libchecker_palette_secondary_50</item>
+        <item name="paletteSecondary60">@color/md_theme_libchecker_palette_secondary_60</item>
+        <item name="paletteSecondary70">@color/md_theme_libchecker_palette_secondary_70</item>
+        <item name="paletteSecondary80">@color/md_theme_libchecker_palette_secondary_80</item>
+        <item name="paletteSecondary90">@color/md_theme_libchecker_palette_secondary_90</item>
+        <item name="paletteSecondary95">@color/md_theme_libchecker_palette_secondary_95</item>
+        <item name="paletteSecondary99">@color/md_theme_libchecker_palette_secondary_99</item>
+        <item name="paletteSecondary100">@color/md_theme_libchecker_palette_secondary_100</item>
+        <item name="paletteTertiary0">@color/md_theme_libchecker_palette_tertiary_0</item>
+        <item name="paletteTertiary10">@color/md_theme_libchecker_palette_tertiary_10</item>
+        <item name="paletteTertiary20">@color/md_theme_libchecker_palette_tertiary_20</item>
+        <item name="paletteTertiary30">@color/md_theme_libchecker_palette_tertiary_30</item>
+        <item name="paletteTertiary40">@color/md_theme_libchecker_palette_tertiary_40</item>
+        <item name="paletteTertiary50">@color/md_theme_libchecker_palette_tertiary_50</item>
+        <item name="paletteTertiary60">@color/md_theme_libchecker_palette_tertiary_60</item>
+        <item name="paletteTertiary70">@color/md_theme_libchecker_palette_tertiary_70</item>
+        <item name="paletteTertiary80">@color/md_theme_libchecker_palette_tertiary_80</item>
+        <item name="paletteTertiary90">@color/md_theme_libchecker_palette_tertiary_90</item>
+        <item name="paletteTertiary95">@color/md_theme_libchecker_palette_tertiary_95</item>
+        <item name="paletteTertiary99">@color/md_theme_libchecker_palette_tertiary_99</item>
+        <item name="paletteTertiary100">@color/md_theme_libchecker_palette_tertiary_100</item>
+        <item name="paletteError0">@color/md_theme_libchecker_palette_error_0</item>
+        <item name="paletteError10">@color/md_theme_libchecker_palette_error_10</item>
+        <item name="paletteError20">@color/md_theme_libchecker_palette_error_20</item>
+        <item name="paletteError30">@color/md_theme_libchecker_palette_error_30</item>
+        <item name="paletteError40">@color/md_theme_libchecker_palette_error_40</item>
+        <item name="paletteError50">@color/md_theme_libchecker_palette_error_50</item>
+        <item name="paletteError60">@color/md_theme_libchecker_palette_error_60</item>
+        <item name="paletteError70">@color/md_theme_libchecker_palette_error_70</item>
+        <item name="paletteError80">@color/md_theme_libchecker_palette_error_80</item>
+        <item name="paletteError90">@color/md_theme_libchecker_palette_error_90</item>
+        <item name="paletteError95">@color/md_theme_libchecker_palette_error_95</item>
+        <item name="paletteError99">@color/md_theme_libchecker_palette_error_99</item>
+        <item name="paletteError100">@color/md_theme_libchecker_palette_error_100</item>
+        <item name="paletteNeutral0">@color/md_theme_libchecker_palette_neutral_0</item>
+        <item name="paletteNeutral10">@color/md_theme_libchecker_palette_neutral_10</item>
+        <item name="paletteNeutral20">@color/md_theme_libchecker_palette_neutral_20</item>
+        <item name="paletteNeutral30">@color/md_theme_libchecker_palette_neutral_30</item>
+        <item name="paletteNeutral40">@color/md_theme_libchecker_palette_neutral_40</item>
+        <item name="paletteNeutral50">@color/md_theme_libchecker_palette_neutral_50</item>
+        <item name="paletteNeutral60">@color/md_theme_libchecker_palette_neutral_60</item>
+        <item name="paletteNeutral70">@color/md_theme_libchecker_palette_neutral_70</item>
+        <item name="paletteNeutral80">@color/md_theme_libchecker_palette_neutral_80</item>
+        <item name="paletteNeutral90">@color/md_theme_libchecker_palette_neutral_90</item>
+        <item name="paletteNeutral95">@color/md_theme_libchecker_palette_neutral_95</item>
+        <item name="paletteNeutral99">@color/md_theme_libchecker_palette_neutral_99</item>
+        <item name="paletteNeutral100">@color/md_theme_libchecker_palette_neutral_100</item>
+        <item name="paletteNeutralVariant0">@color/md_theme_libchecker_palette_neutral_variant_0
+        </item>
+        <item name="paletteNeutralVariant10">@color/md_theme_libchecker_palette_neutral_variant_10
+        </item>
+        <item name="paletteNeutralVariant20">@color/md_theme_libchecker_palette_neutral_variant_20
+        </item>
+        <item name="paletteNeutralVariant30">@color/md_theme_libchecker_palette_neutral_variant_30
+        </item>
+        <item name="paletteNeutralVariant40">@color/md_theme_libchecker_palette_neutral_variant_40
+        </item>
+        <item name="paletteNeutralVariant50">@color/md_theme_libchecker_palette_neutral_variant_50
+        </item>
+        <item name="paletteNeutralVariant60">@color/md_theme_libchecker_palette_neutral_variant_60
+        </item>
+        <item name="paletteNeutralVariant70">@color/md_theme_libchecker_palette_neutral_variant_70
+        </item>
+        <item name="paletteNeutralVariant80">@color/md_theme_libchecker_palette_neutral_variant_80
+        </item>
+        <item name="paletteNeutralVariant90">@color/md_theme_libchecker_palette_neutral_variant_90
+        </item>
+        <item name="paletteNeutralVariant95">@color/md_theme_libchecker_palette_neutral_variant_95
+        </item>
+        <item name="paletteNeutralVariant99">@color/md_theme_libchecker_palette_neutral_variant_99
+        </item>
+        <item name="paletteNeutralVariant100">
+            @color/md_theme_libchecker_palette_neutral_variant_100
+        </item>
+        <item name="android:windowEnterAnimation">@anim/rd_dialog_enter</item>
+        <item name="android:windowExitAnimation">@anim/rd_dialog_exit</item>
+        <item name="bottomSheetDialogTheme">@style/ModalBottomSheetDialog</item>
+        <item name="sheetsBackgroundColor">?android:attr/windowBackground</item>
+        <item name="android:windowActivityTransitions">true</item>
+        <item name="boxCornerRadiusBottomEnd">@dimen/dp_14</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/dp_14</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/dp_14</item>
+        <item name="boxCornerRadiusTopStart">@dimen/dp_14</item>
+        <item name="materialDrawerStyle">@style/Widget.MaterialDrawerStyleCustom</item>
+        <item name="materialDrawerHeaderStyle">@style/Widget.MaterialDrawerHeaderStyleCustom</item>
+    </style>
+
+    <style name="Widget.CheckableChipView" parent="">
+        <item name="android:padding">@dimen/dp_8</item>
+
+        <item name="android:textColor">?attr/colorOnTertiaryContainer</item>
+        <item name="android:textSize">@dimen/sp_13</item>
+
+        <item name="ccv_outlineWidth">@dimen/dp_1</item>
+        <item name="ccv_outlineColor">?attr/colorOnTertiaryContainer</item>
+
+        <item name="android:color">?attr/colorTertiaryContainer</item>
+
+        <item name="ccv_clearIcon">@drawable/ic_baseline_check_24</item>
+        <item name="ccv_foreground">?android:selectableItemBackground</item>
+    </style>
+
+    <style name="Theme.Material3.Dark.YuanHang" parent="Theme.Material3.Dark.Rikka">
+        <item name="boxCornerRadiusBottomEnd">@dimen/dp_14</item>
+        <item name="boxCornerRadiusBottomStart">@dimen/dp_14</item>
+        <item name="boxCornerRadiusTopEnd">@dimen/dp_14</item>
+        <item name="boxCornerRadiusTopStart">@dimen/dp_14</item>
+        <item name="extendedFloatingActionButtonStyle">
+            @style/Widget.Material3.ExtendedFloatingActionButton.Icon.Primary
+        </item>
+        <item name="android:windowEnterAnimation">@anim/rd_dialog_enter</item>
+        <item name="android:windowExitAnimation">@anim/rd_dialog_exit</item>
+        <item name="materialDrawerStyle">@style/Widget.MaterialDrawerStyleCustom</item>
+        <item name="materialDrawerHeaderStyle">@style/Widget.MaterialDrawerHeaderStyleCustom</item>
+        <item name="sheetsBackgroundColor">?android:attr/windowBackground</item>
+        <item name="bottomSheetDialogTheme">@style/ModalBottomSheetDialog</item>
+        <item name="materialCircleIconViewStyle">@style/MaterialCircleIconViewDark</item>
+        <item name="colorPrimary">@color/md_theme_libchecker_dark_primary</item>
+        <item name="colorOnPrimary">@color/md_theme_libchecker_dark_onPrimary</item>
+        <item name="colorPrimaryContainer">@color/md_theme_libchecker_dark_primaryContainer</item>
+        <item name="colorOnPrimaryContainer">@color/md_theme_libchecker_dark_onPrimaryContainer
+        </item>
+        <item name="colorSecondary">@color/md_theme_libchecker_dark_secondary</item>
+        <item name="colorOnSecondary">@color/md_theme_libchecker_dark_onSecondary</item>
+        <item name="colorSecondaryContainer">@color/md_theme_libchecker_dark_secondaryContainer
+        </item>
+        <item name="colorOnSecondaryContainer">
+            @color/md_theme_libchecker_dark_onSecondaryContainer
+        </item>
+        <item name="colorTertiary">@color/md_theme_libchecker_dark_tertiary</item>
+        <item name="colorOnTertiary">@color/md_theme_libchecker_dark_onTertiary</item>
+        <item name="colorTertiaryContainer">@color/md_theme_libchecker_dark_tertiaryContainer</item>
+        <item name="colorOnTertiaryContainer">@color/md_theme_libchecker_dark_onTertiaryContainer
+        </item>
+        <item name="colorError">@color/md_theme_libchecker_dark_error</item>
+        <item name="colorErrorContainer">@color/md_theme_libchecker_dark_errorContainer</item>
+        <item name="colorOnError">@color/md_theme_libchecker_dark_onError</item>
+        <item name="colorOnErrorContainer">@color/md_theme_libchecker_dark_onErrorContainer</item>
+        <item name="android:colorBackground">@color/md_theme_libchecker_dark_surface</item>
+        <item name="colorOnBackground">@color/md_theme_libchecker_dark_onBackground</item>
+        <item name="colorSurface">@color/md_theme_libchecker_dark_surface</item>
+        <item name="colorOnSurface">@color/md_theme_libchecker_dark_onSurface</item>
+        <item name="colorSurfaceVariant">@color/md_theme_libchecker_dark_surfaceVariant</item>
+        <item name="colorOnSurfaceVariant">@color/md_theme_libchecker_dark_onSurfaceVariant</item>
+        <item name="colorOutline">@color/md_theme_libchecker_dark_outline</item>
+        <item name="colorOnSurfaceInverse">@color/md_theme_libchecker_dark_inverseOnSurface</item>
+        <item name="colorSurfaceInverse">@color/md_theme_libchecker_dark_inverseSurface</item>
+        <item name="colorPrimaryInverse">@color/md_theme_libchecker_dark_primaryInverse</item>
+        <item name="palettePrimary0">@color/md_theme_libchecker_palette_primary_0</item>
+        <item name="palettePrimary10">@color/md_theme_libchecker_palette_primary_10</item>
+        <item name="palettePrimary20">@color/md_theme_libchecker_palette_primary_20</item>
+        <item name="palettePrimary30">@color/md_theme_libchecker_palette_primary_30</item>
+        <item name="palettePrimary40">@color/md_theme_libchecker_palette_primary_40</item>
+        <item name="palettePrimary50">@color/md_theme_libchecker_palette_primary_50</item>
+        <item name="palettePrimary60">@color/md_theme_libchecker_palette_primary_60</item>
+        <item name="palettePrimary70">@color/md_theme_libchecker_palette_primary_70</item>
+        <item name="palettePrimary80">@color/md_theme_libchecker_palette_primary_80</item>
+        <item name="palettePrimary90">@color/md_theme_libchecker_palette_primary_90</item>
+        <item name="palettePrimary95">@color/md_theme_libchecker_palette_primary_95</item>
+        <item name="palettePrimary99">@color/md_theme_libchecker_palette_primary_99</item>
+        <item name="palettePrimary100">@color/md_theme_libchecker_palette_primary_100</item>
+        <item name="paletteSecondary0">@color/md_theme_libchecker_palette_secondary_0</item>
+        <item name="paletteSecondary10">@color/md_theme_libchecker_palette_secondary_10</item>
+        <item name="paletteSecondary20">@color/md_theme_libchecker_palette_secondary_20</item>
+        <item name="paletteSecondary30">@color/md_theme_libchecker_palette_secondary_30</item>
+        <item name="paletteSecondary40">@color/md_theme_libchecker_palette_secondary_40</item>
+        <item name="paletteSecondary50">@color/md_theme_libchecker_palette_secondary_50</item>
+        <item name="paletteSecondary60">@color/md_theme_libchecker_palette_secondary_60</item>
+        <item name="paletteSecondary70">@color/md_theme_libchecker_palette_secondary_70</item>
+        <item name="paletteSecondary80">@color/md_theme_libchecker_palette_secondary_80</item>
+        <item name="paletteSecondary90">@color/md_theme_libchecker_palette_secondary_90</item>
+        <item name="paletteSecondary95">@color/md_theme_libchecker_palette_secondary_95</item>
+        <item name="paletteSecondary99">@color/md_theme_libchecker_palette_secondary_99</item>
+        <item name="paletteSecondary100">@color/md_theme_libchecker_palette_secondary_100</item>
+        <item name="paletteTertiary0">@color/md_theme_libchecker_palette_tertiary_0</item>
+        <item name="paletteTertiary10">@color/md_theme_libchecker_palette_tertiary_10</item>
+        <item name="paletteTertiary20">@color/md_theme_libchecker_palette_tertiary_20</item>
+        <item name="paletteTertiary30">@color/md_theme_libchecker_palette_tertiary_30</item>
+        <item name="paletteTertiary40">@color/md_theme_libchecker_palette_tertiary_40</item>
+        <item name="paletteTertiary50">@color/md_theme_libchecker_palette_tertiary_50</item>
+        <item name="paletteTertiary60">@color/md_theme_libchecker_palette_tertiary_60</item>
+        <item name="paletteTertiary70">@color/md_theme_libchecker_palette_tertiary_70</item>
+        <item name="paletteTertiary80">@color/md_theme_libchecker_palette_tertiary_80</item>
+        <item name="paletteTertiary90">@color/md_theme_libchecker_palette_tertiary_90</item>
+        <item name="paletteTertiary95">@color/md_theme_libchecker_palette_tertiary_95</item>
+        <item name="paletteTertiary99">@color/md_theme_libchecker_palette_tertiary_99</item>
+        <item name="paletteTertiary100">@color/md_theme_libchecker_palette_tertiary_100</item>
+        <item name="paletteError0">@color/md_theme_libchecker_palette_error_0</item>
+        <item name="paletteError10">@color/md_theme_libchecker_palette_error_10</item>
+        <item name="paletteError20">@color/md_theme_libchecker_palette_error_20</item>
+        <item name="paletteError30">@color/md_theme_libchecker_palette_error_30</item>
+        <item name="paletteError40">@color/md_theme_libchecker_palette_error_40</item>
+        <item name="paletteError50">@color/md_theme_libchecker_palette_error_50</item>
+        <item name="paletteError60">@color/md_theme_libchecker_palette_error_60</item>
+        <item name="paletteError70">@color/md_theme_libchecker_palette_error_70</item>
+        <item name="paletteError80">@color/md_theme_libchecker_palette_error_80</item>
+        <item name="paletteError90">@color/md_theme_libchecker_palette_error_90</item>
+        <item name="paletteError95">@color/md_theme_libchecker_palette_error_95</item>
+        <item name="paletteError99">@color/md_theme_libchecker_palette_error_99</item>
+        <item name="paletteError100">@color/md_theme_libchecker_palette_error_100</item>
+        <item name="paletteNeutral0">@color/md_theme_libchecker_palette_neutral_0</item>
+        <item name="paletteNeutral10">@color/md_theme_libchecker_palette_neutral_10</item>
+        <item name="paletteNeutral20">@color/md_theme_libchecker_palette_neutral_20</item>
+        <item name="paletteNeutral30">@color/md_theme_libchecker_palette_neutral_30</item>
+        <item name="paletteNeutral40">@color/md_theme_libchecker_palette_neutral_40</item>
+        <item name="paletteNeutral50">@color/md_theme_libchecker_palette_neutral_50</item>
+        <item name="paletteNeutral60">@color/md_theme_libchecker_palette_neutral_60</item>
+        <item name="paletteNeutral70">@color/md_theme_libchecker_palette_neutral_70</item>
+        <item name="paletteNeutral80">@color/md_theme_libchecker_palette_neutral_80</item>
+        <item name="paletteNeutral90">@color/md_theme_libchecker_palette_neutral_90</item>
+        <item name="paletteNeutral95">@color/md_theme_libchecker_palette_neutral_95</item>
+        <item name="paletteNeutral99">@color/md_theme_libchecker_palette_neutral_99</item>
+        <item name="paletteNeutral100">@color/md_theme_libchecker_palette_neutral_100</item>
+        <item name="paletteNeutralVariant0">@color/md_theme_libchecker_palette_neutral_variant_0
+        </item>
+        <item name="paletteNeutralVariant10">@color/md_theme_libchecker_palette_neutral_variant_10
+        </item>
+        <item name="paletteNeutralVariant20">@color/md_theme_libchecker_palette_neutral_variant_20
+        </item>
+        <item name="paletteNeutralVariant30">@color/md_theme_libchecker_palette_neutral_variant_30
+        </item>
+        <item name="paletteNeutralVariant40">@color/md_theme_libchecker_palette_neutral_variant_40
+        </item>
+        <item name="paletteNeutralVariant50">@color/md_theme_libchecker_palette_neutral_variant_50
+        </item>
+        <item name="paletteNeutralVariant60">@color/md_theme_libchecker_palette_neutral_variant_60
+        </item>
+        <item name="paletteNeutralVariant70">@color/md_theme_libchecker_palette_neutral_variant_70
+        </item>
+        <item name="paletteNeutralVariant80">@color/md_theme_libchecker_palette_neutral_variant_80
+        </item>
+        <item name="paletteNeutralVariant90">@color/md_theme_libchecker_palette_neutral_variant_90
+        </item>
+        <item name="paletteNeutralVariant95">@color/md_theme_libchecker_palette_neutral_variant_95
+        </item>
+        <item name="paletteNeutralVariant99">@color/md_theme_libchecker_palette_neutral_variant_99
+        </item>
+        <item name="paletteNeutralVariant100">
+            @color/md_theme_libchecker_palette_neutral_variant_100
+        </item>
+        <item name="android:windowActivityTransitions">true</item>
+    </style>
+
+    <style name="TextView.SansSerif" parent="Widget.MaterialComponents.TextView">
+        <item name="fontFamily">sans-serif</item>
+    </style>
+
+    <style name="TextView.SansSerifCondensedMedium" parent="Widget.MaterialComponents.TextView">
+        <item name="fontFamily">sans-serif-condensed-medium</item>
+    </style>
+
+    <style name="TextView.MonoSpace" parent="Widget.MaterialComponents.TextView">
+        <item name="fontFamily">monospace</item>
+    </style>
+
+    <style name="CustomBottomSheetDialog" parent="@style/ThemeOverlay.MaterialComponents.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/CustomBottomSheet</item>
+    </style>
+
+    <style name="DialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/anim_bottom_sheet_slide_up</item>
+        <item name="android:windowExitAnimation">@anim/anim_bottom_sheet_slide_down</item>
+    </style>
+
+
+    <style name="Platform.V23.Theme.LibChecker" parent="Theme.Material3.Light.LibChecker" />
+
+    <style name="Platform.Theme.LibChecker" parent="Platform.V23.Theme.LibChecker" />
+
+    <style name="Base.AppTheme" parent="Platform.Theme.LibChecker">
+        <item name="preferenceTheme">@style/PreferenceThemeOverlay.Rikka.Material3</item>
+        <item name="bottomSheetDialogTheme">@style/CustomBottomSheetDialog</item>
+        <item name="android:windowActionBar">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="Theme" parent="Base.AppTheme" />
+
+    <style name="TextView.SansSerifMedium" parent="Widget.MaterialComponents.TextView">
+        <item name="fontFamily">sans-serif-medium</item>
+    </style>
+
+    <style name="CustomBottomSheet" parent="Widget.MaterialComponents.BottomSheet">
+        <item name="shapeAppearanceOverlay">@style/CustomShapeAppearanceBottomSheetDialog</item>
+    </style>
+
+    <style name="CustomShapeAppearanceBottomSheetDialog" parent="">
+        <item name="cornerFamily">rounded</item>
+        <item name="cornerSizeTopRight">16dp</item>
+        <item name="cornerSizeTopLeft">16dp</item>
+        <item name="cornerSizeBottomRight">0dp</item>
+        <item name="cornerSizeBottomLeft">0dp</item>
+    </style>
+
+    <style name="Widget.MaterialDrawerStyleCustom" parent="Widget.MaterialDrawerStyle">
+        <item name="materialDrawerInsetForeground">#4000</item>
+        <!-- MaterialDrawer specific values -->
+        <item name="materialDrawerBackground">?attr/colorSurface</item>
+        <item name="materialDrawerPrimaryText">@color/color_drawer_item_text</item>
+        <item name="materialDrawerPrimaryIcon">@color/color_drawer_item_text</item>
+        <item name="materialDrawerSecondaryText">@color/color_drawer_item_text</item>
+        <item name="materialDrawerSecondaryIcon">@color/color_drawer_item_text</item>
+        <item name="materialDrawerDividerColor">?attr/colorOutline</item>
+        <item name="materialDrawerSelectedBackgroundColor">?colorSecondaryContainer</item>
+    </style>
+
+    <style name="BezelImageView">
+        <item name="materialDrawerMaskDrawable">@drawable/material_drawer_rectangle_mask</item>
+        <item name="materialDrawerDrawCircularShadow">false</item>
+        <item name="materialDrawerSelectorOnPress">?attr/colorAccent</item>
+        <item name="android:scaleType">fitXY</item>
+    </style>
+
+    // define a custom header style
+
+    <style name="Widget.MaterialDrawerHeaderStyleCustom" parent="">
+        <item name="materialDrawerCompactStyle">true</item>
+        <item name="materialDrawerHeaderSelectionText">?colorOnSurface</item>
+        <item name="materialDrawerHeaderSelectionSubtext">?colorOnSurface</item>
+    </style>
+
+    <declare-styleable name="BlurView">
+        <attr name="bvCornerRadius" format="dimension" />
+        <attr name="bvBlurRadius" format="float" />
+        <attr name="bvTint" format="color|reference" />
+    </declare-styleable>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+    <color name="dsb_progress_color">#ff009688</color>
+    <color name="dsb_track_color">#ff939393</color>
+    <color name="dsb_disabled_color">#66939393</color>
+    <color name="dsb_ripple_color_pressed">#77939393</color>
+    <color name="dsb_ripple_color_focused">#99999999</color>
+
+    <style name="Widget.DiscreteSeekBar" parent="android:Widget">
+        <item name="dsb_indicatorTextAppearance">@style/Widget.DiscreteIndicatorTextAppearance
+        </item>
+        <item name="dsb_progressColor">@color/dsb_progress_color_list</item>
+        <item name="dsb_trackColor">@color/dsb_track_color_list</item>
+        <item name="dsb_rippleColor">@color/dsb_ripple_color_list</item>
+        <item name="dsb_indicatorColor">@color/dsb_progress_color</item>
+        <item name="dsb_indicatorElevation">4dp</item>
+        <item name="dsb_mirrorForRtl">true</item>
+    </style>
+
+
+    <style name="AboutPage">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">match_parent</item>
+    </style>
+
+    <style name="AboutPage.Item">
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="AboutPage.Header" />
+
+    <style name="AboutPage.Header.ToolbarTitleExpanded" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@android:color/transparent</item>
+    </style>
+
+    <style name="AboutPage.Header.Icon">
+        <item name="android:layout_width">@dimen/dp_98</item>
+        <item name="android:layout_height">@dimen/dp_98</item>
+    </style>
+
+    <style name="AboutPage.Header.Slogan">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:paddingLeft">16dp</item>
+        <item name="android:paddingRight">16dp</item>
+    </style>
+
+    <style name="AboutPage.Header.Version">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:layout_marginTop">4dp</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">@android:color/white</item>
+    </style>
+
+    <style name="AboutPage.Item.Category">
+        <item name="android:layout_marginLeft">1dp</item>
+        <item name="android:layout_marginRight">1dp</item>
+        <item name="android:paddingTop">12dp</item>
+        <item name="android:paddingBottom">12dp</item>
+        <item name="android:paddingLeft">@dimen/about_page_item_category_padding_horizontal</item>
+        <item name="android:paddingRight">12dp</item>
+        <item name="android:paddingStart">@dimen/about_page_item_category_padding_horizontal</item>
+        <item name="android:paddingEnd">12dp</item>
+        <item name="android:textColor">@color/about_page_category_text_color</item>
+    </style>
+
+    <style name="AboutPage.Item.Line">
+        <item name="android:layout_height">1px</item>
+        <item name="android:background">@color/about_page_line</item>
+    </style>
+
+    <style name="AboutPage.Item.Card">
+        <item name="android:paddingLeft">@dimen/dp_16</item>
+        <item name="android:paddingRight">12dp</item>
+        <item name="android:paddingTop">16dp</item>
+        <item name="android:paddingBottom">16dp</item>
+        <item name="android:background">@drawable/about_page_card</item>
+    </style>
+
+    <style name="AboutPage.Item.License">
+        <item name="android:paddingLeft">70dp</item>
+        <item name="android:paddingRight">12dp</item>
+        <item name="android:paddingBottom">16dp</item>
+        <item name="android:background">@drawable/about_page_card</item>
+    </style>
+
+    <style name="AboutPage.CardContent">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:paddingBottom">8dp</item>
+        <item name="android:autoLink">web</item>
+        <item name="android:textColorLink">@color/about_page_link_text_color</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+        <item name="android:textIsSelectable">false</item>
+    </style>
+
+    <style name="AboutPage.ContributorAvatar">
+        <item name="android:layout_width">@dimen/about_page_avatar_size</item>
+        <item name="android:layout_height">@dimen/about_page_avatar_size</item>
+        <item name="android:layout_marginRight">16dp</item>
+        <item name="android:layout_marginEnd">16dp</item>
+    </style>
+
+    <style name="AboutPage.ContributorName">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+    </style>
+
+    <style name="AboutPage.ContributorDesc">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">?android:attr/textColorSecondary</item>
+    </style>
+
+    <style name="AboutPage.LicenseTitle">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+    </style>
+
+    <style name="AboutPage.LicenseHint">
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:layout_height">wrap_content</item>
+        <item name="android:textSize">@dimen/about_page_license_text_size</item>
+        <item name="android:textColor">?android:attr/textColorSecondary</item>
+    </style>
+
+    <style name="AboutPage.BottomSheetItem">
+        <item name="android:paddingLeft">24dp</item>
+        <item name="android:paddingRight">24dp</item>
+        <item name="android:gravity">center|left</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:textColor">@color/about_page_card_text_color</item>
+        <item name="android:background">?selectableItemBackground</item>
+    </style>
+
+    <style name="Widget.DiscreteIndicatorTextAppearance" parent="android:TextAppearance.Small">
+        <item name="android:textColor">?android:attr/textColorPrimaryInverse</item>
+        <item name="android:padding">6dp</item>
+    </style>
+
+    <style name="ModalBottomSheet" parent="Widget.Material3.BottomSheet.Modal">
+        <!-- Apply attributes here -->
+    </style>
+
+    <!--实现BottomSheetDialog圆角效果-->
+    <style name="ModalBottomSheetDialog" parent="ThemeOverlay.Material3.BottomSheetDialog">
+        <item name="bottomSheetStyle">@style/ModalBottomSheet</item>
+        <item name="android:background">@drawable/shape_sheet</item>
+        <item name="android:navigationBarColor">?android:attr/windowBackground</item>
+        <item name="android:windowSoftInputMode">adjustResize</item>
+        <item name="android:windowIsFloating">false</item>
+    </style>
+
+    <style name="MaterialComponentsBottomDialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/mtrl_bottom_sheet_slide_in</item>
+        <item name="android:windowExitAnimation">@anim/mtrl_bottom_sheet_slide_out</item>
+    </style>
+
+    <style name="ToolbarSubtitle" parent="@style/TextAppearance.Widget.AppCompat.Toolbar.Subtitle">
+        <item name="android:textSize">12.0sp</item>
+        <item name="android:ellipsize">marquee</item>
+        <item name="android:fontFamily">serif</item>
+    </style>
+
+    <style name="Widget.Flipped.AppWidget.Container" parent="android:Widget">
+        <item name="android:id">@android:id/background</item>
+        <item name="android:background">?android:attr/colorBackground</item>
+    </style>
+
+    <style name="Widget.Flipped.AppWidget.InnerView" parent="android:Widget">
+        <item name="android:background">?android:attr/colorBackground</item>
+        <item name="android:textColor">?android:attr/textColorPrimary</item>
+    </style>
+
+</resources>

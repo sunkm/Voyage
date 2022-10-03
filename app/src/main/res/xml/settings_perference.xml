@@ -1,0 +1,121 @@
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory app:title="常规">
+
+        <rikka.material.preference.MaterialSwitchPreference
+            app:defaultValue="true"
+            app:icon="@drawable/ic_primary_colorize_24"
+            app:isPreferenceVisible="true"
+            app:key="dynamicColors"
+            app:summary="适配 Android 12 新特性"
+            app:title="动态取色" />
+
+        <rikka.material.preference.MaterialSwitchPreference
+            app:icon="@drawable/ic_primary_font_download_24"
+            app:key="font_settings"
+            app:summary="仅在未启用【自定义字体】时生效。如果取消启用此选项，将会使用系统默认字体或您自定义的字体。"
+            app:title="内置的霞鹜文楷" />
+
+        <rikka.material.preference.MaterialSwitchPreference
+            app:defaultValue="false"
+            app:icon="@drawable/ic_primary_font_download_24"
+            app:key="custom_font"
+            app:title="自定义字体" />
+
+        <rikka.preference.SimpleMenuPreference
+            app:defaultValue="follow_system"
+            app:entries="@array/theme_entries"
+            app:entryValues="@array/theme_values"
+            app:icon="@drawable/ic_primary_palette_24"
+            app:key="theme_style"
+            app:title="深色模式"
+            app:useSimpleSummaryProvider="false" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="存储">
+
+        <rikka.material.preference.MaterialSwitchPreference
+            app:defaultValue="true"
+            app:icon="@drawable/ic_primary_book_24"
+            app:title="小说缓存" />
+
+        <rikka.preference.SimpleMenuPreference
+            app:defaultValue="enabled"
+            app:entries="@array/glide_entries"
+            app:entryValues="@array/glide_values"
+            app:icon="@drawable/ic_primary_image_24"
+            app:key="glide_cache"
+            app:title="图片缓存"
+            app:useSimpleSummaryProvider="false" />
+
+        <Preference
+            app:fragment="com.manchuan.tools.fragment.preferences.StorageFragment"
+            app:icon="@drawable/ic_primary_storage_24"
+            app:key="clear_cache"
+            app:summary="管理本软件已使用的空间"
+            app:title="管理空间" />
+
+        <Preference
+            app:icon="@drawable/ic_baseline_bug_report_24"
+            app:key="bug_list"
+            app:summary="查看软件所产生的崩溃日志"
+            app:title="崩溃日志">
+
+            <intent
+                android:action="android.intent.action.VIEW"
+                android:targetPackage="com.manchuan.tools"
+                android:targetClass="com.manchuan.tools.activity.log.LogListActivity" />
+
+        </Preference>
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="文案">
+
+        <rikka.preference.SimpleMenuPreference
+            app:defaultValue="day_one"
+            app:entries="@array/text_entries"
+            app:entryValues="@array/text_values"
+            app:icon="@drawable/primary_text_snippet_24"
+            app:key="text_refresh"
+            app:title="刷新频率" />
+
+    </PreferenceCategory>
+
+
+    <PreferenceCategory app:title="隐私与协议">
+
+        <rikka.material.preference.MaterialSwitchPreference
+            app:defaultValue="true"
+            app:icon="@drawable/ic_primary_analytics_24"
+            app:key="none_analytic"
+            app:summary="使用Visual Studio App Center(Microsoft) 统计"
+            app:title="分析和统计">
+
+        </rikka.material.preference.MaterialSwitchPreference>
+
+        <Preference
+            app:isPreferenceVisible="false"
+            app:key="private"
+            app:title="隐私政策">
+
+            <intent
+                android:action="android.intent.action.MAIN"
+                android:targetClass="com.manchuan.tools.activity.PrivateActivity"
+                android:targetPackage="com.manchuan.tools" />
+
+        </Preference>
+
+    </PreferenceCategory>
+
+    <PreferenceCategory app:title="会员">
+
+        <Preference
+            app:icon="@drawable/ic_primary_card_giftcard_24"
+            app:key="vip"
+            app:title="我的购买" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

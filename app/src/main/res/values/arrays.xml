@@ -1,0 +1,281 @@
+<resources>
+    <!-- Reply Preference -->
+
+    <string-array name="theme_entries">
+        <item>跟随系统</item>
+        <item>总是关闭</item>
+        <item>总是开启</item>
+    </string-array>
+
+    <string-array name="animation_types_entries">
+        <item>匀速</item>
+        <item>减速</item>
+        <item>加速减速</item>
+        <item>阶段弹球</item>
+        <item>加速</item>
+        <item>前后甩</item>
+    </string-array>
+
+    <string-array name="animation_types_values">
+        <item>linear</item>
+        <item>reduce</item>
+        <item>speed_down</item>
+        <item>stage</item>
+        <item>speed</item>
+        <item>back_forth</item>
+    </string-array>
+
+    <string-array name="theme_values">
+        <item>follow_system</item>
+        <item>day</item>
+        <item>night</item>
+    </string-array>
+
+    <string-array name="glide_entries">
+        <item>启用</item>
+        <item>禁用</item>
+    </string-array>
+
+    <string-array name="glide_values">
+        <item>enabled</item>
+        <item>disabled</item>
+    </string-array>
+
+    <string-array name="text_entries">
+        <item>每日一次</item>
+        <item>手动刷新</item>
+        <item>隐藏</item>
+    </string-array>
+
+    <string-array name="text_values">
+        <item>day_one</item>
+        <item>self</item>
+        <item>gone</item>
+    </string-array>
+
+    <string-array name="language">
+        <item>检测语言</item>
+        <item>阿尔巴尼亚语</item>
+        <item>阿拉伯语</item>
+        <item>阿姆哈拉语</item>
+        <item>阿塞拜疆语</item>
+        <item>爱尔兰语</item>
+        <item>爱沙尼亚语</item>
+        <item>巴斯克语</item>
+        <item>白俄罗斯语</item>
+        <item>保加利亚语</item>
+        <item>冰岛语</item>
+        <item>波兰语</item>
+        <item>波斯尼亚语</item>
+        <item>波斯语</item>
+        <item>布尔语(南非荷兰语)</item>
+        <item>丹麦语</item>
+        <item>德语</item>
+        <item>俄语</item>
+        <item>法语</item>
+        <item>菲律宾语</item>
+        <item>芬兰语</item>
+        <item>弗里西语</item>
+        <item>高棉语</item>
+        <item>格鲁吉亚语</item>
+        <item>古吉拉特语</item>
+        <item>哈萨克语</item>
+        <item>海地克里奥尔语</item>
+        <item>韩语</item>
+        <item>豪萨语</item>
+        <item>荷兰语</item>
+        <item>吉尔吉斯语</item>
+        <item>加利西亚语</item>
+        <item>加泰罗尼亚语</item>
+        <item>捷克语</item>
+        <item>卡纳达语</item>
+        <item>科西嘉语</item>
+        <item>克罗地亚语</item>
+        <item>库尔德语</item>
+        <item>拉丁语</item>
+        <item>拉脱维亚语</item>
+        <item>老挝语</item>
+        <item>立陶宛语</item>
+        <item>卢森堡语</item>
+        <item>罗马尼亚语</item>
+        <item>马尔加什语</item>
+        <item>马耳他语</item>
+        <item>马拉地语</item>
+        <item>马拉雅拉姆语</item>
+        <item>马来语</item>
+        <item>马其顿语</item>
+        <item>毛利语</item>
+        <item>蒙古语</item>
+        <item>孟加拉语</item>
+        <item>缅甸语</item>
+        <item>苗语</item>
+        <item>南非科萨语</item>
+        <item>南非祖鲁语</item>
+        <item>尼泊尔语</item>
+        <item>挪威语</item>
+        <item>旁遮普语</item>
+        <item>葡萄牙语</item>
+        <item>普什图语</item>
+        <item>齐切瓦语</item>
+        <item>日语</item>
+        <item>瑞典语</item>
+        <item>萨摩亚语</item>
+        <item>塞尔维亚语</item>
+        <item>塞索托语</item>
+        <item>僧伽罗语</item>
+        <item>世界语</item>
+        <item>斯洛伐克语</item>
+        <item>斯洛文尼亚语</item>
+        <item>斯瓦希里语</item>
+        <item>苏格兰盖尔语</item>
+        <item>宿务语</item>
+        <item>索马里语</item>
+        <item>塔吉克语</item>
+        <item>泰卢固语</item>
+        <item>泰米尔语</item>
+        <item>泰语</item>
+        <item>土耳其语</item>
+        <item>威尔士语</item>
+        <item>乌尔都语</item>
+        <item>乌克兰语</item>
+        <item>乌兹别克语</item>
+        <item>西班牙语</item>
+        <item>希伯来语</item>
+        <item>希腊语</item>
+        <item>夏威夷语</item>
+        <item>信德语</item>
+        <item>匈牙利语</item>
+        <item>修纳语</item>
+        <item>亚美尼亚语</item>
+        <item>伊博语</item>
+        <item>意大利语</item>
+        <item>意第绪语</item>
+        <item>印地语</item>
+        <item>印尼巽他语</item>
+        <item>印尼语</item>
+        <item>印尼爪哇语</item>
+        <item>英语</item>
+        <item>约鲁巴语</item>
+        <item>越南语</item>
+        <item>繁体中文</item>
+        <item>简体中文</item>
+    </string-array>
+    <string-array name="language_id">
+        <item>auto</item>
+        <item>sq</item>
+        <item>ar</item>
+        <item>am</item>
+        <item>az</item>
+        <item>ga</item>
+        <item>et</item>
+        <item>eu</item>
+        <item>be</item>
+        <item>bg</item>
+        <item>is</item>
+        <item>pl</item>
+        <item>bs</item>
+        <item>fa</item>
+        <item>af</item>
+        <item>da</item>
+        <item>de</item>
+        <item>ru</item>
+        <item>fr</item>
+        <item>tl</item>
+        <item>fi</item>
+        <item>fy</item>
+        <item>km</item>
+        <item>ka</item>
+        <item>gu</item>
+        <item>kk</item>
+        <item>ht</item>
+        <item>ko</item>
+        <item>ha</item>
+        <item>nl</item>
+        <item>ky</item>
+        <item>gl</item>
+        <item>ca</item>
+        <item>cs</item>
+        <item>kn</item>
+        <item>co</item>
+        <item>hr</item>
+        <item>ku</item>
+        <item>la</item>
+        <item>lv</item>
+        <item>lo</item>
+        <item>lt</item>
+        <item>lb</item>
+        <item>ro</item>
+        <item>mg</item>
+        <item>mt</item>
+        <item>mr</item>
+        <item>ml</item>
+        <item>ms</item>
+        <item>mk</item>
+        <item>mi</item>
+        <item>mn</item>
+        <item>bn</item>
+        <item>my</item>
+        <item>hmn</item>
+        <item>xh</item>
+        <item>zu</item>
+        <item>ne</item>
+        <item>no</item>
+        <item>pa</item>
+        <item>pt</item>
+        <item>ps</item>
+        <item>ny</item>
+        <item>ja</item>
+        <item>sv</item>
+        <item>sm</item>
+        <item>sr</item>
+        <item>st</item>
+        <item>si</item>
+        <item>eo</item>
+        <item>sk</item>
+        <item>sl</item>
+        <item>sw</item>
+        <item>gd</item>
+        <item>ceb</item>
+        <item>so</item>
+        <item>tg</item>
+        <item>te</item>
+        <item>ta</item>
+        <item>th</item>
+        <item>tr</item>
+        <item>cy</item>
+        <item>ur</item>
+        <item>uk</item>
+        <item>uz</item>
+        <item>es</item>
+        <item>iw</item>
+        <item>el</item>
+        <item>haw</item>
+        <item>sd</item>
+        <item>hu</item>
+        <item>sn</item>
+        <item>hy</item>
+        <item>ig</item>
+        <item>it</item>
+        <item>yi</item>
+        <item>hi</item>
+        <item>su</item>
+        <item>id</item>
+        <item>jw</item>
+        <item>en</item>
+        <item>yo</item>
+        <item>vi</item>
+        <item>zh-TW</item>
+        <item>zh-CN</item>
+    </string-array>
+    <!-- Reply Preference -->
+    <string-array name="reply_entries">
+        <item>Reply</item>
+        <item>Reply to all</item>
+    </string-array>
+
+    <string-array name="reply_values">
+        <item>reply</item>
+        <item>reply_all</item>
+    </string-array>
+
+</resources>

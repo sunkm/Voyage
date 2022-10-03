@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+	xmlns:app="http://schemas.android.com/apk/res-auto"
+	xmlns:tools="http://schemas.android.com/tools"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:orientation="vertical">
+
+	<com.google.android.material.appbar.AppBarLayout
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		app:elevation="0dp">
+
+		<androidx.appcompat.widget.Toolbar
+			android:id="@+id/toolbar"
+			android:layout_width="match_parent"
+			android:layout_height="?attr/actionBarSize"
+			app:elevation="0dp"/>
+
+	</com.google.android.material.appbar.AppBarLayout>
+
+	<androidx.core.widget.NestedScrollView
+		android:layout_width="match_parent"
+		android:layout_height="match_parent"
+		android:fillViewport="true">
+
+		<LinearLayout
+			android:layout_width="match_parent"
+			android:layout_height="match_parent"
+			android:animateLayoutChanges="true"
+			android:orientation="vertical">
+
+			<LinearLayout
+				android:id="@+id/tp_linear"
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginTop="20dp"
+				android:animateLayoutChanges="true"
+				android:orientation="horizontal"
+				android:paddingLeft="10dp"
+				android:paddingRight="10dp">
+
+				<com.google.android.material.card.MaterialCardView
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:layout_marginLeft="10dp"
+					android:layout_marginRight="10dp"
+					android:layout_weight="1.0"
+					android:theme="@style/Theme.MaterialComponents"
+					app:cardBackgroundColor="@color/itemBackColor"
+					app:cardElevation="0dp">
+
+					<ImageView
+						android:id="@+id/tp1"
+						android:layout_width="match_parent"
+						android:layout_height="match_parent"
+						android:adjustViewBounds="true"
+						android:scaleType="fitCenter" />
+
+				</com.google.android.material.card.MaterialCardView>
+
+				<com.google.android.material.card.MaterialCardView
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:layout_marginLeft="10dp"
+					android:layout_marginRight="10dp"
+					android:layout_weight="1.0"
+					android:theme="@style/Theme.MaterialComponents"
+					app:cardBackgroundColor="@color/itemBackColor"
+					app:cardElevation="0dp">
+
+					<ImageView
+						android:id="@+id/tp2"
+						android:layout_width="match_parent"
+						android:layout_height="match_parent"
+						android:adjustViewBounds="true"
+						android:scaleType="fitCenter" />
+
+				</com.google.android.material.card.MaterialCardView>
+
+			</LinearLayout>
+
+			<com.google.android.material.card.MaterialCardView
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:layout_marginLeft="20dp"
+				android:layout_marginTop="20dp"
+				android:layout_marginRight="20dp"
+				android:theme="@style/Theme.MaterialComponents"
+				android:visibility="gone"
+				app:cardBackgroundColor="@color/itemBackColor"
+				app:cardElevation="0dp">
+
+				<LinearLayout
+					android:layout_width="match_parent"
+					android:layout_height="match_parent"
+					android:orientation="vertical">
+
+					<TextView
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_marginLeft="12dp"
+						android:layout_marginTop="12dp"
+						android:layout_marginRight="12dp"
+						android:text="压缩质量"
+						android:textColor="@color/fabColor" />
+
+					<org.adw.library.widgets.discreteseekbar.DiscreteSeekBar
+						android:id="@+id/seekbar1"
+						android:layout_width="match_parent"
+						android:layout_height="wrap_content"
+						android:layout_marginLeft="4dp"
+						android:layout_marginRight="4dp"
+						android:layout_marginBottom="8dp"
+						app:dsb_indicatorColor="@color/fabColor"
+						app:dsb_max="90"
+						app:dsb_min="10"
+						app:dsb_progressColor="@color/fabColor"
+						app:dsb_value="60"
+						tools:ignore="SpeakableTextPresentCheck" />
+
+				</LinearLayout>
+
+			</com.google.android.material.card.MaterialCardView>
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="wrap_content"
+				android:orientation="horizontal"
+				android:padding="10dp"
+				android:paddingEnd="10dp"
+				tools:ignore="RtlSymmetry">
+
+				<com.google.android.material.button.MaterialButton
+					android:id="@+id/xztp"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_margin="10dp"
+					android:layout_weight="1.0"
+					android:insetTop="0dp"
+					android:insetBottom="0dp"
+					android:text="选择图片"/>
+
+				<com.google.android.material.button.MaterialButton
+					android:id="@+id/ystp"
+					android:layout_width="match_parent"
+					android:layout_height="wrap_content"
+					android:layout_margin="10dp"
+					android:layout_weight="1.0"
+					android:insetTop="0dp"
+					android:insetBottom="0dp"
+					android:text="压缩图片" />
+
+			</LinearLayout>
+
+			<LinearLayout
+				android:layout_width="match_parent"
+				android:layout_height="match_parent"
+				android:orientation="horizontal">
+
+				<TextView
+					android:id="@+id/txt1"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_weight="1.0"
+					android:gravity="center"
+					android:text="大小:--"
+					android:textColor="@color/editTextColor"
+					tools:ignore="HardcodedText" />
+
+				<TextView
+					android:id="@+id/txt2"
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:layout_weight="1.0"
+					android:gravity="center"
+					android:text="大小:--"
+					android:textColor="@color/editTextColor"
+					tools:ignore="HardcodedText" />
+
+			</LinearLayout>
+
+		</LinearLayout>
+
+	</androidx.core.widget.NestedScrollView>
+
+</LinearLayout>
+

@@ -1,0 +1,219 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.coordinatorlayout.widget.CoordinatorLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stateListAnimator="@null">
+
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            app:titleTextAppearance="@style/ToolbarTitle"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize" />
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/divider_color" />
+
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.appcompat.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        app:layout_behavior="com.google.android.material.appbar.AppBarLayout$ScrollingViewBehavior"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.0"
+            android:measureWithLargestChild="true"
+            android:orientation="vertical"
+            android:weightSum="1">
+
+            <EditText
+                android:id="@+id/editText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#00000000"
+                android:gravity="top"
+                android:hint="请输入内容"
+                android:importantForAutofill="no"
+                android:inputType="none"
+                android:minLines="6"
+                android:padding="20dp"
+                android:textColor="@color/editTextColor"
+                android:textSize="16sp"
+                tools:ignore="TextContrastCheck" />
+
+            <com.google.android.material.card.MaterialCardView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical">
+
+                    <AutoCompleteTextView
+                        android:id="@+id/textView"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1.0"
+                        android:background="#00000000"
+                        android:gravity="top"
+                        android:inputType="none"
+                        android:minLines="3"
+                        android:paddingLeft="16dp"
+                        android:paddingTop="12dp"
+                        android:paddingRight="16dp"
+                        android:paddingBottom="12dp"
+                        android:textColor="@color/textColor"
+                        tools:ignore="SpeakableTextPresentCheck" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/card1"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="8dp"
+                            android:layout_marginBottom="8dp"
+                            app:strokeWidth="0dp">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/imageView3"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:padding="13dp"
+                                android:scaleType="fitCenter"
+                                app:srcCompat="@drawable/ic_content_copy"
+                                tools:ignore="ImageContrastCheck" />
+
+                        </com.google.android.material.card.MaterialCardView>
+
+                        <com.google.android.material.card.MaterialCardView
+                            android:id="@+id/card2"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:layout_marginBottom="8dp"
+                            android:layout_toStartOf="@+id/card1"
+                            app:strokeWidth="0dp">
+
+                            <androidx.appcompat.widget.AppCompatImageView
+                                android:id="@+id/imageView4"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:padding="12dp"
+                                android:scaleType="fitCenter"
+                                app:srcCompat="@drawable/ic_volume_high"
+                                tools:ignore="ImageContrastCheck" />
+
+                        </com.google.android.material.card.MaterialCardView>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </com.google.android.material.card.MaterialCardView>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+        <androidx.appcompat.widget.LinearLayoutCompat
+            android:id="@+id/bottom"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_64"
+            android:layout_gravity="bottom"
+            android:background="?android:windowBackground"
+            android:elevation="@dimen/dp_8"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="left|center_vertical"
+                android:orientation="horizontal">
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/button"
+                    android:layout_width="@dimen/dp_100"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/dp_16"
+                    android:backgroundTint="@color/SelectedBackColor"
+                    android:ellipsize="end"
+                    android:insetLeft="0dp"
+                    android:insetTop="0dp"
+                    android:insetRight="0dp"
+                    android:insetBottom="0dp"
+                    android:paddingLeft="@dimen/dp_4"
+                    android:paddingTop="@dimen/dp_4"
+                    android:paddingRight="@dimen/dp_4"
+                    android:paddingBottom="@dimen/dp_4"
+                    android:text="自动检测"
+                    android:textColor="@color/editTextColor"
+                    android:textStyle="normal"
+                    app:cornerRadius="@dimen/dp_12"
+                    app:rippleColor="@color/rippleColor" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="right"
+                android:gravity="right|center_vertical"
+                android:orientation="horizontal">
+
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/button1"
+                    android:layout_width="@dimen/dp_100"
+                    android:layout_height="wrap_content"
+                    android:layout_marginEnd="@dimen/dp_16"
+                    android:backgroundTint="@color/SelectedBackColor"
+                    android:ellipsize="end"
+                    android:insetLeft="0dp"
+                    android:insetTop="0dp"
+                    android:insetRight="0dp"
+                    android:insetBottom="0dp"
+                    android:paddingLeft="@dimen/dp_4"
+                    android:paddingTop="@dimen/dp_4"
+                    android:paddingRight="@dimen/dp_4"
+                    android:paddingBottom="@dimen/dp_4"
+                    android:text="简体中文"
+                    android:textColor="@color/editTextColor"
+                    android:textStyle="normal"
+                    app:cornerRadius="@dimen/dp_12"
+                    app:rippleColor="@color/rippleColor" />
+
+            </LinearLayout>
+
+        </androidx.appcompat.widget.LinearLayoutCompat>
+
+    </androidx.appcompat.widget.LinearLayoutCompat>
+
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_translate"
+        app:layout_anchor="@id/bottom"
+        app:layout_anchorGravity="center_horizontal"
+        tools:ignore="ContentDescription,SpeakableTextPresentCheck" />
+
+</androidx.coordinatorlayout.widget.CoordinatorLayout>
+

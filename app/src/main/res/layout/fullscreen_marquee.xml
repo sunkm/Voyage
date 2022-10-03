@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+	xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+	android:orientation="vertical"
+	android:layout_width="match_parent"
+	android:layout_height="match_parent"
+	android:background="#FF000000"
+	android:gravity="center">
+
+	<com.manchuan.tools.view.MarqueeView
+        android:id="@+id/marquee_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:singleLine="true"
+        android:gravity="center"
+        app:marqueeview_is_resetLocation="false"
+        app:marqueeview_isclickalbe_stop="true"
+        app:marqueeview_repet_type="repet_interval"
+        app:marqueeview_text_size="80"
+        app:marqueeview_text_speed="4"/>
+        
+</LinearLayout>
+

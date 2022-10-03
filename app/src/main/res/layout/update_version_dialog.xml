@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/_linear"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:animateLayoutChanges="true"
+    android:clickable="true"
+    android:focusable="true"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/linear1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:animateLayoutChanges="true"
+        android:orientation="vertical"
+        tools:ignore="UselessParent">
+
+        <com.google.android.material.progressindicator.LinearProgressIndicator
+            android:id="@+id/progressBar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/dp_8"
+            android:indeterminate="true"
+            android:visibility="gone" />
+
+        <LinearLayout
+            android:id="@+id/linear2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_8"
+            android:layout_marginBottom="8dp"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/TextView.SansSerifCondensedMedium"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_24"
+                android:layout_marginRight="@dimen/dp_24"
+                android:focusable="false"
+                android:text="@string/update_version"
+                android:textColor="@color/textColor"
+                android:textSize="@dimen/sp_22"
+                android:textStyle="bold" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/dp_24"
+                android:layout_marginRight="@dimen/dp_24"
+                android:text="New Version"
+                android:typeface="serif" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.0"
+            android:orientation="horizontal"
+            android:paddingStart="@dimen/dp_24"
+            android:paddingTop="@dimen/dp_8"
+            android:paddingEnd="@dimen/dp_24"
+            android:paddingBottom="@dimen/dp_24">
+
+            <TextView
+                android:id="@+id/event_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:selectable="true"
+                android:typeface="serif" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/buttonLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_8"
+            android:layout_marginBottom="@dimen/dp_8"
+            android:animateLayoutChanges="true"
+            android:gravity="right"
+            android:orientation="horizontal"
+            android:paddingRight="16dp"
+            tools:ignore="RtlHardcoded,RtlSymmetry">
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/cancel_button"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="6dp"
+                android:elevation="0dp"
+                android:text="@string/cancel"
+                tools:ignore="SpeakableTextPresentCheck,TextContrastCheck" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/upgrade"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:elevation="0dp"
+                android:text="@string/upgrade"
+                app:icon="@drawable/ic_baseline_arrow_downward_24"
+                app:iconGravity="textStart"
+                tools:ignore="SpeakableTextPresentCheck,TextContrastCheck" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
